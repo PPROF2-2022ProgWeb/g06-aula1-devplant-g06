@@ -15,6 +15,10 @@
 
 }
 
+.header li{
+  margin: 0 5px 0 5px;
+}
+
 .header ul li a:hover{
   background: hsla(82, 53%, 37%, 0.7);
   color: #ffffff;
