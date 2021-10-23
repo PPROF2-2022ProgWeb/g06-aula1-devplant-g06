@@ -28,58 +28,49 @@
       type="text/css"
     />
 
+  
+    
     <script type="text/javascript">
-      function validar() {        
-        
-        const nombre = document.getElementById('Nombre');            
-        const apellido = document.getElementById('Apellido');
-        const mail = document.getElementById('EMail');
-        var error = document.getElementById('error');
-
-        error.innerHTML = '';
-        
-        if(nombre.value !== '') {          
-          if(!isNaN(nombre.value))
-          {
-            error.innerHTML = 'El nombre no puede contener números'            
-            return false;
-          }       
-        } else {
-          error.innerHTML = 'Debe indicar un Nombre'          
+    
+      function validarFormulario(){
+     
+        var txtNombre = document.getElementById('Nombre').value;
+        var txtApellido = document.getElementById('Apellido').value;
+        var txtEmail = document.getElementById('Email').value;
+        var txtConsulta = document.getElementById('Consulta').value;
+      
+        //Test campo obligatorio
+        if(txtNombre == null || txtNombre.length == 0 || /^\s+$/.test(txtNombre)){
+         alert('ERROR: El campo nombre no debe ir vacío o lleno de solamente espacios en blanco');
           return false;
         }
        
-        if(apellido.value !== '') {          
-          if(!isNaN(apellido.value))
-          {
-            error.innerHTML = 'El campo apellido no puede ser un numero'
-            return false;
-          }
-        } else {
-          error.innerHTML = 'Debe indicar un apellido'          
+        if(txtApellido == null || txtApellido.length == 0 || /^\s+$/.test(txtApellido)){
+          alert('ERROR: El campo apellido no debe ir vacío o lleno de solamente espacios en blanco');
           return false;
         }
-
-        
-        if(!EMail.value !== '') {
-          if(!isNaN(mail.value)){
-            error.innerHTML = 'El campo mail no puede ser un numero'
-            return false;
-          }          
-        } else {
-          error.innerHTML = 'Debe indicar un eMail'          
+     
+        //Test correo
+        if(!(/\S+@\S+\.\S+/.test(txtEmail))){
+          alert('ERROR: Debe escribir un correo válido');
           return false;
         }
-
-        
+        if(txtConsulta == null || txtConsulta.length == 0 || /^\s+$/.test(txtConsulta)){
+          alert('ERROR: El campo consulta no debe ir vacío o lleno de solamente espacios en blanco');
+          return false;
+        }
+     
+     
         return true;
-      }   
-    </script>
+      }
+      
+     
+      </script>
     <title>Contactanos</title>
   </head>
   
   <body>
-    
+    <form action= "#" onsubmit="return validarFormulario()">
     <header class="header">
       <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
         <div class="container-fluid">
@@ -141,8 +132,7 @@
         <div class="d-flex justify-content-center">
           <div class="row form3">
             
-            <form action="#" class="form" onsubmit="return validar()" >
-              
+          
               <div class="abs-center">
               <div class="form-grup">
                 <div><img class="form-img" src="img/logo_devplant.png" alt="logo-devplant"></div>
@@ -186,9 +176,9 @@
                   style="height: 170px"                  
                 ></textarea>
               </div>
-              <div id="error"></div>
               <div class="botones">
-                <input type="submit" value="INGRESAR">
+                <input type="submit" value="Enviar">
+              </div>
               </div>
             </div>
             </form>
