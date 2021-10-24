@@ -165,6 +165,7 @@ body {
   width: 250px;
 }
 
+
 .form-control3{
   height: 500px;
   width: 285px;
@@ -182,16 +183,14 @@ body {
  color: #FFFFFF !important;
 }
 
-
-
 .botones {
   padding-top: 40px;
+  color: #ffffff;
 }
 
 textarea {
   resize: none;
 }
-
 
 input {
   display: block;
@@ -224,6 +223,7 @@ input[type="submit"]:active {
   /* Active es una clase q se usa para darle un efecto o configuracion cuando se clickea el boton por eso Active */
   transform: scale(0.95); /* se redusca el tamaño cuando se hace click */
 }
+
 
 .label {
   color: #e2e2e2; /* Color de todos los h3 del sitio */

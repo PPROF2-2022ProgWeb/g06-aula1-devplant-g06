@@ -94,11 +94,6 @@ input {
   }
 
 
-
-
-
-
-
 .container-navbar {
   height: 50px;
   width: 96%;
@@ -290,5 +285,9 @@ footer {
 .hover3 :active {
   border-color: #050702;
   border-style: solid;
+}
+
+#error {
+  background-color: skyblue;
 }
 
