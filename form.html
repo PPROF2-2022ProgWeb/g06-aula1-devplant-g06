@@ -58,87 +58,87 @@
 
 <body>
   <!-- NAV! -->
-    <header class="header">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="index.html"><img src="img/logo_devplant.png" class="logo" width="150px"
-              height="40%" alt="logo" /></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-            aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="index.html">Inicio</a>
-              </li>
+  <header class="header">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html"><img src="img/logo_devplant.png" class="logo" width="150px"
+            height="40%" alt="logo" /></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="index.html">Inicio</a>
+            </li>
 
-              <li class="nav-item">
-                <a class="nav-link" href="plantas.html">Mis plantas</a>
-              </li>
+            <li class="nav-item">
+              <a class="nav-link" href="plantas.html">Mis plantas</a>
+            </li>
 
-              <li class="nav-item">
-                <a class="nav-link" href="form.html">Contactanos</a>
-              </li>
-            </ul>
-            <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link" href="login.html">Ingresar</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="registro.html">Registrarse</a>
-              </li>
-            </ul>
+            <li class="nav-item">
+              <a class="nav-link" href="form.html">Contactanos</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="login.html">Ingresar</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="registro.html">Registrarse</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <h3 class="vivero">Vivero OnLine</h3>
+    <h1 class="devplant">&lt;DEVPLANT&gt;</h1>
+    <p class="tips">
+      Mantente informado para cuidar tus plantas de la mejor manera
+    </p>
+  </header>
+
+  <!-- FORM -->
+
+  <section>
+
+    <div class="container30">
+      <div class="d-flex justify-content-center">
+        <div class="row form3">
+          <div class="abs-center">
+            <form action="#" onsubmit="return validarFormulario()">
+            <div class="form-grup">
+              <div><img class="form-img" src="img/logo_devplant.png" alt="logo-devplant"></div>
+
+              <label class="label" for="Nombre">Nombre</label>
+              <input type="text" class="form-control" id="Nombre" name="Nombre" placeholder="Nombre" />
+            </div>
+            <div class="form-grup">
+              <label class="label" for="lname">Apellido</label>
+              <input type="text" class="form-control" id="Apellido" name="Apellido" placeholder="Apellido" />
+            </div>
+            <div class="form-grup2">
+              <label class="label" for="Email">Email</label>
+              <input type="text" class="form-control" id="Email" name="Email" placeholder="fulanito@example.com" />
+            </div>
+            <div class="form-grup3">
+              <label class="label" for="Tu Consulta">Consulta</label>
+              <textarea name="Consulta" id="Consulta" class="form-control3" placeholder="Escribe aqui tu mensaje"
+                style="height: 170px"></textarea>
+            </div>
+
+            <div class="botones">
+              <div id="error" class="error"> </div> <!-- Div de mensaje de alerta sin formato, la clase es botones. -->
+            </div>
+
+            <input type="submit" value="Enviar">
+            </form>
           </div>
         </div>
-      </nav>
-      <h3 class="vivero">Vivero OnLine</h3>
-      <h1 class="devplant">&lt;DEVPLANT&gt;</h1>
-      <p class="tips">
-        Mantente informado para cuidar tus plantas de la mejor manera
-      </p>
-    </header>
-
-    <!-- FORM -->
-
-    <section>
-      <form action="#" onsubmit="return validarFormulario()">
-      <div class="container30">
-        <div class="d-flex justify-content-center">
-          <div class="row form3">
-            <div class="abs-center">
-              <div class="form-grup">
-                <div><img class="form-img" src="img/logo_devplant.png" alt="logo-devplant"></div>
-
-                <label class="label" for="Nombre">Nombre</label>
-                <input type="text" class="form-control" id="Nombre" name="Nombre" placeholder="Nombre" />
-              </div>
-              <div class="form-grup">
-                <label class="label" for="lname">Apellido</label>
-                <input type="text" class="form-control" id="Apellido" name="Apellido" placeholder="Apellido" />
-              </div>
-              <div class="form-grup2">
-                <label class="label" for="Email">Email</label>
-                <input type="text" class="form-control" id="Email" name="Email" placeholder="fulanito@example.com" />
-              </div>
-              <div class="form-grup3">
-                <label class="label" for="Tu Consulta">Consulta</label>
-                <textarea name="Consulta" id="Consulta" class="form-control3" placeholder="Escribe aqui tu mensaje"
-                  style="height: 170px"></textarea>
-              </div>
-
-              <div class="botones">
-                <div id="error" class="error"> </div> <!-- Div de mensaje de alerta sin formato, la clase es botones. -->
-              </div>
-
-              <input type="submit" value="Enviar">
-
-              </div>
-            </div>
-          </div>
+      </div>
     </div>
-    </form>
+
   </section>
 
   <footer class="footer">
