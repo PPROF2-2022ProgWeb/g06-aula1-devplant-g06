@@ -236,13 +236,13 @@ input[type="submit"]:active {
 }
 
 .form-class{
-  height: 200px;
+  height: auto;
   width: 100%;
   background-color: rgb(58, 57, 57) !important;
-  display:inline-block;
   color: white !important;
   border-radius: 25px;
   text-align: center;
+  padding-bottom: 25px;
 }
 
 .form-class input{
@@ -271,11 +271,18 @@ input[type="submit"]:active {
   height: 50px !important;
   border-radius: 25px;
   margin-top: 75px;
-  margin-left: 50px;
+  margin-left: 25px;
   color: white !important;
   background-color: #6c912d !important;
 }
 
 .img-plantform:hover{ 
     border: 5px solid #f7f7f7;
+}
+.horizontal-line{
+height: 5px;
+margin-left: 55px;
+width: 75%;
+background-color: white;
+text-align: center;
 }
