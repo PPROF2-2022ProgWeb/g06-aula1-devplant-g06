@@ -62,7 +62,9 @@ form {
 }
 /* Tamaño del form de registro (Se lo agranda para q entren los demas items que se necesitan en el registro) */
 .form-registro {
-  height: 573px;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  height: 740px;
 }
 
 /* Configuracion de los Imputs del form */
@@ -87,11 +89,7 @@ input {
 /* Separacion del input numero 2 al primero */
 
 .input2 {
-  padding-top: 20px;
-}
-/* Separacion del tercer input al segundo */
-.input3 {
-  padding-top: 20px;
+  padding-top: 10px;
 }
 
 /* Color q va a tener el font que va a tener el placeholder de los inputs */
@@ -158,11 +156,11 @@ h3 {
 /* Configuracion de la separacion de los botones registro y ingresar del form */
 
 .botones {
-  padding-top: 40px;
+  padding-top: 20px;
 }
 
 .label {
   color: #e2e2e2; /* Color de todos los h3 del sitio */
   font-weight: normal;
-  font-size: 16px;
+  font-size: 14px;
 }

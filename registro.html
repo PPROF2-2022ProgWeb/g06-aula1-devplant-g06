@@ -1,12 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
+    <title>Registro</title>
+
+     <!-- Required meta tags -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Esta sección de la página nos permite registrar un nuevo usuario en la plataforma">
+    <meta name="keywords" content="registro, usuario, vivero, online, nuevo"> 
+    
+    <!-- CSS -->
     <link rel="StyleSheet" media="screen" type="text/css" href="css/style_login_registro.css">
     <link href="https://allfont.es/allfont.css?fonts=roboto-regular" rel="stylesheet" type="text/css" /> 
-    <title>Devplant</title>
+    
+    <!-- Agregar favicons -->
+    <link rel="Shortcut icon" href="img/favicon-16x16.png">
+    
 </head>
 <body>
     <form action="login.html" class="form-registro" >
@@ -14,10 +24,22 @@
         <div class="input1">
             <label for="nombre"><p class="label">Nombre y apellido</p></label>
             <input type="text" placeholder ="🌿 Ingresá tu nombre y apellido" name = "nombre" id="nombre">
+        </div>
+        <div class="input2">
+            <label for="email"><p class="label">Fecha de nacimiento</p></label>
+            <input type="date" name = "fechaNacimiento" id="fechaNacimiento">
         </div>        
-        <div class="input3">
+        <div class="input2">
             <label for="email"><p class="label">E-mail</p></label>
             <input type="email" placeholder ="📧 Ingresá tu E-mail" name = "contraseña" id="email">
+        </div>
+        <div class="input2">
+            <label for="provincia"><p class="label">Provincia</p></label>
+            <input type="text" placeholder ="🏘️ Ingresá tu provincia" name = "provincia" id="provincia">
+        </div>
+        <div class="input2">
+            <label for="pais"><p class="label">País</p></label>
+            <input type="text" placeholder ="🌎 Ingresá tu país" name = "pais" id="pais">
         </div>
         <div class="input2">
             <label for="password"><p class="label">Contraseña</p></label>
