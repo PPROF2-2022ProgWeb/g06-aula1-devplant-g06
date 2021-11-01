@@ -103,8 +103,12 @@ body {
     justify-content: center;
   
     overflow-x: hidden;
-  
+  }
 
+  .container2 a{
+    text-decoration: none;
+    color: blue;
+    text-align: center;
   }
 
 
