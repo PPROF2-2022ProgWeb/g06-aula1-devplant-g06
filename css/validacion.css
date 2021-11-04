@@ -47,28 +47,50 @@ body {
   margin-top: 20px;
 }
 
+.container{
+  height: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /* Configuracion del tamaño, color, dimenciones del Form login */
 form {
-  margin: auto; 
+  margin-top: 207px;
   padding: 45px 55px;
   border: 1px solid rgba(0, 0, 0, 0.2);
-  color: white !important;
-  font-size: 20px;
-  border-spacing: 10px;
   background-color: #0000009c;
-  border-radius: 30px;
   height: auto;
   width: 400px;
+  left: 460px;
+  top: 207px;
+  border-radius: 30px;
+  color: white;
+  text-align: center;
 }
 
-.table-primary{
-    padding-top: 20px;
+.preloader {
+  width: 70px;
+  height: 70px;
+  border: 10px solid #eee;
+  border-top: 10px solid #666;
+  border-radius: 50%;
+  animation-name: girar;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  display: inline-block;
 }
 
-.table-secondary{
-    padding-top: 20px;
-}
-.table-success{
-    padding-top: 20px;
+.caja-preloader{
+  margin-top: 50px;
 }
 
+@keyframes girar {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

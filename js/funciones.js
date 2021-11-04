@@ -45,7 +45,7 @@ function alerta() {
   }
 }
 
-
+//funcion para redireccionar desde redireccion a index.html.
 function myFunction() {
   setTimeout(function(){ location.href = "/index.html" }, 5000);  //Redireccionar despues de 5 segundos!
 }
