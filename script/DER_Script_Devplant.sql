@@ -114,6 +114,26 @@ CREATE TABLE IF NOT EXISTS `DER_Devplant`.`Cuidados` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
+ALTER TABLE `der_devplant`.`clientes` 
+ADD COLUMN `fechaBaja` DATETIME NULL AFTER `fechaNacimiento`;
+
+ALTER TABLE `der_devplant`.`cuidados` 
+ADD COLUMN `fechaBaja` DATETIME NULL AFTER `periodicidad`;
+
+ALTER TABLE `der_devplant`.`localidad` 
+ADD COLUMN `fechaBaja` DATETIME NULL AFTER `ciudad`;
+
+ALTER TABLE `der_devplant`.`plantas` 
+ADD COLUMN `fechaBaja` DATETIME NULL AFTER `idCliente`;
+
+ALTER TABLE `der_devplant`.`tipocuidado` 
+ADD COLUMN `fechaBaja` DATETIME NULL AFTER `descripcion`;
+
+ALTER TABLE `der_devplant`.`tipoplantas` 
+ADD COLUMN `fechaBaja` DATETIME NULL AFTER `descripcion`;
+
+
+
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
