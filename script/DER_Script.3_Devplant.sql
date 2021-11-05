@@ -31,10 +31,10 @@ ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS `DER_Devplant`.`Clientes` (
   `idCliente` INT NOT NULL AUTO_INCREMENT,
   `usuarioEmail` VARCHAR(45) NOT NULL,
-  `passsword` VARCHAR(45) NOT NULL,
+  `password` VARCHAR(45) NOT NULL,
   `nombre` VARCHAR(45) NOT NULL,
   `apellido` VARCHAR(45) NOT NULL,
-  `telefono`  INT NULL,
+  `telefono` VARCHAR(45) NULL,
   `idLocalidad` INT NOT NULL,
   `fechaNacimiento` DATE NOT NULL,
   PRIMARY KEY (`idCliente`),
@@ -116,10 +116,8 @@ CREATE TABLE IF NOT EXISTS `DER_Devplant`.`Plantas` (
   `nombrePlanta` VARCHAR(45) NOT NULL,
   `idTipoPlanta` INT NOT NULL,
   `idCliente` INT NOT NULL,
-  `idCuidadosPlantas` INT NOT NULL,
   PRIMARY KEY (`idPlantas`),
   INDEX `fk_planta_cliente_idx` (`idCliente` ASC) ,
-  INDEX `fk_planta_cuidadosPlantas_idx` (`idCuidadosPlantas` ASC),
   INDEX `fk_planta_tipo_idx` (`idTipoPlanta` ASC) ,
   CONSTRAINT `fk_planta_tipo`
     FOREIGN KEY (`idTipoPlanta`)
@@ -130,13 +128,66 @@ CREATE TABLE IF NOT EXISTS `DER_Devplant`.`Plantas` (
     FOREIGN KEY (`idCliente`)
     REFERENCES `DER_Devplant`.`Clientes` (`idCliente`)
     ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_planta_cuidadosPlantas`
-    FOREIGN KEY (`idCuidadosPlantas`)
-    REFERENCES `DER_Devplant`.`CuidadosPlantas` (`idCuidadosPlantas`)
-    ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
+
+/* DML */
+
+/* Insertar Datos */
+
+INSERT INTO Localidad ( provincia, ciudad)
+VALUES ('Cordoba','Rio cuarto');
+INSERT INTO Localidad ( provincia, ciudad)
+VALUES ('Cordoba','Córdoba');
+INSERT INTO Localidad ( provincia, ciudad)
+VALUES ('Cordoba','Carlos Paz');
+
+INSERT INTO Clientes (usuarioEmail, password, nombre, apellido, telefono, idLocalidad, fechaNacimiento)
+VALUES ('juan@gmail.com', '123456', 'Juan', 'Canepa', "+543516451231", 1,'1992-09-04');
+INSERT INTO Clientes (usuarioEmail, password, nombre, apellido, telefono, idLocalidad, fechaNacimiento)
+VALUES ('lucia@gmail.com', '789123', 'Lucía', 'Gonzalez', "+543516751621", 2,'1996-12-07');
+INSERT INTO Clientes (usuarioEmail, password, nombre, apellido, telefono, idLocalidad, fechaNacimiento)
+VALUES ('florencia@gmail.com', '456789', 'Florencia', 'Lopez', "+543516135285", 3,'1994-02-10');
+
+INSERT INTO TipoCuidado(idTipoCuidado, descripcion)
+VALUES (1,'Podar');
+INSERT INTO TipoCuidado(idTipoCuidado, descripcion)
+VALUES (2,'Regar');
+INSERT INTO TipoCuidado(idTipoCuidado, descripcion)
+VALUES (3,'Transplantar');
+
+INSERT INTO Cuidados(idCuidados, idPlantas, idTipoCuidado, periodicidad)
+VALUES (1, 1, 3, '2');
+INSERT INTO Cuidados(idCuidados, idPlantas, idTipoCuidado, periodicidad)
+VALUES (2, 3, 2, '1');
+INSERT INTO Cuidados(idCuidados, idPlantas, idTipoCuidado, periodicidad)
+VALUES (3, 2, 1, '4');
+
+INSERT INTO TipoPlantas (idTipoPlantas, descripcion)
+VALUES (1 ,'Planta de exterior');
+INSERT INTO TipoPlantas (idTipoPlantas, descripcion)
+VALUES (2 ,'Planta de interior');
+
+INSERT INTO Plantas(idPlantas, nombrePlanta, idTipoPlanta, idCliente)
+VALUES (1, 'Margarita', 1, 1);
+INSERT INTO Plantas(idPlantas, nombrePlanta, idTipoPlanta, idCliente)
+VALUES (2, 'Sansevieria', 2, 2);
+INSERT INTO Plantas(idPlantas, nombrePlanta, idTipoPlanta, idCliente)
+VALUES (3, 'Rosa', 1, 3);
+
+
+/* Cosultar resultado */
+
+SELECT * FROM Clientes
+WHERE nombre='Juan' AND password='123456';
+
+SELECT nombrePlanta FROM Plantas
+WHERE idPlantas='3';
+
+SELECT nombre, apellido FROM Clientes
+WHERE usuarioEmail='juan@gmail.com' AND password='123456';
+
+/* Modificar Datos */
 
 ALTER TABLE `der_devplant`.`clientes` 
 ADD COLUMN `fechaBaja` DATETIME NULL AFTER `fechaNacimiento`;
