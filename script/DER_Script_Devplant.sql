@@ -31,15 +31,15 @@ ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS `DER_Devplant`.`Clientes` (
   `idCliente` INT NOT NULL AUTO_INCREMENT,
   `usuarioEmail` VARCHAR(45) NOT NULL,
-  `passsword` VARCHAR(45) NOT NULL,
+  `password` VARCHAR(45) NOT NULL,
   `nombre` VARCHAR(45) NOT NULL,
   `apellido` VARCHAR(45) NOT NULL,
-  `telefono`  INT NULL,
+  `telefono` VARCHAR(45) NULL,
   `idLocalidad` INT NOT NULL,
   `fechaNacimiento` DATE NOT NULL,
   PRIMARY KEY (`idCliente`),
-  INDEX ` fk_Clientes_localidad_idx` (`idLocalidad` ASC) ,
-  CONSTRAINT ` fk_Clientes_localidad`
+  INDEX `fk_cliente_localidad_idx` (`idLocalidad` ASC) VISIBLE,
+  CONSTRAINT `fk_cliente_localidad`
     FOREIGN KEY (`idLocalidad`)
     REFERENCES `DER_Devplant`.`Localidad` (`idLocalidad`)
     ON DELETE NO ACTION
@@ -51,9 +51,33 @@ ENGINE = InnoDB;
 -- Table `DER_Devplant`.`TipoPlantas`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `DER_Devplant`.`TipoPlantas` (
-  `idTipoPlantas` INT NOT NULL AUTO_INCREMENT,
+  `idTipoPlanta` INT NOT NULL AUTO_INCREMENT,
   `descripcion` VARCHAR(45) NOT NULL,
-  PRIMARY KEY (`idTipoPlantas`))
+  PRIMARY KEY (`idTipoPlanta`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `DER_Devplant`.`Plantas`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `DER_Devplant`.`Plantas` (
+  `idPlanta` INT NOT NULL,
+  `nombrePlanta` VARCHAR(45) NOT NULL,
+  `idTipoPlanta` INT NOT NULL,
+  `idCliente` INT NOT NULL,
+  PRIMARY KEY (`idPlanta`),
+  INDEX `tipo_idx` (`idTipoPlanta` ASC) VISIBLE,
+  INDEX `fk_planta_cliente_idx` (`idCliente` ASC) VISIBLE,
+  CONSTRAINT `fk_planta_tipo`
+    FOREIGN KEY (`idTipoPlanta`)
+    REFERENCES `DER_Devplant`.`TipoPlantas` (`idTipoPlanta`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_planta_cliente`
+    FOREIGN KEY (`idCliente`)
+    REFERENCES `DER_Devplant`.`Clientes` (`idCliente`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
@@ -71,90 +95,25 @@ ENGINE = InnoDB;
 -- Table `DER_Devplant`.`Cuidados`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `DER_Devplant`.`Cuidados` (
-  `idCuidados` INT NOT NULL AUTO_INCREMENT,
-  `idPlantas` INT NOT NULL,
+  `idCuidado` INT NOT NULL AUTO_INCREMENT,
+  `idPlanta` INT NOT NULL,
   `idTipoCuidado` INT NOT NULL,
   `periodicidad` INT NOT NULL,
-  PRIMARY KEY (`idCuidados`),
-  INDEX `fk_cuidado_tipo_idx` (`idTipoCuidado` ASC) ,
+  PRIMARY KEY (`idCuidado`),
+  INDEX `fk_cuidado_tipo_idx` (`idTipoCuidado` ASC) VISIBLE,
+  INDEX `fk_cuidado_planta_idx` (`idPlanta` ASC) VISIBLE,
   CONSTRAINT `fk_cuidado_tipo`
     FOREIGN KEY (`idTipoCuidado`)
     REFERENCES `DER_Devplant`.`TipoCuidado` (`idTipoCuidado`)
     ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `DER_Devplant`.`CuidadosPlantas`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `DER_Devplant`.`CuidadosPlantas` (
-  `idCuidadosPlantas` INT NOT NULL AUTO_INCREMENT,
-  `idPlantas` INT NOT NULL,
-  `idCuidados` INT NOT NULL,
-  PRIMARY KEY (`idCuidadosPlantas`),
-  INDEX `plantas_fk_idx` (`idPlantas` ASC) ,
-  INDEX `cuidados_fk_idx` (`idCuidados` ASC) ,
-  CONSTRAINT `plantas_fk`
-    FOREIGN KEY (`idPlantas`)
-    REFERENCES `DER_Devplant`.`Plantas` (`idPlantas`)
-    ON DELETE NO ACTION
     ON UPDATE NO ACTION,
-  CONSTRAINT `cuidados_fk`
-    FOREIGN KEY (`idCuidados`)
-    REFERENCES `DER_Devplant`.`Cuidados` (`idCuidados`)
+  CONSTRAINT `fk_cuidado_planta`
+    FOREIGN KEY (`idPlanta`)
+    REFERENCES `DER_Devplant`.`Plantas` (`idPlanta`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-
--- -----------------------------------------------------
--- Table `DER_Devplant`.`Plantas`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `DER_Devplant`.`Plantas` (
-  `idPlantas` INT NOT NULL AUTO_INCREMENT,
-  `nombrePlanta` VARCHAR(45) NOT NULL,
-  `idTipoPlanta` INT NOT NULL,
-  `idCliente` INT NOT NULL,
-  `idCuidadosPlantas` INT NOT NULL,
-  PRIMARY KEY (`idPlantas`),
-  INDEX `fk_planta_cliente_idx` (`idCliente` ASC) ,
-  INDEX `fk_planta_cuidadosPlantas_idx` (`idCuidadosPlantas` ASC),
-  INDEX `fk_planta_tipo_idx` (`idTipoPlanta` ASC) ,
-  CONSTRAINT `fk_planta_tipo`
-    FOREIGN KEY (`idTipoPlanta`)
-    REFERENCES `DER_Devplant`.`TipoPlantas` (`idTipoPlantas`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_planta_cliente`
-    FOREIGN KEY (`idCliente`)
-    REFERENCES `DER_Devplant`.`Clientes` (`idCliente`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_planta_cuidadosPlantas`
-    FOREIGN KEY (`idCuidadosPlantas`)
-    REFERENCES `DER_Devplant`.`CuidadosPlantas` (`idCuidadosPlantas`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
-
-ALTER TABLE `der_devplant`.`clientes` 
-ADD COLUMN `fechaBaja` DATETIME NULL AFTER `fechaNacimiento`;
-
-ALTER TABLE `der_devplant`.`cuidados` 
-ADD COLUMN `fechaBaja` DATETIME NULL AFTER `periodicidad`;
-
-ALTER TABLE `der_devplant`.`localidad` 
-ADD COLUMN `fechaBaja` DATETIME NULL AFTER `ciudad`;
-
-ALTER TABLE `der_devplant`.`plantas` 
-ADD COLUMN `fechaBaja` DATETIME NULL AFTER `idCliente`;
-
-ALTER TABLE `der_devplant`.`tipocuidado` 
-ADD COLUMN `fechaBaja` DATETIME NULL AFTER `descripcion`;
-
-ALTER TABLE `der_devplant`.`tipoplantas` 
-ADD COLUMN `fechaBaja` DATETIME NULL AFTER `descripcion`;
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
