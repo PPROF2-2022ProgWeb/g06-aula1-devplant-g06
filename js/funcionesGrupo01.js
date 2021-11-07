@@ -14,7 +14,7 @@ $(document).ready(function(){
       }); 
       
 
-      /*funcion calculo de fechas  */
+      /*funcion calculo de fechas hay 2 problemas, 1, se abre automaticamente la pagina de inicio y se lee el cartel de bienvenida, 2 una vez que se ingresa, el pop up se vuelve a abrir */
       
       function calculateAge() {
          var d = document.getElementById("date").value;
@@ -26,7 +26,7 @@ $(document).ready(function(){
             if (edad >= 18) {
                document.getElementById("resultado").innerHTML = " Bienvenido";
                
-               window.open('pop (2).html','_self');
+               window.open('popup_terminos.html','_self');
                
               
             } else
