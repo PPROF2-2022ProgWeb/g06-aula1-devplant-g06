@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+@media (max-width: 768px) {
+         /* Cuando esta en ese tamaño se agranda el tamaño del login un 25% mas de lo normal */
+         .form-control {
+           width: 75%;
+         }
+}
+@media (max-width: 480px) {
+         /* Cuando esta en ese tamaño se agranda el tamaño del login un 45% mas de lo normal */
+         .form-control {
+           width: 95%;
+         }
+}
+
+body {
+  background-image: url("../img/fondo.jpg");/* Ubicación de la imagen */
+  background-position: center center;/* Para dejar la imagen de fondo centrada, vertical y horizontalmente */
+  background-repeat: no-repeat;/* Para que la imagen de fondo no se repita */
+  background-attachment: fixed;/* La imagen se fija en la ventana de visualización para que la altura de la imagen no supere a la del contenido */
+  background-size: cover;/* La imagen de fondo se reescala automáticamente con el cambio del ancho de ventana del navegador */
+  background-color: #6c912d;/* Se muestra un color de fondo mientras se está cargando la imagende fondo o si hay problemas para cargarla */
+  display: flex;
+  min-height: 100vh;
+  
+}
+/*logo devplant*/
+.img {
+  width: auto;
+  height: 35px;
+  display: block;
+  margin: auto;
+  margin-top: 20px;
+}
+/*form- fondo negro transparente*/
+.row {
+  margin: auto;
+  max-width: 50%; 
+  padding: 45px 55px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background-color: #0000009c;
+  height: 496px;
+  width: 430px;
+  left: 460px;
+  top: 207px;
+  border-radius: 30px;
+}
+/*espacio donde se escribe usuario y contraseña*/
+.form-control {
+  display: flex;
+  padding: 8px;
+  width: 100%;
+  font-size: 14px;
+  background-color: #c4c4c459;
+  border-radius: 7px;
+  font-family: "roboto";
+  color: #e2e2e2;
+  }
+  /*color y tamaño de letra de usuario y contraseña fuera de la caja*/
+.form-label  {
+  color: #e2e2e2; 
+  font-family: "roboto";
+  font-weight: normal;
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+
+
+/*color y tamaño de terminos y condiciones*
+.form-check-label {
+  color: #e2e2e2; 
+  font-weight: normal;
+  font-family: "roboto";
+  font-size: 12px;
+  margin-top: 20px;
+}
+/*cuadradito verde de check
+#invalidCheck2{
+background-color: #6c912d;
+border: 0;
+margin-top: 23px;
+}*/
+
+
+
+/*boton de ingresar*/
+
+#ingresar {
+ background-color: #6c912d; /* Color del fondo del boton */
+ border: 0;
+ font-family: "roboto";
+ font-weight: normal;
+ font-size: 18 px;
+ color: #ffffff; /* Color de la fuente del boton */
+ cursor: pointer; /* Va aparecer una manito cuando se le pasa el mouse por encima */
+ border-radius: 30px; /* saca las puntas de los bordes */
+ padding: 10px;
+ margin-top: 35px;
+ margin-left: 5px;
+ width: 295px;
+
+
+ 
+}
+/*etiqueta p "si no esta registrado"*/
+.registro {
+  color: #e2e2e2; 
+  font-weight: normal;
+  font-family: "roboto";
+  font-size: 12px;
+  margin-top: 25px;
+  
+}
+/*palabra REGISTRARSE*/
+.registro a {
+color: #6c912d;
+font-family: "roboto";
+font-size: 14px;
+font-weight: bold;
+margin-top: 20px;
+}
+
+.inicio a{
+color: #6c912d;
+font-family: "roboto";
+font-size: 16px;
+font-weight: bold;
+margin-top: 20px;
+float: right;
+}
