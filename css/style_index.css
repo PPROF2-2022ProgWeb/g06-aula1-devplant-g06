@@ -234,3 +234,12 @@ input[type="submit"]:active {
   font-weight: normal;
   font-size: 16px;
 }
+
+/* estilo de enlace "terminos y condiciiones" */
+.terminos  {
+  
+  color: #6c912d;
+  margin: 20px;
+  
+  }
+  
