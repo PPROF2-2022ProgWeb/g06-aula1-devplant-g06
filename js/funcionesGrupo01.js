@@ -94,5 +94,6 @@ $(document).ready(function(){
        
        //funcion para redireccionar desde redireccion a index.html.
        function myFunction() {
+                       //Alert al mandar la consulta!
            setTimeout(function(){ location.href = "/index.html" }, 5000);  //Redireccionar despues de 5 segundos!
        }
