@@ -34,28 +34,18 @@ body {
 }
 /*form- fondo negro transparente*/
 .row {
-  margin: auto;
-  max-width: 50%; 
+  margin: auto; 
   padding: 45px 55px;
   border: 1px solid rgba(0, 0, 0, 0.2);
   background-color: #0000009c;
   height: 496px;
-  width: 430px;
+  width: 420px;
   left: 460px;
   top: 207px;
   border-radius: 30px;
 }
 /*espacio donde se escribe usuario y contraseña*/
-.form-control {
-  display: flex;
-  padding: 8px;
-  width: 100%;
-  font-size: 14px;
-  background-color: #c4c4c459;
-  border-radius: 7px;
-  font-family: "roboto";
-  color: #e2e2e2;
-  }
+
   /*color y tamaño de letra de usuario y contraseña fuera de la caja*/
 .form-label  {
   color: #e2e2e2; 
@@ -65,7 +55,9 @@ body {
   margin-top: 20px;
 }
 
-
+input{
+  width: 100% !important;
+}
 
 /*color y tamaño de terminos y condiciones*
 .form-check-label {
@@ -98,10 +90,7 @@ margin-top: 23px;
  padding: 10px;
  margin-top: 35px;
  margin-left: 5px;
- width: 295px;
-
-
- 
+ width: 100%;
 }
 /*etiqueta p "si no esta registrado"*/
 .registro {
