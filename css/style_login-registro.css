@@ -1,17 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
-@media (max-width: 768px) {
-         /* Cuando esta en ese tamaño se agranda el tamaño del login un 25% mas de lo normal */
-         .form-control {
-           width: 75%;
-         }
-}
-@media (max-width: 480px) {
-         /* Cuando esta en ese tamaño se agranda el tamaño del login un 45% mas de lo normal */
-         .form-control {
-           width: 95%;
-         }
-}
+
 
 body {
   background-image: url("../img/fondo.jpg");/* Ubicación de la imagen */
@@ -38,7 +27,7 @@ body {
   padding: 45px 55px;
   border: 1px solid rgba(0, 0, 0, 0.2);
   background-color: #0000009c;
-  height: 496px;
+  height: auto;
   width: 420px;
   left: 460px;
   top: 207px;
@@ -48,12 +37,14 @@ body {
 
   /*color y tamaño de letra de usuario y contraseña fuera de la caja*/
 .form-label  {
-  color: #e2e2e2; 
+  color: #e2e2e2 ;
   font-family: "roboto";
   font-weight: normal;
   font-size: 14px;
   margin-top: 20px;
 }
+
+
 
 input{
   width: 100% !important;
@@ -92,6 +83,23 @@ margin-top: 23px;
  margin-left: 5px;
  width: 100%;
 }
+
+#registrar {
+  background-color: #6c912d; /* Color del fondo del boton */
+  border: 0;
+  font-family: "roboto";
+  font-weight: normal;
+  font-size: 18 px;
+  color: #ffffff !important; /* Color de la fuente del boton */
+  cursor: pointer; /* Va aparecer una manito cuando se le pasa el mouse por encima */
+  border-radius: 30px; /* saca las puntas de los bordes */
+  padding: 10px;
+  margin-top: 35px;
+  margin-left: 5px;
+  width: 100%;
+ }
+
+
 /*etiqueta p "si no esta registrado"*/
 .registro {
   color: #e2e2e2; 
