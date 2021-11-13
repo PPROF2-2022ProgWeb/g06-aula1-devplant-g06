@@ -1,37 +1,88 @@
 <!DOCTYPE html>
-<html lang="es">
-    <head>
-        <title>Login</title>
+<html lang="en">
 
-        <!-- Required meta tags -->
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Esta sección de la página nos permite ingresar a nuestro usuario dentro de la plataforma">
-        <meta name="keywords" content="inicio, ingresar, usuario, vivero, online"> 
+<head>
+         
+         <title>Login</title>
 
-        <!-- CSS -->
-        <link rel="StyleSheet" media="screen" type="text/css" href="css/style_login_registro.css">
+         <meta charset="UTF-8">
+         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <meta name="description" content="Esta sección de la página nos permite ingresar a nuestro usuario dentro de la plataforma">
+         <meta name="keywords" content="inicio, ingresar, usuario, vivero, online">
 
-        <!-- Agregar favicons -->
-        <link rel="Shortcut icon" href="img/favicon-16x16.png">    
-    </head>
-    <body>
-        <form action="index.html" >
-            <img class="img" src="img/logo_devplant.png" alt="Logo-devplant">
-            <div class="input1">
-                <label for="usuario"><p class="label">Usuario</p></label>
-                <input type="text" placeholder ="📧 Ingresá tu e-mail" name = "usuario" id="usuario">
-            </div>
-            <div class="input2">
-                <label for="password"></label><p class="label">Constraseña</p></label>
-                <input type="password" placeholder ="🔐 Ingresá tu contraseña" name = "password" id="password" maxlength="10">
-            </div> 
-            <div class="botones">
-                <input type="submit" value="INGRESAR">
-            </div>
-            <p class="registro">Sino está registrado haga clic en el botón <a href="registro.html" >registrarse</a></p>
-            
-        </form>
-    </body>
+         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+         <!-- CSS -->
+         <link rel="StyleSheet" media="screen" type="text/css" href="css/style_login-registro.css">
+
+         <!-- favicon -->
+         <link rel="Shortcut icon" href="img/favicon-16x16.png">
+         
+</head>
+
+<body>
+       
+<!-- empieza el formulario -->
+         <form action="./index.html" class="row justify-content-center h-100">
+                  <!-- logo devplant -->
+                  <img class="img" src="./img/logo_devplant.png" alt="Logo-devplant">
+
+                  <!-- label donde se escribe el usuario -->
+
+                  <div class="col-md-12">
+
+                           <label for="usuario" class="form-label">Usuario</label>
+                           <input type="text" placeholder="📧 Ingresá tu e-mail" class="form-control" id="usuario" required>
+                  </div>
+
+                  <!-- label donde se escribe la contraseña -->
+
+                  <div class="col-md-12">
+
+                           <label for="password" class="form-label">Constraseña</label>
+                           <input type="text" placeholder="🔐 Ingresá tu contraseña" maxlength="10" class="form-control" id="password" required>
+                  </div>
+
+                  <!--  input para aceptar terminos y condiciones  -->
+
+
+                           <!--  <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+
+                                    <label class="form-check-label" for="invalidCheck2"> Estoy de acuerdo con los términos y condiciones.   </label>
+                           </div>
+                  </div> -->
+
+                  <!-- boton de ingreso al index -->
+
+                  <div class="col-md-12">
+                           
+                         <button class="btn btn-primary" type="submit" id="ingresar">INGRESAR</button> 
+                  </div>
+                  <!-- link que redirige a pagina de registro -->
+
+                  <div class="col-md-12">
+
+                           <p class="registro" style="font-size: 15px;">No esta registrado? <a href="registro.html" style="padding-left: 10px;">REGISTRARSE</a></p>
+                   </div>
+
+                   <div class="col-md-12 inicio">
+                   <a href="./index.html">Volver al inicio</a>
+                   </div>
+              </div>
+         </form>
+
+<!-- termina el formulario -->
+
+
+
+
+
+         
+         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+
+</body>
+
 </html>
