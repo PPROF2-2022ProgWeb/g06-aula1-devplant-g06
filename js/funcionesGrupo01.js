@@ -1,18 +1,19 @@
-/*funcion para mostrar pop up  */
-$(document).ready(function () {
-  function showPopup() {
-    $(".popup").addClass("show");
-    $(".popup1").addClass("show");
+// funcion para mostrar pop up, echa en JS con libreria JQuery.
+$(document).ready(function () {             //Función que hace que se muestre la ventana emergente en la página de terminos y condiciones.
+  function showPopup() {                    // le damos nombre a la función
+    $(".popup").addClass("show");           //llamamos a la clase popup (que es la imagen que cubre todo la pagina de color gris transparente)
+    $(".popup1").addClass("show");          //lamamos a la clase popup1 (que es la ventana modal que contiene a la función calculateAge, que es la que nos dice que si es o no mayor de edad)
   }
-  $("#close").click(function () {
-    $(".popup").removeClass("show");
-    $(".popup1").removeClass("show");
+  $("#close").click(function () {           //funcion que hace que funcione el "close" (cruz) para cerrar la ventana emergente.
+    $(".popup").removeClass("show");         //con el removeClass, hacemos desaparecer el bloqueo de la ventana modal una vez que se da válido el id"resultado" de la funcion de JS.
+    $(".popup1").removeClass("show");       
   });
-  setTimeout(showPopup, 2000);
+  
+  setTimeout(showPopup, 2000);  // tiempo desde que se abre la página y aparece el popup.
+
 });
 
-/*funcion calculo de fechas hay 2 problemas, 1, se abre automaticamente la pagina de inicio y se lee el cartel de bienvenida, 2 una vez que se ingresa, el pop up se vuelve a abrir */
-
+// Problema pop up: una vez que se ingresa, el pop up se vuelve a abrir y solo desaparece si se cierra con el close. 
 function calculateAge() {
   var d = document.getElementById("date").value;
   var inDate = new Date(d);
@@ -21,13 +22,14 @@ function calculateAge() {
   var fec_anio = fec_actual.getFullYear();
   var edad = fec_anio - anio;
   if (edad >= 18) {
-    document.getElementById("resultado").innerHTML = " Bienvenido";
-
-    window.open("popup_terminos.html", "_self");
+    document.getElementById("resultado").innerHTML = " ";
+  
+   window.open("popup_terminos.html", "_self");
   } else {
     document.getElementById("resultado").innerHTML =
       "Para navegar en DevPlant tenes que ser mayor de 18 años";
   }
+  
 }
 
 function validarFormulario() {
