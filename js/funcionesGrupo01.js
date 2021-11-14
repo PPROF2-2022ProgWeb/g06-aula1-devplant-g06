@@ -83,7 +83,9 @@ function alerta() {
     //Alert al mandar la consulta!
     window.alert("Gracias por su consulta!");
   }
+
 }
+ 
 
 //funcion para redireccionar desde redireccion a index.html.
 function myFunction() {
@@ -91,13 +93,13 @@ function myFunction() {
   setTimeout(function () {
     location.href = "/index.html";
   }, 5000); //Redireccionar despues de 5 segundos!
-}
+ }
 
 //evento para que las fotos de las plantas cambien cuando se pasa el cursos por encima
 
   //PLANTA1
     function cambiarImagen1(){
-      const imagen=document.getElementById("planta1")
+      const imagen=document.getElementById("planta1");
       imagen.src="img/planta1a.jpg"
     }
     function volverImagen1(){
@@ -117,10 +119,20 @@ function myFunction() {
     
     //PLANTA3
     function cambiarImagen3(){
-      const imagen=document.getElementById("planta3")
-      imagen.src="img/planta3c.jpg"
-    }
-    function volverImagen3(){
-      const imagen=document.getElementById("planta3")
-      imagen.src="img/planta3.jpg"
-    }
+      const imagen=document.getElementById("planta3");
+      imagen.src="img/planta3c.jpg";
+    };
+    function volverImagen3() {
+      const imagen=document.getElementById("planta3");
+      imagen.src="img/planta3.jpg";
+
+      };
+
+
+function captura(){
+        var usuario= document.getElementById("usuario").value;
+        var password = document.getElementById("password").value
+        alert(usuario);
+        alert (password);
+
+      }
