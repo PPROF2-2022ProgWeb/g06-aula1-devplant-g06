@@ -26,7 +26,7 @@
 <body>
 
     <!-- empieza el formulario -->
-    <form action="login.html" class="row justify-content-center h-100">
+    <form action="login.html" class="row justify-content-center h-100"  >
         <!-- logo devplant -->
         <img class="img" src="./img/logo_devplant.png" alt="Logo-devplant">
 
@@ -34,8 +34,12 @@
 
         <div class="col-md-12">
 
-            <label for="nombre" class="form-label">Nombre y apellido</label>
-            <input type="text" placeholder ="🌿 Ingresá tu nombre y apellido" name = "nombre" id="nombre" class="form-control">
+            <label for="nombre" class="form-label">Nombre</label>
+            <input type="text" placeholder ="🌿 Ingresá tu nombre" name = "nombre" id="nombre" class="form-control">
+        </div>
+        <div class="col-md-12">
+            <label for="Apellido" class="form-label">Apellido</label>
+            <input type="text" placeholder="🌿 Ingresá tu Apellido" name="Apellido" id="apellido" class="form-control">
         </div>
 
 
@@ -70,13 +74,18 @@
             <input type="password" placeholder="🔐 Ingresa tu contraseña" name="password" id="password" maxlength="10" class="form-control">
         </div>
         <div class="botones">
-            <button class="btn btn-primary" type="submit" id="registrar">Registrar</button> 
+            <button class="btn btn-primary" type="submit" id="registrar" >Registrar</button> 
         </div>  
         <div class="col-md-12 justify-content-center">
             <p class="registro" style="font-size: 15px;">Esta registrado? <a href="login.html" style="padding-left: 10px;"> ¡INGRESE AQUI!</a></p>
         </div>
+        
        
-
+        <!-- Redirige a pagina de inicio -->
+        <div class="col-md-12 inicio">
+            <a href="./index.html">Volver al inicio</a>
+            </div>
+        
     </form>
 
     <!-- termina el formulario -->
