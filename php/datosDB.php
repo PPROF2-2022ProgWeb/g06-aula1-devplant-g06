@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+<?php
+define('SERVER', 'localhost');
+define('USER', 'root');
+define('PASS', '');
+define('DB', 'der_devplant');
+$conector = mysqli_connect(SERVER, USER, PASS, DB);
+
+?> 
+=======
 <?php // apertura de php
 
 $host = "localhost" ; // servidor remoto
@@ -14,3 +24,4 @@ if ( $conn -> connect_error ) { // preguntamos si la relación tuvo un error.
 }
 
 ?>
+>>>>>>> a3d76be0d1be08283f9918ecccedaf7cbdbfa251
