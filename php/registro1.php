@@ -1,3 +1,4 @@
+<<<<<<< HEAD
  <!DOCTYPE html>
 <html lang="en">
 
@@ -11,10 +12,14 @@
    
 </head>
 
+
 <body> 
 
 <?php
 //definimos las variables que tenemos en la tabla clientes de la base de datos y las que le corresponden en el formulario de registro, usamos el _POST para tomar los datos del registro.html.
+
+
+
 
     $email = $_POST["email"];
     $password = $_POST["password"];
@@ -25,7 +30,7 @@
     $fechaNacimiento = $_POST["fechaNacimiento"];
 
 
-    
+
  //le indicamos que imprima por pantalla los datos ingresados.   
 
     print "<p>Su eMail es <strong>$email</strong>.</p>\n";
@@ -43,6 +48,7 @@
     print "<p>Su fecha de nacimiento es <strong>$fechaNacimiento</strong>.</p>\n";
     print "\n";
 
+
     // con el include, llamamos al archivo donde estan los datos de la base de datos.
     
     include("datosDB.php"); 
@@ -56,6 +62,7 @@
 
 //la variable resultado nos responderá si se ha agregado o no el nuevo registro
     
+
     $resultado = mysqli_query($conector, $consulta);
 
 
@@ -64,7 +71,6 @@
     } else {
         echo "Error: " . $consulta . "<br>" . mysqli_error($connection);
     }
-    
-    //cerramos la conexión con la base de datos
+
   mysqli_close($conector);
 ?>
