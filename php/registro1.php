@@ -1,4 +1,5 @@
-<!-- <!DOCTYPE html>
+<<<<<<< HEAD
+ <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -11,11 +12,14 @@
    
 </head>
 
-<body> -->
+
+<body> 
 
 <?php
+//definimos las variables que tenemos en la tabla clientes de la base de datos y las que le corresponden en el formulario de registro, usamos el _POST para tomar los datos del registro.html.
 
-    // require_once("pureba.php");
+
+
 
     $email = $_POST["email"];
     $password = $_POST["password"];
@@ -26,9 +30,8 @@
     $fechaNacimiento = $_POST["fechaNacimiento"];
 
 
-    // $db = new DataBase();
-    // $connection = $db->getConnection();
-    
+
+ //le indicamos que imprima por pantalla los datos ingresados.   
 
     print "<p>Su eMail es <strong>$email</strong>.</p>\n";
     print "\n";
@@ -45,13 +48,21 @@
     print "<p>Su fecha de nacimiento es <strong>$fechaNacimiento</strong>.</p>\n";
     print "\n";
 
-    //Incluimos los datos de conexión  y las funciones.
-    include("datosDB.php"); // variable de conexión a la base de datos
 
+    // con el include, llamamos al archivo donde estan los datos de la base de datos.
+    
+    include("datosDB.php"); 
+
+//definimos una variable con los datos que pedimos. con el INSERT TO, se agregan los datos a la tabla seleccionada
+//con el VALUES declaramos los valores que serán insertados.
 
     $consulta = "INSERT INTO clientes (email, password, nombre, apellido, provincia, pais, idLocalidad, fechaNacimiento) 
                     VALUES ('$email','$password','$nombre','$apellido','$provincia','$pais', 1, '$fechaNacimiento')";
-    // echo $consulta;
+
+
+//la variable resultado nos responderá si se ha agregado o no el nuevo registro
+    
+
     $resultado = mysqli_query($conector, $consulta);
 
 
@@ -60,5 +71,6 @@
     } else {
         echo "Error: " . $consulta . "<br>" . mysqli_error($connection);
     }
+
   mysqli_close($conector);
 ?>
