@@ -1,3 +1,5 @@
+/* MODULO DEL INICIO DEL SITIO */
+
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
