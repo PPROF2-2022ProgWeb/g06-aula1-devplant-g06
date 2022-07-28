@@ -10,11 +10,13 @@ import { GaleriaComponent } from './components/galeria/galeria.component';
 
 
 
+
 @NgModule({
   declarations: [
     HeaderComponent,
     FooterComponent,
     GaleriaComponent,
+ 
 
   ],
   imports: [
