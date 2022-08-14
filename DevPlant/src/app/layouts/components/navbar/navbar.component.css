@@ -1,0 +1,33 @@
+.nav ul li a{
+  color: #6c912d  !important;
+  transition: all 0.4s linear;
+  border-radius: 4px;
+
+}
+
+.nav li{
+  margin: 0 5px 0 5px;
+}
+
+.nav ul li a:hover{
+  background: hsla(82, 53%, 37%, 0.7);
+  color: white !important;
+}
+
+
+
+
+
+
+
+
+
+.navbar{
+    border-radius: 25px;
+}
+
+
+
+.logo{
+  padding-bottom: 5px;
+}
