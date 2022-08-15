@@ -6,10 +6,12 @@ import { ECommerceComponent } from './components/e-commerce/e-commerce.component
 
 
 
+
 @NgModule({
   declarations: [
     HomeComponent,
     ECommerceComponent
+
   ],
   imports: [
     CommonModule,
