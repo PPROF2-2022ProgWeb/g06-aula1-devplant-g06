@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PagesModule } from './pages/pages.module';
+import { ECommerceModule } from './e-commerce/e-commerce.module';
 
 
 
@@ -14,7 +15,8 @@ import { PagesModule } from './pages/pages.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    PagesModule
+    PagesModule,
+    ECommerceModule
   ],
   providers: [],
   bootstrap: [AppComponent]
