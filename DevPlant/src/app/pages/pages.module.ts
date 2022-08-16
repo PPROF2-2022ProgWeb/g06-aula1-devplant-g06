@@ -3,15 +3,17 @@ import { CommonModule } from '@angular/common';
 import { HomeComponent } from './components/home/home.component';
 import { LayoutsModule } from '../layouts/layouts.module';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
+import { ECommerceModule } from '../e-commerce/e-commerce.module';
 
 @NgModule({
   declarations: [
     HomeComponent,
-    ContactUsComponent,
+    ContactUsComponent        
   ],
   imports: [
     CommonModule,
-    LayoutsModule
+    LayoutsModule,
+    ECommerceModule
   ],
   
   exports: [
