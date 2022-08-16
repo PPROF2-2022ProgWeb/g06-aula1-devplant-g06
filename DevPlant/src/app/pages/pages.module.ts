@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HomeComponent } from './components/home/home.component';
 import { LayoutsModule } from '../layouts/layouts.module';
 import { ECommerceComponent } from './components/e-commerce/e-commerce.component';
+import { ContactUsComponent } from './components/contact-us/contact-us.component';
 
 
 
@@ -10,7 +11,8 @@ import { ECommerceComponent } from './components/e-commerce/e-commerce.component
 @NgModule({
   declarations: [
     HomeComponent,
-    ECommerceComponent
+    ECommerceComponent,
+    ContactUsComponent
 
   ],
   imports: [
@@ -19,7 +21,8 @@ import { ECommerceComponent } from './components/e-commerce/e-commerce.component
   ],
   exports: [
     HomeComponent,
-    ECommerceComponent
+    ECommerceComponent,
+    ContactUsComponent
   ]
 })
 export class PagesModule { }
