@@ -5,6 +5,7 @@ import { LayoutsModule } from '../layouts/layouts.module';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import { ECommerceModule } from '../e-commerce/e-commerce.module';
 
+
 @NgModule({
   declarations: [
     HomeComponent,
