@@ -12,9 +12,9 @@ div.container-fluid{
 
 .header {
     width: 100%;
-    height: 550px;
+    height: 300px;
     padding-top: 15px;
-    background-image: url("../../../../assets/banner.jpg");
+    background-color:#dfe6e0;
     background-attachment: fixed;
     background-size: cover;
     background-position: center center;
@@ -24,21 +24,21 @@ div.container-fluid{
 
 .vivero {
   width: 96%;
-  font-size: 26px;
+  font-size: 20px;
   text-align: right;
-  color: #ffffff;
+  color: #000000;
 
-  margin-top: 8.5rem;
+  margin-top: 15px;
   margin-right: 3.5rem;
 }
 
 .devplant {
   width: 96%;
 
-  font-size: 60px;
+  font-size: 50px;
   font-weight: bold;
   text-align: right;
-  color: #ffffff;
+  color: #000000;
 
   margin-top: 3rem;
   margin-right: 3.5rem;
@@ -47,9 +47,9 @@ div.container-fluid{
 .tips {
   width: 96%;
 
-  font-size: 1.7rem;
+  font-size: 15px;
   text-align: right;
-  color: #ffffff;
+  color: #000000;
 
   margin-top: 3rem;
   margin-right: 3.5rem;

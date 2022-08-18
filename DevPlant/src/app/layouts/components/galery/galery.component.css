@@ -1,12 +1,15 @@
 #galeria img{
   width: 100%;
+  border: 5px solid #abb0ac;
 }
 #galeria .col-lg-4{
   margin: 0;
   padding-top: 25px;
+   
 }
 #galeria img:hover {
-  border: 5px solid #f7f7f7;
+  border: 5px solid #dfe6e0;
+  
 }
 
 #galeria a{
