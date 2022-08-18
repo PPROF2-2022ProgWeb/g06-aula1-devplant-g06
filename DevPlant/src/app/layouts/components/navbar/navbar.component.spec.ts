@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { TiendaComponent } from 'src/app/e-commerce/tienda/tienda.component';
+
 
 import { NavbarComponent } from './navbar.component';
 
