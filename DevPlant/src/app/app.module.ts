@@ -14,15 +14,17 @@ import { CartComponent } from './e-commerce/cart/cart.component';
 @NgModule({
   declarations: [
     AppComponent,
-    
-    
-    
+
+
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     PagesModule,
-    
+    LayoutsModule,
+    AppRoutingModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
