@@ -9,7 +9,7 @@ const routes: Routes = [
   { path: 'tienda', component: TiendaComponent },
   { path: 'cart', component: CartComponent }
 
-
+]
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
