@@ -7,9 +7,11 @@ import { LayoutsModule } from './layouts/layouts.module';
 import { ECommerceModule } from './e-commerce/e-commerce.module';
 import { RouterModule } from '@angular/router';
 
+
 @NgModule({
   declarations: [
     AppComponent,
+   
     
   ],
   imports: [
