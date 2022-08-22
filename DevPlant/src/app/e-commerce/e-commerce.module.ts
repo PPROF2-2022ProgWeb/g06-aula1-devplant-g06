@@ -1,24 +1,24 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-import { CartComponent } from './cart/cart.component';
-
 import { RouterModule } from '@angular/router';
+import { CartComponent } from './cart/cart.component';
+import { ShopComponent } from './shop/shop.component';
 
 
 
 @NgModule({
   declarations: [
     ShopComponent,
-    CartComponent],
+    CartComponent
+  ],
 
   imports: [
     CommonModule,
-    RouterModule  ],
+    RouterModule
+  ],
+
   exports: [
-    CartComponent,
-    
-    
+  
   ]
 })
 export class ECommerceModule { }

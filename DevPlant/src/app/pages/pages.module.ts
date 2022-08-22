@@ -4,8 +4,7 @@ import { LayoutsModule } from '../layouts/layouts.module';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import { AppRoutingModule } from '../app-routing.module';
 import { HomeComponent } from './components/home/home.component';
-
-import { CartComponent } from '../e-commerce/cart/cart.component';
+import { ECommerceModule } from '../e-commerce/e-commerce.module';
 import { RouterModule } from '@angular/router';
 
 
@@ -19,7 +18,7 @@ import { RouterModule } from '@angular/router';
     AppRoutingModule,
     CommonModule,
     LayoutsModule,
-    
+    ECommerceModule,
     
 
     //Se importa el approutingmodule asi funciona en pages module
@@ -28,9 +27,9 @@ import { RouterModule } from '@angular/router';
 
   exports: [
     ContactUsComponent,
+   
 
 
-
-  ]
+  ],
 })
 export class PagesModule { }
