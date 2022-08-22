@@ -1,42 +1,34 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HomeComponent } from './components/home/home.component';
+
 import { LayoutsModule } from '../layouts/layouts.module';
-<<<<<<< HEAD
-
-=======
-import { ECommerceComponent } from './components/e-commerce/e-commerce.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
->>>>>>> 06fd021fbeb173b881a655411006b37748893cc1
-
+import { ECommerceModule } from '../e-commerce/e-commerce.module';
+import { AppRoutingModule } from '../app-routing.module';
+import { HomeComponent } from './components/home/home.component';
+import { RouterModule } from '@angular/router';
 
 
 
 @NgModule({
   declarations: [
-<<<<<<< HEAD
-    HomeComponent
-   
-=======
+    ContactUsComponent,
     HomeComponent,
-    ECommerceComponent,
-    ContactUsComponent
 
->>>>>>> 06fd021fbeb173b881a655411006b37748893cc1
   ],
   imports: [
     CommonModule,
-    LayoutsModule
+    LayoutsModule,
+    ECommerceModule,
+    //Se importa el approutingmodule asi funciona en pages module
+    RouterModule
   ],
-  
+
   exports: [
-    HomeComponent,
-<<<<<<< HEAD
-    
-=======
-    ECommerceComponent,
-    ContactUsComponent
->>>>>>> 06fd021fbeb173b881a655411006b37748893cc1
+    ContactUsComponent,
+
+
+
   ]
 })
 export class PagesModule { }

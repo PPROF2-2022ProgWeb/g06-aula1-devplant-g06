@@ -5,6 +5,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ContentComponent } from './components/content/content.component';
 import { GaleryComponent } from './components/galery/galery.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -17,7 +18,10 @@ import { GaleryComponent } from './components/galery/galery.component';
     GaleryComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    //Se importa el approutingmodule asi funciona en layouts module
+    RouterModule,
+
   ],
   exports: [
     HeaderComponent,
