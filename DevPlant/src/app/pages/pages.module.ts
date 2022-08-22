@@ -7,6 +7,7 @@ import { HomeComponent } from './components/home/home.component';
 import { ECommerceModule } from '../e-commerce/e-commerce.module';
 import { RouterModule } from '@angular/router';
 import { AboutUsComponent } from './components/about-us/about-us.component';
+import { FaqsComponent } from './components/faqs/faqs.component';
 
 
 
@@ -14,7 +15,8 @@ import { AboutUsComponent } from './components/about-us/about-us.component';
   declarations: [
     ContactUsComponent,
     HomeComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    FaqsComponent
   ],
   imports: [
     AppRoutingModule,
@@ -29,7 +31,8 @@ import { AboutUsComponent } from './components/about-us/about-us.component';
 
   exports: [
     ContactUsComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    FaqsComponent
    
 
 
