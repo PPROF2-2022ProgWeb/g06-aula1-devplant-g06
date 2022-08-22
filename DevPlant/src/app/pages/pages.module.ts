@@ -8,6 +8,8 @@ import { ECommerceModule } from '../e-commerce/e-commerce.module';
 import { RouterModule } from '@angular/router';
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { FaqsComponent } from './components/faqs/faqs.component';
+import { BlogComponent } from './components/blog/blog.component';
+import { AccountComponent } from './components/account/account.component';
 
 
 
@@ -16,7 +18,9 @@ import { FaqsComponent } from './components/faqs/faqs.component';
     ContactUsComponent,
     HomeComponent,
     AboutUsComponent,
-    FaqsComponent
+    FaqsComponent,
+    BlogComponent,
+    AccountComponent
   ],
   imports: [
     AppRoutingModule,
@@ -32,7 +36,9 @@ import { FaqsComponent } from './components/faqs/faqs.component';
   exports: [
     ContactUsComponent,
     AboutUsComponent,
-    FaqsComponent
+    FaqsComponent,
+    BlogComponent,
+    AccountComponent
    
 
 

@@ -6,6 +6,8 @@ import { HomeComponent } from './pages/components/home/home.component';
 import { CartComponent } from './e-commerce/cart/cart.component';
 import { ShopComponent } from './e-commerce/shop/shop.component';
 import { FaqsComponent } from './pages/components/faqs/faqs.component';
+import { BlogComponent } from './pages/components/blog/blog.component';
+import { AccountComponent } from './pages/components/account/account.component';
 
 const routes: Routes = [
 
@@ -16,6 +18,8 @@ const routes: Routes = [
   {path: 'cart', component: CartComponent},
   {path: 'about-us', component: AboutUsComponent},
   {path: 'faqs', component: FaqsComponent},
+  {path: 'blog', component: BlogComponent},
+  {path: 'account', component: AccountComponent},
 
 
 
