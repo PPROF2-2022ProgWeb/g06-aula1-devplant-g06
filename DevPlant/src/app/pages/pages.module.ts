@@ -14,9 +14,6 @@ import { RouterModule } from '@angular/router';
   declarations: [
     ContactUsComponent,
     HomeComponent,
-   
-    CartComponent
-
   ],
   imports: [
     AppRoutingModule,

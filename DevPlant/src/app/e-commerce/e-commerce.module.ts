@@ -9,9 +9,9 @@ import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
-    CartComponent,
-    
-  ],
+    ShopComponent,
+    CartComponent],
+
   imports: [
     CommonModule,
     RouterModule  ],
