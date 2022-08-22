@@ -6,6 +6,7 @@ import { AppRoutingModule } from '../app-routing.module';
 import { HomeComponent } from './components/home/home.component';
 import { ECommerceModule } from '../e-commerce/e-commerce.module';
 import { RouterModule } from '@angular/router';
+import { AboutUsComponent } from './components/about-us/about-us.component';
 
 
 
@@ -13,6 +14,7 @@ import { RouterModule } from '@angular/router';
   declarations: [
     ContactUsComponent,
     HomeComponent,
+    AboutUsComponent
   ],
   imports: [
     AppRoutingModule,
@@ -27,6 +29,7 @@ import { RouterModule } from '@angular/router';
 
   exports: [
     ContactUsComponent,
+    AboutUsComponent
    
 
 
