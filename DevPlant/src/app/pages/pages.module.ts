@@ -7,6 +7,8 @@ import { ECommerceModule } from '../e-commerce/e-commerce.module';
 import { AppRoutingModule } from '../app-routing.module';
 import { HomeComponent } from './components/home/home.component';
 import { RouterModule } from '@angular/router';
+import { TiendaComponent } from '../e-commerce/tienda/tienda.component';
+import { CartComponent } from '../e-commerce/cart/cart.component';
 
 
 
@@ -14,12 +16,16 @@ import { RouterModule } from '@angular/router';
   declarations: [
     ContactUsComponent,
     HomeComponent,
+    TiendaComponent,
+    CartComponent
 
   ],
   imports: [
+    AppRoutingModule,
     CommonModule,
     LayoutsModule,
-    ECommerceModule,
+    
+
     //Se importa el approutingmodule asi funciona en pages module
     RouterModule
   ],
