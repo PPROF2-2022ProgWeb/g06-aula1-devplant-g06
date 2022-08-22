@@ -38,7 +38,7 @@ import { AccountComponent } from './components/account/account.component';
     AboutUsComponent,
     FaqsComponent,
     BlogComponent,
-    AccountComponent
+    AccountComponent,
    
 
 
