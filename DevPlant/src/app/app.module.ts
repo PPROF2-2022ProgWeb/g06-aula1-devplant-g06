@@ -23,8 +23,6 @@ import { CartComponent } from './e-commerce/cart/cart.component';
     AppRoutingModule,
     PagesModule,
     LayoutsModule,
-    AppRoutingModule
-
   ],
   providers: [],
   bootstrap: [AppComponent]

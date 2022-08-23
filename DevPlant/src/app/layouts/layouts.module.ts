@@ -6,6 +6,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { ContentComponent } from './components/content/content.component';
 import { GaleryComponent } from './components/galery/galery.component';
 import { RouterModule } from '@angular/router';
+import { FnavbarComponent } from './components/fnavbar/fnavbar.component';
 
 
 
@@ -15,7 +16,8 @@ import { RouterModule } from '@angular/router';
     FooterComponent,
     NavbarComponent,
     ContentComponent,
-    GaleryComponent
+    GaleryComponent,
+    FnavbarComponent
   ],
   imports: [
     CommonModule,
@@ -28,7 +30,8 @@ import { RouterModule } from '@angular/router';
     ContentComponent,
     FooterComponent,
     NavbarComponent,
-    GaleryComponent
+    GaleryComponent,
+    FnavbarComponent
   ]
 })
 export class LayoutsModule { }
