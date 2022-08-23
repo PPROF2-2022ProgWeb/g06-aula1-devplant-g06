@@ -1,0 +1,12 @@
+#catalogo img{
+         width: 75%;
+       }
+       #catalogo .col{
+         margin: 0;
+         padding-top: 25px;
+       }
+       #catalogo img:hover {
+         border: 5px solid #f7f7f7;
+       }
+       
+       
