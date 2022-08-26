@@ -1,12 +1,17 @@
-#catalogo img{
-         width: 75%;
-       }
-       #catalogo .col{
-         margin: 0;
-         padding-top: 25px;
-       }
-       #catalogo img:hover {
-         border: 5px solid #f7f7f7;
-       }
-       
-       
+.container{
+  width: 100%;
+  margin-top: 5%;
+  margin-left: 5em;
+ 
+}
+.col{
+  margin-block-end: 5em;
+}
+.card {
+  width: 18rem;
+  
+}
+.img{
+ width: 18rem;
+ height: 18rem;
+}
