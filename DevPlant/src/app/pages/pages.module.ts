@@ -10,6 +10,9 @@ import { AboutUsComponent } from './components/about-us/about-us.component';
 import { FaqsComponent } from './components/faqs/faqs.component';
 import { BlogComponent } from './components/blog/blog.component';
 import { AccountComponent } from './components/account/account.component';
+import { LogInComponent } from './components/log-in/log-in.component';
+import { CheckInComponent } from './components/check-in/check-in.component';
+
 
 
 
@@ -20,7 +23,9 @@ import { AccountComponent } from './components/account/account.component';
     AboutUsComponent,
     FaqsComponent,
     BlogComponent,
-    AccountComponent
+    AccountComponent,
+    LogInComponent,
+    CheckInComponent
   ],
   imports: [
     AppRoutingModule,
@@ -39,6 +44,8 @@ import { AccountComponent } from './components/account/account.component';
     FaqsComponent,
     BlogComponent,
     AccountComponent,
+    LogInComponent,
+    CheckInComponent
    
 
 

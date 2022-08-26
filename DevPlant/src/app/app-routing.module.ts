@@ -8,6 +8,8 @@ import { ShopComponent } from './e-commerce/shop/shop.component';
 import { FaqsComponent } from './pages/components/faqs/faqs.component';
 import { BlogComponent } from './pages/components/blog/blog.component';
 import { AccountComponent } from './pages/components/account/account.component';
+import { LogInComponent } from './pages/components/log-in/log-in.component';
+import { CheckInComponent } from './pages/components/check-in/check-in.component';
 
 const routes: Routes = [
 
@@ -20,9 +22,8 @@ const routes: Routes = [
   {path: 'faqs', component: FaqsComponent},
   {path: 'blog', component: BlogComponent},
   {path: 'account', component: AccountComponent},
-
-
-
+  {path: 'LogIn', component:LogInComponent},
+  {path: 'CheckIn', component:CheckInComponent},
 
 ];
 
