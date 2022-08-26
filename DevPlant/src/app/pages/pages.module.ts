@@ -32,7 +32,7 @@ import { CheckInComponent } from './components/check-in/check-in.component';
     CommonModule,
     LayoutsModule,
     ECommerceModule,
-    
+
 
     //Se importa el approutingmodule asi funciona en pages module
     RouterModule
@@ -46,7 +46,7 @@ import { CheckInComponent } from './components/check-in/check-in.component';
     AccountComponent,
     LogInComponent,
     CheckInComponent
-   
+
 
 
   ],
