@@ -5,11 +5,12 @@
 <!--  3- arreglar los botones de comprar y que se carguen al carrito  -->
 <!--  4- arreglar los botones de guardar en fav y que se guarden en narnia  -->
 <!--  5- poner la descripción  a las fotos, o un desplegable -->
+<!--  6- Acomodar la tabla de carrito de compra en algun lugar mejor y los botones comprar de cada producto deberian plasmarse en esa tabla y el la pagina de carrito -->
 
-<div class="row">
+<div class="row ">
   <div class="container">
     <div class="row row-cols-4">
-
+      
       <div class="col">
         <div class="card">
           <img src="../../../assets/DRACAENAPALODEAGUA1.jpg" class="img" alt="palo de agua">
@@ -97,8 +98,34 @@
           </div>
         </div>
     <div>
-      <a class="btn btn-primary" href="../cart/cart.component.html" role="button">Ir al carrito</a>
+      
+
+     <div>
+      <h3>Carrito de Compras</h3>
+      <table class="table table-primary table-striped">
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Cantidad</th>
+            <th>Precio</th>
+          </tr>
+        </thead>
+        <tbody>
+         
+          <tr>
+            <td>Palo de agua</td>
+            <td>1</td>
+            <td>$1000</td>
+          </tr>
+          
+        </tbody>
+      </table>
+      
+      <div class="text-end">
+             <button type="button" class="btn btn-info">Comprar</button>
       </div>
       </div>
+      </div>
+    </div> 
     </div>
   </div>
