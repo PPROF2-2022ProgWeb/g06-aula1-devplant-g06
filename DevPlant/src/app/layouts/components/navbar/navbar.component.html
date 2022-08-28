@@ -24,22 +24,22 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
       <!-- Ruteo mediante routerLink-->
-         <!-- Llamo a la variable session, al inicio de la lista, declarada en el component.ts, con ngIf realizo la validación-->
+         <!-- Llamo a la variable session, al inicio de la lista, declarada en el component.ts, con ngIf realizo la validación, por ahora están !"deshabilitados"-->
 
       
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item" *ngIf="!session"><a class="nav-link" routerLink="/home" >Inicio</a></li>
         <li class="nav-item" *ngIf="!session"><a class="nav-link" routerLink="/shop">Tienda</a></li>
-        <li class="nav-item" *ngIf="session"><a class="nav-link" routerLink="/account">Mi cuenta</a></li>
-        <li class="nav-item" *ngIf="session"><a class="nav-link" routerLink="/blog">Blog</a></li>  
+        <li class="nav-item" *ngIf="!session"><a class="nav-link" routerLink="/account">Mi cuenta</a></li>
+        <li class="nav-item" *ngIf="!session"><a class="nav-link" routerLink="/blog">Blog</a></li>  
         <li class="nav-item" *ngIf="!session"><a class="nav-link" routerLink="/about-us">Nosotros</a></li>
         <li class="nav-item" *ngIf="!session"><a class="nav-link" routerLink="/faqs">FaQs</a></li>
         <li class="nav-item" *ngIf="!session"><a class="nav-link" routerLink="/contact-us" >Contactanos</a></li>
         </ul>
         <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
-        <li class="nav-item" *ngIf="session"><a class="nav-link carrito" style="height: 40px;"  routerLink="/cart" ><img src="../../../../assets/cart.png"></a></li>
+        <li class="nav-item" *ngIf="!session"><a class="nav-link carrito" style="height: 40px;"  routerLink="/cart" ><img src="../../../../assets/cart.png"></a></li>
         <li class="nav-item" *ngIf="!session"><a class="nav-link" routerLink="/LogIn">Ingresar</a></li>  
-        <li class="nav-item" *ngIf="session"><a class="nav-link" routerLink="/CheckIn">Registrarse</a></li>
+        <li class="nav-item" *ngIf="!session"><a class="nav-link" routerLink="/CheckIn">Registrarse</a></li>
         </ul>
     </div>
   </div>
