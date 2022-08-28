@@ -10,6 +10,8 @@ import { BlogComponent } from './pages/components/blog/blog.component';
 import { AccountComponent } from './pages/components/account/account.component';
 import { LogInComponent } from './pages/components/log-in/log-in.component';
 import { CheckInComponent } from './pages/components/check-in/check-in.component';
+import { LogOutComponent } from './pages/components/log-out/log-out.component';
+import { ResetPasswordComponent } from './pages/components/reset-password/reset-password.component';
 
 const routes: Routes = [
 
@@ -23,7 +25,9 @@ const routes: Routes = [
   {path: 'blog', component: BlogComponent},
   {path: 'account', component: AccountComponent},
   {path: 'LogIn', component:LogInComponent},
+  {path: 'logOut', component:LogOutComponent},
   {path: 'CheckIn', component:CheckInComponent},
+  {path: 'resetPassword', component:ResetPasswordComponent},
 
 ];
 
