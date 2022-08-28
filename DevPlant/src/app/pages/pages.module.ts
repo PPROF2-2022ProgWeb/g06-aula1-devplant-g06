@@ -14,8 +14,8 @@ import { LogInComponent } from './components/log-in/log-in.component';
 import { CheckInComponent } from './components/check-in/check-in.component';
 import { LogOutComponent } from './components/log-out/log-out.component';
 import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
-/*import { FormsModule, ReactiveFormsModule } from '@angular/forms'; //importamos para poder utilizar los formularios de angular
-*/
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'; //importamos para poder utilizar los formularios de angular
+
 
 
 
@@ -37,8 +37,8 @@ import { ResetPasswordComponent } from './components/reset-password/reset-passwo
     CommonModule,
     LayoutsModule,
     ECommerceModule,
-   /* FormsModule,
-    ReactiveFormsModule,*/
+   FormsModule,
+    ReactiveFormsModule, 
 
 
     //Se importa el approutingmodule asi funciona en pages module

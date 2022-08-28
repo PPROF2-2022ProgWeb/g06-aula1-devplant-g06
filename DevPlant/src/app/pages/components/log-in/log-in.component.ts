@@ -9,23 +9,23 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class LogInComponent implements OnInit {
 
 
- /*form: FormGroup = new FormGroup({});*/
+ form: FormGroup = new FormGroup({});
   constructor(
-    /*private fb: FormBuilder*/
+    private fb: FormBuilder
   ){ }
 
   ngOnInit(): void {
-   /* this.CreateForm();*/
-  /*}
+   this.CreateForm();
+  }
   
   CreateForm(){
     this.form = this.fb.group({
 
-      username:["aaaa",[Validators.required, Validators.email,Validators.minLength(10)]],
+      username:[" ",[Validators.required, Validators.email,Validators.minLength(10)]],
       
-      password:["abababa",[Validators.required,Validators.minLength(8)]]
+      password:[" ",[Validators.required,Validators.minLength(8)]],
 
-    });*/
+    });
   }
 
 }
