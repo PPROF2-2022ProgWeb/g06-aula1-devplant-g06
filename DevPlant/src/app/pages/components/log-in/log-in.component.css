@@ -1,3 +1,5 @@
+
+
 .gradient-custom-2 {
   /* fallback for old browsers */
   background: #fccb90;
@@ -24,4 +26,12 @@
   border-top-right-radius: .3rem;
   border-bottom-right-radius: .3rem;
   }
+  }
+
+
+  .img{
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
   }
