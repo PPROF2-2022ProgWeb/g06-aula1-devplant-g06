@@ -1,1 +1,119 @@
-<p>check-in works!</p>
+<section class="h-100 gradient-form" style="background-color: #eee;">
+         <div class="container py-5 h-100">
+           <div class="row d-flex justify-content-center align-items-center h-100">
+             <div class="col-xl-12">
+               <div class="card rounded-3 text-black">
+                 <div class="row g-0">
+                   <div class="col-lg-6">
+                     <div class="card-body p-md-5 mx-md-4">
+       
+                       <div class="text-center">
+                         <img src="../../../../assets/logo_devplant.png"
+                           style="width: 250px;" alt="logo">
+                       </div>
+       
+                       <form style="padding-top: 100px; " [formGroup] ="form">  <!-- formGroup para conectar a las funciones del pages.module.ts--no funciona el placeholder-->
+                         <p>Registrate en DevPlant</p>
+       
+                         <div class="form-outline mb-4">
+                           <label class="form-label" style="font-style: italic; font-size: small;" for="eMail">eMail</label><br>
+                           <input formControlName="eMail" type="text" id="eMail"  class="validate" placeholder="eMail"  />
+                         <div  *ngIf="GetForm['eMail'].errors && (GetForm['eMail'].dirty ||GetForm['eMail'].touched )"  class="error-message">
+                             <label style="font-size: 10px;">Por favor ingrese un correo electrónico válido</label>
+                         </div>
+                         </div>
+
+                         <div class="form-outline mb-4">
+                           <label class="form-label" style="font-style: italic; font-size: small;" for="password">Contraseña</label> <br>
+                           <input formControlName="password" type="text" id="password" class="validate" placeholder="contraseña" />
+                             <div  *ngIf="GetForm['password'].errors && (GetForm['password'].dirty ||GetForm['password'].touched )"  class="error-message">
+                               <label style="font-size: 10px;" >Por favor ingrese una contraseña válida</label>
+                             </div> 
+                         </div>
+                         
+                         <div class="form-outline mb-4">
+                          <label class="form-label" style="font-style: italic; font-size: small;" for="name">Nombre</label> <br>
+                          <input formControlName="name" type="text" id="name" class="validate" placeholder="Nombre" />
+                            <div  *ngIf="GetForm['name'].errors && (GetForm['name'].dirty ||GetForm['name'].touched )"  class="error-message">
+                              <label style="font-size: 10px;" >Por favor ingrese su nombre</label>
+                            </div> 
+                        </div>
+                         
+                          
+                        <div class="form-outline mb-4">
+                          <label class="form-label" style="font-style: italic; font-size: small;" for="lastname">Apellido</label> <br>
+                          <input formControlName="lastname" type="text" id="lastname" class="validate" placeholder="Apellido" />
+                            <div  *ngIf="GetForm['lastname'].errors && (GetForm['lastname'].dirty ||GetForm['lastname'].touched )"  class="error-message">
+                              <label style="font-size: 10px;" >Por favor ingrese su apellido</label>
+                            </div> 
+                        </div>
+                        <div class="form-outline mb-4">
+                          <label class="form-label" style="font-style: italic; font-size: small;" for="dni">DNI</label> <br>
+                          <input formControlName="dni" type="text" id="dni" class="validate" placeholder="DNI" />
+                            <div  *ngIf="GetForm['dni'].errors && (GetForm['dni'].dirty ||GetForm['dni'].touched )"  class="error-message">
+                              <label style="font-size: 10px;" >Por favor ingrese su DNI</label>
+                            </div> 
+                        </div>
+                      
+                        <div class="form-outline mb-4">
+                          <label class="form-label" style="font-style: italic; font-size: small;" for="birthday">Fecha de nacimiento</label> <br>
+                          <input formControlName="birthday" type="text" id="birthday" class="validate" placeholder="Fecha de nacimiento" />
+                            <div  *ngIf="GetForm['birthday'].errors && (GetForm['birthday'].dirty ||GetForm['birthday'].touched )"  class="error-message">
+                              <label style="font-size: 10px;" >Por favor ingrese su fecha de nacimiento</label>
+                            </div> 
+
+                        </div>
+                        <div class="form-outline mb-4">
+                          <label class="form-label" style="font-style: italic; font-size: small;" for="phone">Teléfono</label> <br>
+                          <input formControlName="phone" type="text" id="phone" class="validate" placeholder="Teléfono" />
+                            <div  *ngIf="GetForm['phone'].errors && (GetForm['phone'].dirty ||GetForm['phone'].touched )"  class="error-message">
+                              <label style="font-size: 10px;" >Por favor ingrese su número de teléfono</label>
+                            </div> 
+                        </div>
+
+                        <div class="form-outline mb-4">
+                          <label class="form-label" style="font-style: italic; font-size: small;" for="city">Localidad</label> <br>
+                          <input formControlName="city" type="text" id="city" class="validate" placeholder="Localidad" />
+                            <div  *ngIf="GetForm['city'].errors && (GetForm['city'].dirty ||GetForm['city'].touched )"  class="error-message">
+                              <label style="font-size: 10px;" >Por favor ingrese su localidad</label>
+                            </div> 
+                        </div>
+                        <div class="form-outline mb-4">
+                          <label class="form-label" style="font-style: italic; font-size: small;" for="province">Provincia</label> <br>
+                          <input formControlName="province" type="text" id="province" class="validate" placeholder="Provincia" />
+                            <div  *ngIf="GetForm['province'].errors && (GetForm['province'].dirty ||GetForm['province'].touched )"  class="error-message">
+                              <label style="font-size: 10px;" >Por favor ingrese su provincia</label>
+                            </div> 
+                        </div>
+
+
+                        
+
+
+       
+                         <div class="text-center pt-1 mb-5 pb-1">
+                           <!-- con disabled deshabilitamos el boton de ingresar hasta que no esten correctos los datos -->
+                           <button  [disabled]="GetForm['username'].errors ||GetForm['password'].errors " (click)="logIn"  type="button" 
+                           class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" style="font-size: 20px;" routerLink="/home" >Registrarme</button>
+                           
+                         </div>
+       
+                         <div class="d-flex align-items-center justify-content-center pb-4">
+                           <p class="mb-0 me-2">Ya tenés cuenta?</p>
+                       
+                           <button  type="button"  class="btn btn-outline-danger" routerLink="/logIn">Ingresar a mi cuenta</button>
+                         </div>
+       
+                       </form>
+       
+                     </div>
+                   </div>
+                     <div class="col-lg-6 d-flex align-items-center gradient-custom-3">
+                   </div>
+                 </div>
+               </div>
+             </div>
+           </div>
+         </div>
+       </section>
+       

@@ -14,7 +14,7 @@ import { LogInComponent } from './components/log-in/log-in.component';
 import { CheckInComponent } from './components/check-in/check-in.component';
 import { LogOutComponent } from './components/log-out/log-out.component';
 import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms'; //importamos para poder utilizar los formularios de angular
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'; //importamos para poder utilizar los formularios reactivos de angular
 
 
 
@@ -37,7 +37,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms'; //importamos 
     CommonModule,
     LayoutsModule,
     ECommerceModule,
-   FormsModule,
+    FormsModule,
     ReactiveFormsModule, 
 
 

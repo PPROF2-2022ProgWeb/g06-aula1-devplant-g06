@@ -8,11 +8,12 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class LogInComponent implements OnInit {
 
-
+//funciones del formulario
  form: FormGroup = new FormGroup({});
   constructor(
-    private fb: FormBuilder
-  ){ }
+    private fb: FormBuilder){
+      
+     }
 
   ngOnInit(): void {
    this.CreateForm();
@@ -27,5 +28,15 @@ export class LogInComponent implements OnInit {
 
     });
   }
+  logIn(){
+   
 
+  }
+
+  //inhabilitamos el boton de ingresar hasta que esté validado el usuario y la contraseña en logIn component.html con [disabled]
+
+  get GetForm(){
+
+    return this.form.controls;
+  }
 }
