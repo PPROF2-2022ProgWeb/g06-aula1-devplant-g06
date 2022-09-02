@@ -13,38 +13,38 @@
                 </div>
 
                 <form style="padding-top: 100px; " [formGroup] ="form">  <!-- formGroup para conectar a las funciones del pages.module.ts--no funciona el placeholder-->
-                  <p>Ingresá a tu cuenta</p>
-
+                  <h3 style="text-align: center;">Ingresá a tu cuenta</h3>
+                    <br>
                     <div class="form-outline ">
-                      <label class="form-label" style="font-style: italic; font-size: small;" for="username">Usuario (...@gmail.com)</label><br>
+                      <label class="form-label" style="font-size: medium;" for="username">Usuario (...@gmail.com)</label><br>
                       <!-- ponemos formcontrolname en el input -->
-                      <input formControlName="username" type="text" id="username"  class="validate"  placeholder="Ingrese su email"  />
+                      <input formControlName="username" type="text" id="username"  style="width: 100%;" class="validate"  placeholder="Ingrese su email"  />
 
                      <!-- ponemos etiqueta que pida usuario y contraseña correcta con ngif Y PEDIMOS QUE NO SE MUESTRE el mensaje si no fue "tocado" el sector-->
                       <div  *ngIf="GetForm['username'].errors && (GetForm['username'].dirty ||GetForm['username'].touched )"  class="error-message">
-                        <label style="font-size: 10px;">Por favor ingrese un usuario válido</label>
+                        <label style="font-size: 15px;">Por favor ingrese un email válido</label>
                       </div>
                     </div>
 
 
-
+                    <br>
                   <div class="form-outline mb-4">
-                    <label class="form-label" style="font-style: italic; font-size: small;" for="password">Contraseña</label> <br>
+                    <label class="form-label" style="font-size: medium;" for="password">Contraseña</label> <br>
                     <!-- ponemos formcontrolname en el input---no funciona el placeholder -->
-                    <input formControlName="password" type="text" id="password" class="validate" placeholder="contraseña" />
+                    <input formControlName="password" type="text" id="password" style="width: 100%;" class="validate" placeholder="contraseña" />
 
 
                       <!-- ponemos etiqueta que pida usuario y contraseña correcta con ngif-->
-                      <div  *ngIf="GetForm['password'].errors && (GetForm['password'].dirty ||GetForm['password'].touched )"  class="error-message">
-                        <label style="font-size: 10px;" >Por favor ingrese una contraseña válida</label>
-                      </div>
+                    <div  *ngIf="GetForm['password'].errors && (GetForm['password'].dirty ||GetForm['password'].touched )"  class="error-message">
+                      <label style="font-size: 15px;" >Por favor ingrese una contraseña válida</label>
+                    </div>
                   </div>
 
 
                   <div class="text-center pt-1 mb-5 pb-1">
                     <!-- con disabled deshabilitamos el boton de ingresar hasta que no esten correctos los datos -->
                     <button  [disabled]="GetForm['username'].errors ||GetForm['password'].errors " (click)="logIn"  type="button"
-                    class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" style="font-size: 20px;" routerLink="/home" >Ingresar</button>
+                    class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" style="font-size: 20px;" routerLink="/home">Ingresar</button>
                     <br>
                     <a class="text-muted" routerLink="/resetPassword">Olvidaste tu contraseña?</a>
                   </div>

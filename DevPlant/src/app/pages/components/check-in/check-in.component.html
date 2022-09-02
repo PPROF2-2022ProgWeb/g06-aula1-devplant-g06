@@ -13,74 +13,81 @@
                        </div>
 
                        <form style="padding-top: 100px; " [formGroup] ="form">  <!-- formGroup para conectar a las funciones del pages.module.ts--no funciona el placeholder-->
-                         <p>Registrate en DevPlant</p>
-
+                         <h3 style="text-align: center;">Registrate en DevPlant</h3>
+                          <br>
                          <div class="form-outline mb-4">
-                           <label class="form-label" style="font-style: italic; font-size: small;" for="eMail">eMail</label><br>
-                           <input formControlName="eMail" type="text" id="eMail"  class="validate" placeholder="eMail"  />
+                           <label class="form-label" style="font-size: medium;" for="eMail">eMail</label><br>
+                           <input formControlName="eMail"  style="width: 100%;" type="text" id="eMail"  class="validate" placeholder="eMail"  />
                          <div  *ngIf="GetForm['eMail'].errors && (GetForm['eMail'].dirty ||GetForm['eMail'].touched )"  class="error-message">
-                             <label style="font-size: 10px;">Por favor ingrese un correo electrónico válido</label>
+                             <label style="font-size: 10px; ">Por favor ingrese un correo electrónico válido</label>
                          </div>
                          </div>
-
+                         <br>
                          <div class="form-outline mb-4">
-                           <label class="form-label" style="font-style: italic; font-size: small;" for="password">Contraseña</label> <br>
-                           <input formControlName="password" type="text" id="password" class="validate" placeholder="contraseña" />
+                           <label class="form-label" style="font-size: medium;" for="password">Contraseña</label> <br>
+                           <input formControlName="password" style="width: 100%;" type="text" id="password" class="validate" placeholder="contraseña" />
                              <div  *ngIf="GetForm['password'].errors && (GetForm['password'].dirty || GetForm['password'].touched )"  class="error-message">
                                <label style="font-size: 10px;" >Por favor ingrese una contraseña válida</label>
                              </div>
                          </div>
-
+                         <br>
                          <div class="form-outline mb-4">
-                          <label class="form-label" style="font-style: italic; font-size: small;" for="name">Nombre</label> <br>
-                          <input formControlName="name" type="text" id="name" class="validate" placeholder="Nombre" />
+                          <label class="form-label" style="font-size: medium;" for="name">Nombre</label> <br>
+                          <input formControlName="name" style="width: 100%;"  type="text" id="name" class="validate" placeholder="Nombre" />
                             <div  *ngIf="GetForm['name'].errors && (GetForm['name'].dirty || GetForm['name'].touched )"  class="error-message">
                               <label style="font-size: 10px;" >Por favor ingrese su nombre</label>
                             </div>
                         </div>
 
-
+                        <br>
                         <div class="form-outline mb-4">
-                          <label class="form-label" style="font-style: italic; font-size: small;" for="lastname">Apellido</label> <br>
-                          <input formControlName="lastname" type="text" id="lastname" class="validate" placeholder="Apellido" />
+                          <label class="form-label" style="font-size: medium;" for="lastname">Apellido</label> <br>
+                          <input formControlName="lastname" style="width: 100%;"  type="text" id="lastname" class="validate" placeholder="Apellido" />
                             <div  *ngIf="GetForm['lastname'].errors && (GetForm['lastname'].dirty || GetForm['lastname'].touched )"  class="error-message">
                               <label style="font-size: 10px;" >Por favor ingrese su apellido</label>
                             </div>
                         </div>
+
+                        <br>
                         <div class="form-outline mb-4">
-                          <label class="form-label" style="font-style: italic; font-size: small;" for="dni">DNI</label> <br>
-                          <input formControlName="dni" type="text" id="dni" class="validate" placeholder="DNI" />
+                          <label class="form-label" style="font-size: medium;" for="dni">DNI</label> <br>
+                          <input formControlName="dni"  style="width: 100%;" type="text" id="dni" class="validate" placeholder="DNI" />
                             <div  *ngIf="GetForm['dni'].errors && (GetForm['dni'].dirty || GetForm['dni'].touched )"  class="error-message">
                               <label style="font-size: 10px;" >Por favor ingrese su DNI</label>
                             </div>
                         </div>
 
+                        <br>
                         <div class="form-outline mb-4">
-                          <label class="form-label" style="font-style: italic; font-size: small;" for="birthday">Fecha de nacimiento</label> <br>
-                          <input formControlName="birthday" type="text" id="birthday" class="validate" placeholder="Fecha de nacimiento" />
+                          <label class="form-label" style="font-size: medium;" for="birthday">Fecha de nacimiento</label> <br>
+                          <input formControlName="birthday" style="width: 100%;"  type="text" id="birthday" class="validate" placeholder="Fecha de nacimiento" />
                             <div  *ngIf="GetForm['birthday'].errors && (GetForm['birthday'].dirty || GetForm['birthday'].touched )"  class="error-message">
                               <label style="font-size: 10px;" >Por favor ingrese su fecha de nacimiento</label>
                             </div>
-
                         </div>
+
+                        <br>
                         <div class="form-outline mb-4">
-                          <label class="form-label" style="font-style: italic; font-size: small;" for="phone">Teléfono</label> <br>
-                          <input formControlName="phone" type="text" id="phone" class="validate" placeholder="Teléfono" />
+                          <label class="form-label" style="font-size: medium;" for="phone">Teléfono</label> <br>
+                          <input formControlName="phone" style="width: 100%;"  type="text" id="phone" class="validate" placeholder="Teléfono" />
                             <div  *ngIf="GetForm['phone'].errors && (GetForm['phone'].dirty || GetForm['phone'].touched )"  class="error-message">
                               <label style="font-size: 10px;" >Por favor ingrese su número de teléfono</label>
                             </div>
                         </div>
 
+                        <br>
                         <div class="form-outline mb-4">
-                          <label class="form-label" style="font-style: italic; font-size: small;" for="city">Localidad</label> <br>
-                          <input formControlName="city" type="text" id="city" class="validate" placeholder="Localidad" />
+                          <label class="form-label" style="font-size: medium;" for="city">Localidad</label> <br>
+                          <input formControlName="city"  style="width: 100%;" type="text" id="city" class="validate" placeholder="Localidad" />
                             <div  *ngIf="GetForm['city'].errors && (GetForm['city'].dirty || GetForm['city'].touched )"  class="error-message">
                               <label style="font-size: 10px;" >Por favor ingrese su localidad</label>
                             </div>
                         </div>
+
+                        <br>
                         <div class="form-outline mb-4">
-                          <label class="form-label" style="font-style: italic; font-size: small;" for="province">Provincia</label> <br>
-                          <input formControlName="province" type="text" id="province" class="validate" placeholder="Provincia" />
+                          <label class="form-label" style="font-size: medium;" for="province">Provincia</label> <br>
+                          <input formControlName="province" style="width: 100%;" type="text" id="province" class="validate" placeholder="Provincia" />
                             <div  *ngIf="GetForm['province'].errors && (GetForm['province'].dirty || GetForm['province'].touched )"  class="error-message">
                               <label style="font-size: 10px;" >Por favor ingrese su provincia</label>
                             </div>
