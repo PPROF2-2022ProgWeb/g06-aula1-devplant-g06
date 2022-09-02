@@ -7,125 +7,88 @@
 <!--  5- poner la descripción  a las fotos, o un desplegable -->
 <!--  6- Acomodar la tabla de carrito de compra en algun lugar mejor y los botones comprar de cada producto deberian plasmarse en esa tabla y el la pagina de carrito -->
 
-<div class="row ">
-  <div class="container">
-    <div class="row row-cols-4">
-      
-      <div class="col">
-        <div class="card">
-          <img src="../../../assets/DRACAENAPALODEAGUA1.jpg" class="img" alt="palo de agua">
-          <div class="card-body">
-            <h5 class="card-title">Palo de agua</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Interior/exterior</h6>
-            <a href="#" class="card-link">Comprar</a>
-            <a href="#" class="card-link">Guardar en favoritos</a> 
-          </div>
-        </div>
-      </div>
+  
 
-      <div class="col">
-        <div class="card">
-          <img src="../../../assets/FICUSBENJAMINA2.webp" class="img" alt="ficus ">
-          <div class="card-body">
-            <h5 class="card-title">Ficus</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Interior/exterior</h6>
-            <p class="card-text">Descripcion</p>
-            <a href="#" class="card-link">Comprar</a>
-            <a href="#" class="card-link">Guardar en favoritos</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col">
-        <div class="card">
-          <img src="../../../assets/FICUSELASTICA(GOMERO).jpg" class="img" alt="gomero ">
-          <div class="card-body">
-            <h5 class="card-title">Gomero</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Interior/exterior</h6>
-            <p class="card-text">Descripcion</p>
-            <a href="#" class="card-link">Comprar</a>
-            <a href="#" class="card-link">Guardar en favoritos</a>
-          </div>
-        </div>
-      </div>
-
-        <div class="col">
-          <div class="card">
-            <img src="../../../assets/LAZODEAMOR.jpg" class="img" alt="Lazo de amor ">
-            <div class="card-body">
-              <h5 class="card-title">Lazo de amor</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Interior/exterior</h6>
-              <p class="card-text">Descripcion</p>
-              <a href="#" class="card-link">Comprar</a>
-              <a href="#" class="card-link">Guardar en favoritos</a>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <img src="../../../assets/SANSEVIERIA3.jpg" class="img" alt="Sansevieria ">
-            <div class="card-body">
-              <h5 class="card-title">Sansevieria</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Interior/exterior</h6>
-              <p class="card-text">Descripcion</p>
-              <a href="#" class="card-link">Comprar</a>
-              <a href="#" class="card-link">Guardar en favoritos</a>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <img src="../../../assets/POTUS.jpg" class="img" alt="Potus ">
-            <div class="card-body">
-              <h5 class="card-title">Potus</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Interior/exterior</h6>
-              <p class="card-text">Descripcion</p>
-              <a href="#" class="card-link">Comprar</a>
-              <a href="#" class="card-link">Guardar en favoritos</a>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <img src="../../../assets/MONSTERA1.jpg" class="img" alt="Monstera ">
-            <div class="card-body">
-              <h5 class="card-title">Monstera Deliciosa</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Interior/exterior</h6>
-              <p class="card-text">Descripcion</p>
-              <a href="#" class="card-link">Comprar</a>
-              <a href="#" class="card-link">Guardar en favoritos</a>
-            </div>
-          </div>
-        </div>
-    <div>
-      
-
-     <div>
-      <h3>Carrito de Compras</h3>
-      <table class="table table-primary table-striped">
-        <thead>
-          <tr>
-            <th>Nombre</th>
-            <th>Cantidad</th>
-            <th>Precio</th>
-          </tr>
-        </thead>
-        <tbody>
-         
-          <tr>
-            <td>Palo de agua</td>
-            <td>1</td>
-            <td>$1000</td>
-          </tr>
-          
-        </tbody>
-      </table>
-      
-      <div class="text-end">
-             <button type="button" class="btn btn-info">Comprar</button>
-      </div>
-      </div>
-      </div>
-    </div> 
+<div class="container">
+  <div class="row">
+  <div class="col-lg-4 mb-4">
+  <div class="card">
+    <img src="../../../assets/DRACAENAPALODEAGUA1.jpg" class="img" alt="palo de agua">
+    <div class="card-body">
+      <h5 class="card-title">Palo de agua</h5>
+      <p class="card-text">interior/exterior</p>
+      <a  class="btn btn-outline-success btn-sm" routerLink="/tienda" style="margin: 10px;">Agregar al carrito</a>
+      <a  class="btn btn-outline-success btn-sm" routerLink="/account">Agregar a favoritos</a>
+    </div>
+   </div>
+  </div>
+<div class="col-lg-4 mb-4">
+<div class="card">
+  <img src="../../../assets/FICUSBENJAMINA2.webp" class="img" alt="ficus ">
+    <div class="card-body">
+      <h5 class="card-title">Ficus</h5>
+      <p class="card-text">interior/exterior</p>
+     <a  class="btn btn-outline-success btn-sm" routerLink="/tienda" style="margin: 10px;">Agregar al carrito</a>
+     <a  class="btn btn-outline-success btn-sm" routerLink="/account">Agregar a favoritos</a>
+     
+    </div>
     </div>
   </div>
+  <div class="col-lg-4 mb-4">
+  <div class="card">
+    <img src="../../../assets/FICUSELASTICA(GOMERO).jpg" class="img" alt="gomero ">
+    <div class="card-body">
+      <h5 class="card-title">Gomero</h5>
+      <p class="card-text">interior/exterior</p>
+      <a  class="btn btn-outline-success btn-sm" routerLink="/tienda" style="margin: 10px;">Agregar al carrito</a>
+      <a  class="btn btn-outline-success btn-sm" routerLink="/account">Agregar a favoritos</a>
+    </div>
+   </div>
+  </div>
+  <div class="col-lg-4 mb-4">
+    <div class="card">
+      <img src="../../../assets/LAZODEAMOR.jpg" class="img" alt="Lazo de amor ">
+        <div class="card-body">
+          <h5 class="card-title">Lazo de amor</h5>
+          <p class="card-text">interior/exterior</p>
+          <a  class="btn btn-outline-success btn-sm" routerLink="/tienda" style="margin: 10px;">Agregar al carrito</a>
+          <a  class="btn btn-outline-success btn-sm" routerLink="/account">Agregar a favoritos</a>
+        </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <div class="card">
+          <img src="../../../assets/SANSEVIERIA3.jpg" class="img" alt="Sansevieria ">
+            <div class="card-body">
+              <h5 class="card-title">Sansevieria</h5>
+              <p class="card-text">interior/exterior</p>
+              <a  class="btn btn-outline-success btn-sm" routerLink="/tienda" style="margin: 10px;">Agregar al carrito</a>
+              <a  class="btn btn-outline-success btn-sm" routerLink="/account">Agregar a favoritos</a>
+            </div>
+            </div>
+          </div>
+          <div class="col-lg-4 mb-4">
+            <div class="card">
+              <img src="../../../assets/POTUS.jpg" class="img" alt="Potus ">
+                <div class="card-body">
+                  <h5 class="card-title">Potus</h5>
+                  <p class="card-text">interior/exterior</p>
+                  <a  class="btn btn-outline-success btn-sm" routerLink="/tienda" style="margin: 10px;">Agregar al carrito</a>
+                  <a  class="btn btn-outline-success btn-sm" routerLink="/account">Agregar a favoritos</a>
+                  
+                </div>
+                </div>
+              </div>
+              <div class="col-lg-4 mb-4">
+                <div class="card">
+                  <img src="../../../assets/MONSTERA1.jpg" class="img" alt="Monstera ">
+                    <div class="card-body">
+                      <h5 class="card-title">Monstera deliciosa</h5>
+                      <p class="card-text">interior/exterior</p>
+                      <a  class="btn btn-outline-success btn-sm" routerLink="/tienda" style="margin: 10px;">Agregar al carrito</a>
+                      <a  class="btn btn-outline-success btn-sm" routerLink="/account">Agregar a favoritos</a>
+                    </div>
+                    </div>
+                  </div>
+</div>
+</div>
