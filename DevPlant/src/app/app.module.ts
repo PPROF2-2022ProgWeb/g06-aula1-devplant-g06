@@ -6,13 +6,13 @@ import { PagesModule } from './pages/pages.module';
 import { LayoutsModule } from './layouts/layouts.module';
 import { ECommerceModule } from './e-commerce/e-commerce.module';
 import { RouterModule } from '@angular/router';
-
+import { HttpClientModule} from '@angular/common/http'
 
 @NgModule({
   declarations: [
     AppComponent,
-   
-    
+
+
   ],
   imports: [
     BrowserModule,
@@ -20,7 +20,8 @@ import { RouterModule } from '@angular/router';
     LayoutsModule,
     PagesModule,
     ECommerceModule,
-    RouterModule
+    RouterModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -10,7 +10,7 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,N
 -- -----------------------------------------------------
 -- Schema DEVPLANT_DB
 -- -----------------------------------------------------
-DROP SCHEMA IF EXISTS `DEVPLANT_DB` ;
+DROP TABLE IF EXISTS `DEVPLANT_DB` ;
 
 -- -----------------------------------------------------
 -- Schema DEVPLANT_DB
@@ -55,16 +55,14 @@ ENGINE = InnoDB;
 DROP TABLE IF EXISTS `DEVPLANT_DB`.`Stock` ;
 
 CREATE TABLE IF NOT EXISTS `DEVPLANT_DB`.`Stock` (
-  `idStock` INT NOT NULL AUTO_INCREMENT,
-  `idPlantas` INT NOT NULL,
-  `Stock` INT NOT NULL,
-  PRIMARY KEY (`idStock`),
-  CONSTRAINT `idPlantas`
-    FOREIGN KEY (`idPlantas`)
-    REFERENCES `DEVPLANT_DB`.`Plantas` (`idPlantas`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
+    `idStock` INT NOT NULL AUTO_INCREMENT,
+    `idPlantas` INT NOT NULL,
+    `Stock` INT NOT NULL,
+    PRIMARY KEY (`idStock`),
+    CONSTRAINT `idPlantas` FOREIGN KEY (`idPlantas`)
+        REFERENCES `DEVPLANT_DB`.`Plantas` (`idPlantas`)
+        ON DELETE NO ACTION ON UPDATE NO ACTION
+)  ENGINE=INNODB;
 
 
 -- -----------------------------------------------------

@@ -14,7 +14,8 @@ import { LogInComponent } from './components/log-in/log-in.component';
 import { CheckInComponent } from './components/check-in/check-in.component';
 import { LogOutComponent } from './components/log-out/log-out.component';
 import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms'; //importamos para poder utilizar los formularios reactivos de angular
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AdminComponent } from './components/admin/admin.component'; //importamos para poder utilizar los formularios reactivos de angular
 
 
 
@@ -30,7 +31,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms'; //importamos 
     LogInComponent,
     CheckInComponent,
     LogOutComponent,
-    ResetPasswordComponent
+    ResetPasswordComponent,
+    AdminComponent
   ],
   imports: [
     AppRoutingModule,
@@ -38,7 +40,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms'; //importamos 
     LayoutsModule,
     ECommerceModule,
     FormsModule,
-    ReactiveFormsModule, 
+    ReactiveFormsModule,
 
 
     //Se importa el approutingmodule asi funciona en pages module
@@ -54,7 +56,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms'; //importamos 
     LogInComponent,
     CheckInComponent,
     ResetPasswordComponent,
-    LogOutComponent
+    LogOutComponent,
+    AdminComponent
 
 
 
