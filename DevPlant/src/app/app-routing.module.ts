@@ -12,6 +12,7 @@ import { LogInComponent } from './pages/components/log-in/log-in.component';
 import { CheckInComponent } from './pages/components/check-in/check-in.component';
 import { LogOutComponent } from './pages/components/log-out/log-out.component';
 import { ResetPasswordComponent } from './pages/components/reset-password/reset-password.component';
+import { AdminComponent } from './pages/components/admin/admin.component';
 
 const routes: Routes = [
 
@@ -28,7 +29,7 @@ const routes: Routes = [
   {path: 'logOut', component:LogOutComponent},
   {path: 'CheckIn', component:CheckInComponent},
   {path: 'resetPassword', component:ResetPasswordComponent},
-
+  {path: 'admin',component:AdminComponent}
 ];
 
 @NgModule({
