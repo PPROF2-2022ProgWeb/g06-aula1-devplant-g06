@@ -16,7 +16,7 @@
                          <h3 style="text-align: center;">Registrate en DevPlant</h3>
                           <br>
                          <div class="form-outline mb-4">
-                           <label class="form-label" style="font-size: medium;" for="eMail">eMail</label><br>
+                           <label class="form-label" style="font-size: medium;" for="eMail">Usuario</label><br>
                            <input formControlName="eMail"  style="width: 100%;" type="text" id="eMail"  class="validate" placeholder="eMail"  />
                          <div  *ngIf="GetForm['eMail'].errors && (GetForm['eMail'].dirty ||GetForm['eMail'].touched )"  class="error-message">
                              <label style="font-size: 10px; ">Por favor ingrese un correo electrónico válido</label>
@@ -49,13 +49,7 @@
                         </div>
 
                         <br>
-                        <div class="form-outline mb-4">
-                          <label class="form-label" style="font-size: medium;" for="dni">DNI</label> <br>
-                          <input formControlName="dni"  style="width: 100%;" type="text" id="dni" class="validate" placeholder="DNI" />
-                            <div  *ngIf="GetForm['dni'].errors && (GetForm['dni'].dirty || GetForm['dni'].touched )"  class="error-message">
-                              <label style="font-size: 10px;" >Por favor ingrese su DNI</label>
-                            </div>
-                        </div>
+
 
                         <br>
                         <div class="form-outline mb-4">
@@ -76,24 +70,6 @@
                         </div>
 
                         <br>
-                        <div class="form-outline mb-4">
-                          <label class="form-label" style="font-size: medium;" for="city">Localidad</label> <br>
-                          <input formControlName="city"  style="width: 100%;" type="text" id="city" class="validate" placeholder="Localidad" />
-                            <div  *ngIf="GetForm['city'].errors && (GetForm['city'].dirty || GetForm['city'].touched )"  class="error-message">
-                              <label style="font-size: 10px;" >Por favor ingrese su localidad</label>
-                            </div>
-                        </div>
-
-                        <br>
-                        <div class="form-outline mb-4">
-                          <label class="form-label" style="font-size: medium;" for="province">Provincia</label> <br>
-                          <input formControlName="province" style="width: 100%;" type="text" id="province" class="validate" placeholder="Provincia" />
-                            <div  *ngIf="GetForm['province'].errors && (GetForm['province'].dirty || GetForm['province'].touched )"  class="error-message">
-                              <label style="font-size: 10px;" >Por favor ingrese su provincia</label>
-                            </div>
-                        </div>
-
-
 
 
 
