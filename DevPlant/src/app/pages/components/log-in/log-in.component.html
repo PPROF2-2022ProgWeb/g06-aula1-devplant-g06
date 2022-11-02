@@ -16,13 +16,13 @@
                   <h3 style="text-align: center;">Ingresá a tu cuenta</h3>
                     <br>
                     <div class="form-outline ">
-                      <label class="form-label" style="font-size: medium;" for="username">Usuario (...@gmail.com)</label><br>
+                      <label class="form-label" style="font-size: medium;" for="username">Usuario</label><br>
                       <!-- ponemos formcontrolname en el input -->
-                      <input formControlName="username" type="text" id="username"  style="width: 100%;" class="validate"  placeholder="Ingrese su email"  />
+                      <input formControlName="username" type="text" id="username"  style="width: 100%;" class="validate"  placeholder="Ingrese su Usuario"  />
 
                      <!-- ponemos etiqueta que pida usuario y contraseña correcta con ngif Y PEDIMOS QUE NO SE MUESTRE el mensaje si no fue "tocado" el sector-->
                       <div  *ngIf="GetForm['username'].errors && (GetForm['username'].dirty ||GetForm['username'].touched )"  class="error-message">
-                        <label style="font-size: 15px;">Por favor ingrese un email válido</label>
+                        <label style="font-size: 15px;">Por favor ingrese un Usuario válido</label>
                       </div>
                     </div>
 
