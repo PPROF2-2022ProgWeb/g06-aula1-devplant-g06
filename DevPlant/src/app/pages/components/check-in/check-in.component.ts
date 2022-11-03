@@ -40,7 +40,7 @@ export class CheckInComponent implements OnInit {
         alert('Usuario guardado con exito')
       },(error) => {
         console.log(error)
-        alert('Ha ocurrido un error')
+        alert('Usuario ya esta registrado')
       }
     )
 
