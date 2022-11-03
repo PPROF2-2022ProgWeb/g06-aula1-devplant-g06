@@ -20,6 +20,7 @@ import { AdminComponent } from './components/admin/admin.component'; //importamo
 
 
 
+
 @NgModule({
   declarations: [
     ContactUsComponent,
@@ -58,6 +59,7 @@ import { AdminComponent } from './components/admin/admin.component'; //importamo
     ResetPasswordComponent,
     LogOutComponent,
     AdminComponent
+
 
 
 

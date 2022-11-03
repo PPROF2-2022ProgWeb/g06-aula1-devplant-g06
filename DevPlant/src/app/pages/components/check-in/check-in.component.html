@@ -1,102 +1,76 @@
 
-         <div class="container py-5 h-100">
-           <div class="row d-flex justify-content-center align-items-center h-100">
-             <div class="col-xl-12">
-               <div class="card rounded-3 text-black">
-                 <div class="row g-0">
-                   <div class="col-lg-6">
-                     <div class="card-body p-md-5 mx-md-4 justify-content-center">
+  <div class="container h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-lg-12 col-xl-11">
+        <div class="card text-black" style="border-radius: 25px;">
+          <div class="card-body p-md-5">
+            <div class="row justify-content-center">
+              <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
 
-                       <div class="text-center">
-                         <img src="../../../../assets/logo_devplant.png"
-                           style="width: 250px;" alt="logo">
-                       </div>
+                <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Sign up</p>
 
-                       <form style="padding-top: 100px; " [formGroup] ="form">  <!-- formGroup para conectar a las funciones del pages.module.ts--no funciona el placeholder-->
-                         <h3 style="text-align: center;">Registrate en DevPlant</h3>
-                          <br>
-                         <div class="form-outline mb-4">
-                           <label class="form-label" style="font-size: medium;" for="eMail">Usuario</label><br>
-                           <input formControlName="eMail"  style="width: 100%;" type="text" id="eMail"  class="validate" placeholder="eMail"  />
-                         <div  *ngIf="GetForm['eMail'].errors && (GetForm['eMail'].dirty ||GetForm['eMail'].touched )"  class="error-message">
-                             <label style="font-size: 10px; ">Por favor ingrese un correo electrónico válido</label>
-                         </div>
-                         </div>
-                         <br>
-                         <div class="form-outline mb-4">
-                           <label class="form-label" style="font-size: medium;" for="password">Contraseña</label> <br>
-                           <input formControlName="password" style="width: 100%;" type="text" id="password" class="validate" placeholder="contraseña" />
-                             <div  *ngIf="GetForm['password'].errors && (GetForm['password'].dirty || GetForm['password'].touched )"  class="error-message">
-                               <label style="font-size: 10px;" >Por favor ingrese una contraseña válida</label>
-                             </div>
-                         </div>
-                         <br>
-                         <div class="form-outline mb-4">
-                          <label class="form-label" style="font-size: medium;" for="name">Nombre</label> <br>
-                          <input formControlName="name" style="width: 100%;"  type="text" id="name" class="validate" placeholder="Nombre" />
-                            <div  *ngIf="GetForm['name'].errors && (GetForm['name'].dirty || GetForm['name'].touched )"  class="error-message">
-                              <label style="font-size: 10px;" >Por favor ingrese su nombre</label>
-                            </div>
-                        </div>
+                <form (ngSubmit)="formSubmit()" class="mx-1 mx-md-4">
 
-                        <br>
-                        <div class="form-outline mb-4">
-                          <label class="form-label" style="font-size: medium;" for="lastname">Apellido</label> <br>
-                          <input formControlName="lastname" style="width: 100%;"  type="text" id="lastname" class="validate" placeholder="Apellido" />
-                            <div  *ngIf="GetForm['lastname'].errors && (GetForm['lastname'].dirty || GetForm['lastname'].touched )"  class="error-message">
-                              <label style="font-size: 10px;" >Por favor ingrese su apellido</label>
-                            </div>
-                        </div>
+                  <div class="d-flex flex-row align-items-center mb-4">
+                    <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                    <div class="form-outline flex-fill mb-0">
+                      <input [(ngModel)] = "user.username" name = "username" class="form-control" />
+                      <label class="form-label" for="form3Example3c">Nombre de usuario</label>
+                    </div>
+                  </div>
+                  <div class="d-flex flex-row align-items-center mb-4">
+                    <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                    <div class="form-outline flex-fill mb-0">
+                      <input [(ngModel)] = "user.password" name = "password" type="password" class="form-control" />
+                      <label class="form-label" for="form3Example3c">password</label>
+                    </div>
+                  </div>
+                  <div class="d-flex flex-row align-items-center mb-4">
+                    <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                    <div class="form-outline flex-fill mb-0">
+                      <input [(ngModel)] = "user.nacimiento" name = "nacimiento" type="date" class="form-control" />
+                      <label class="form-label" for="form3Example3c">Fecha nacimiento</label>
+                    </div>
+                  </div>
+                  <div class="d-flex flex-row align-items-center mb-4">
+                    <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                    <div class="form-outline flex-fill mb-0">
+                      <input [(ngModel)] = "user.nombre" name = "nombre" class="form-control" />
+                      <label class="form-label" for="form3Example3c">Nombre</label>
+                    </div>
+                  </div>
+                  <div class="d-flex flex-row align-items-center mb-4">
+                    <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                    <div class="form-outline flex-fill mb-0">
+                      <input [(ngModel)] = "user.apellido" name = "apellido" class="form-control" />
+                      <label class="form-label" for="form3Example3c">Apellido</label>
+                    </div>
+                  </div>
+                  <div class="d-flex flex-row align-items-center mb-4">
+                    <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                    <div class="form-outline flex-fill mb-0">
+                      <input [(ngModel)] = "user.email" name = "email" class="form-control" />
+                      <label class="form-label" for="form3Example3c">Email</label>
+                    </div>
+                  </div>
 
-                        <br>
+                  <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+                    <button type="submit" class="btn btn-primary">Registrar</button>
+                  </div>
 
+                </form>
 
-                        <br>
-                        <div class="form-outline mb-4">
-                          <label class="form-label" style="font-size: medium;" for="birthday">Fecha de nacimiento</label> <br>
-                          <input formControlName="birthday" style="width: 100%;"  type="text" id="birthday" class="validate" placeholder="Fecha de nacimiento" />
-                            <div  *ngIf="GetForm['birthday'].errors && (GetForm['birthday'].dirty || GetForm['birthday'].touched )"  class="error-message">
-                              <label style="font-size: 10px;" >Por favor ingrese su fecha de nacimiento</label>
-                            </div>
-                        </div>
+              </div>
+              <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
 
-                        <br>
-                        <div class="form-outline mb-4">
-                          <label class="form-label" style="font-size: medium;" for="phone">Teléfono</label> <br>
-                          <input formControlName="phone" style="width: 100%;"  type="text" id="phone" class="validate" placeholder="Teléfono" />
-                            <div  *ngIf="GetForm['phone'].errors && (GetForm['phone'].dirty || GetForm['phone'].touched )"  class="error-message">
-                              <label style="font-size: 10px;" >Por favor ingrese su número de teléfono</label>
-                            </div>
-                        </div>
+                <img src="../../../../assets/logo_devplant.png"
+                  class="img-fluid" alt="Sample image">
 
-                        <br>
-
-
-
-
-                         <div class="text-center pt-1 mb-5 pb-1">
-                           <!-- con disabled deshabilitamos el boton de ingresar hasta que no esten correctos los datos -->
-                           <button  [disabled]="GetForm['username'].errors ||GetForm['password'].errors " (click)="logIn"  type="button"
-                           class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" style="font-size: 20px;" routerLink="/home" >Registrarme</button>
-
-                         </div>
-
-                         <div class="d-flex align-items-center justify-content-center pb-4">
-                           <p class="mb-0 me-2">Ya tenés cuenta?</p>
-
-                           <button  type="button"  class="btn btn-outline-danger" routerLink="/LogIn">Ingresar a mi cuenta</button>
-                         </div>
-
-                       </form>
-
-                     </div>
-                   </div>
-                     <div class="col-lg-6 d-flex align-items-center gradient-custom-3">
-                   </div>
-                 </div>
-               </div>
-             </div>
-           </div>
-         </div>
-
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
