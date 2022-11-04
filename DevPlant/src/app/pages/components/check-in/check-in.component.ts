@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import  { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { UserService } from 'src/app/services/user.service';
+import Swal from 'sweetalert2';
+
 
 @Component({
   selector: 'app-check-in',
@@ -7,48 +11,74 @@ import  { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./check-in.component.css']
 })
 export class CheckInComponent implements OnInit {
-  
-//funciones del formulario
-form: FormGroup = new FormGroup({});
 
-  constructor(private fb: FormBuilder) {
-    
+  public user = {
+    username : '',
+    password : '',
+    nombre : '',
+    apellido : '',
+    email : '',
+    telefono : '',
+    nacimiento : ''
+  }
+
+  constructor(private userService:UserService, private snack:MatSnackBar) {
+
    }
 
-  ngOnInit(): void {
-    this.CreateForm();
+   ngOnInit(): void {
+
   }
-  CreateForm(){
-    this.form = this.fb.group({
 
-      eMail:[" ",[Validators.required, Validators.email,Validators.minLength(10)]],
-      password:[" ",[Validators.required,Validators.minLength(8)]],
-      name:[" ",[Validators.required,Validators.minLength(2)]],
-      lastname:[" ",[Validators.required,Validators.minLength(2)]],
-      dni:[" ",[Validators.required,Validators.minLength(2)]],
-      birthday:[" ",[Validators.required,Validators.minLength(2)]],
-      phone:[" ",[Validators.required,Validators.minLength(2)]],
-      city:[" ",[Validators.required,Validators.minLength(2)]],
-      province:[" ",[Validators.required,Validators.minLength(2)]],
+  formSubmit(){
+    console.log(this.user);
+    if (this.user.username == '' || this.user.username == null){
+      this.snack.open('El nombre de usuario es requerido!' , 'Aceptar', {
+        duration : 3000,
+        verticalPosition : 'top',
+        horizontalPosition : 'right'
+      });
+      return;
+    }
+    if (this.user.password == '' || this.user.password == null){
+      this.snack.open('La contraseña es requerida!' , 'Aceptar', {
+        duration : 3000,
+        verticalPosition : 'top',
+        horizontalPosition : 'right'
+      });
+      return;
+    }
 
 
-    });
-    
+
+    this.userService.registrarUsuario(this.user).subscribe(
+      (data) => {
+        console.log(data)
+        Swal.fire('Usuario guardado', 'Usuario registrado con exito','success');
+      },(error) => {
+        console.log(error)
+        this.snack.open('Usuario ya esta registrado' , 'Aceptar', {
+          duration : 3000,
+        });
+      }
+    )
+
+
+  }
+
+
+
   //inhabilitamos el boton de ingresar hasta que esté validado el usuario y la contraseña en logIn component.html con [disabled]
 
 }
-logIn(){
- 
 
-}
+
+
+
 
 //inhabilitamos el boton de ingresar hasta que esté validado el usuario y la contraseña en logIn component.html con [disabled]
 
-get GetForm(){
 
-  return this.form.controls;
-}
-}
 
 
 

@@ -1,102 +1,64 @@
 
-         <div class="container py-5 h-100">
-           <div class="row d-flex justify-content-center align-items-center h-100">
-             <div class="col-xl-12">
-               <div class="card rounded-3 text-black">
-                 <div class="row g-0">
-                   <div class="col-lg-6">
-                     <div class="card-body p-md-5 mx-md-4 justify-content-center">
+<div class="boostrap-wrapper">
+  <div class="cointainer">
+    <div class="row " style="margin-top : 30px;"  >
+      <div class="col-md-6 offset-md-3" style="  border-radius: 10px; margin-bottom: 50px;">
+        <mat-card style="padding-top: 50px; padding-bottom: 25px;">
+        <div class="container text-center" >
+          <img src="../../../../assets/plantaicono.png" style="width: 100px;" alt="">
+        </div>
+        <h1 class="text-center"> Registrate Aqui</h1>
 
-                       <div class="text-center">
-                         <img src="../../../../assets/logo_devplant.png"
-                           style="width: 250px;" alt="logo">
-                       </div>
+        <form (ngSubmit)="formSubmit()">
 
-                       <form style="padding-top: 100px; " [formGroup] ="form">  <!-- formGroup para conectar a las funciones del pages.module.ts--no funciona el placeholder-->
-                         <h3 style="text-align: center;">Registrate en DevPlant</h3>
-                          <br>
-                         <div class="form-outline mb-4">
-                           <label class="form-label" style="font-size: medium;" for="eMail">Usuario</label><br>
-                           <input formControlName="eMail"  style="width: 100%;" type="text" id="eMail"  class="validate" placeholder="eMail"  />
-                         <div  *ngIf="GetForm['eMail'].errors && (GetForm['eMail'].dirty ||GetForm['eMail'].touched )"  class="error-message">
-                             <label style="font-size: 10px; ">Por favor ingrese un correo electrónico válido</label>
-                         </div>
-                         </div>
-                         <br>
-                         <div class="form-outline mb-4">
-                           <label class="form-label" style="font-size: medium;" for="password">Contraseña</label> <br>
-                           <input formControlName="password" style="width: 100%;" type="text" id="password" class="validate" placeholder="contraseña" />
-                             <div  *ngIf="GetForm['password'].errors && (GetForm['password'].dirty || GetForm['password'].touched )"  class="error-message">
-                               <label style="font-size: 10px;" >Por favor ingrese una contraseña válida</label>
-                             </div>
-                         </div>
-                         <br>
-                         <div class="form-outline mb-4">
-                          <label class="form-label" style="font-size: medium;" for="name">Nombre</label> <br>
-                          <input formControlName="name" style="width: 100%;"  type="text" id="name" class="validate" placeholder="Nombre" />
-                            <div  *ngIf="GetForm['name'].errors && (GetForm['name'].dirty || GetForm['name'].touched )"  class="error-message">
-                              <label style="font-size: 10px;" >Por favor ingrese su nombre</label>
-                            </div>
-                        </div>
+          <mat-form-field class="full-width"  appearance = "outline">
+            <mat-label>Nombre de usuario</mat-label>
+            <!-- required es un campo requerido -->
+            <input matInput required [(ngModel)] = "user.username" name = "username" placeholder="Digite nombre de usuario"/>
+            <mat-hint>El nombre de usuario debe ser unico</mat-hint>
+          </mat-form-field>
 
-                        <br>
-                        <div class="form-outline mb-4">
-                          <label class="form-label" style="font-size: medium;" for="lastname">Apellido</label> <br>
-                          <input formControlName="lastname" style="width: 100%;"  type="text" id="lastname" class="validate" placeholder="Apellido" />
-                            <div  *ngIf="GetForm['lastname'].errors && (GetForm['lastname'].dirty || GetForm['lastname'].touched )"  class="error-message">
-                              <label style="font-size: 10px;" >Por favor ingrese su apellido</label>
-                            </div>
-                        </div>
+          <mat-form-field class="full-width"  appearance = "outline">
+            <mat-label>Contraseña</mat-label>
+            <input type="password" matInput required [(ngModel)] = "user.password" name = "password" placeholder="Digite contraseña"/>
+          </mat-form-field>
 
-                        <br>
+          <mat-form-field class="full-width"  appearance = "outline">
+            <mat-label>Email</mat-label>
+            <input matInput required [(ngModel)] = "user.email" name = "email" placeholder="Digite username"/>
+          </mat-form-field>
+
+          <mat-form-field class="full-width"  appearance = "outline">
+            <mat-label>Nombre </mat-label>
+            <input matInput [(ngModel)] = "user.nombre" name = "nombre" placeholder="Digite su nombre"/>
+          </mat-form-field>
+
+          <mat-form-field class="full-width"  appearance = "outline">
+            <mat-label>Apellido</mat-label>
+            <input matInput [(ngModel)] = "user.apellido" name = "apellido" placeholder="Digite su apellido"/>
+          </mat-form-field>
 
 
-                        <br>
-                        <div class="form-outline mb-4">
-                          <label class="form-label" style="font-size: medium;" for="birthday">Fecha de nacimiento</label> <br>
-                          <input formControlName="birthday" style="width: 100%;"  type="text" id="birthday" class="validate" placeholder="Fecha de nacimiento" />
-                            <div  *ngIf="GetForm['birthday'].errors && (GetForm['birthday'].dirty || GetForm['birthday'].touched )"  class="error-message">
-                              <label style="font-size: 10px;" >Por favor ingrese su fecha de nacimiento</label>
-                            </div>
-                        </div>
-
-                        <br>
-                        <div class="form-outline mb-4">
-                          <label class="form-label" style="font-size: medium;" for="phone">Teléfono</label> <br>
-                          <input formControlName="phone" style="width: 100%;"  type="text" id="phone" class="validate" placeholder="Teléfono" />
-                            <div  *ngIf="GetForm['phone'].errors && (GetForm['phone'].dirty || GetForm['phone'].touched )"  class="error-message">
-                              <label style="font-size: 10px;" >Por favor ingrese su número de teléfono</label>
-                            </div>
-                        </div>
-
-                        <br>
+          <mat-form-field class="full-width"  appearance = "outline">
+            <mat-label>Fecha de nacimiento</mat-label>
+            <input matInput type="date"  [(ngModel)] = "user.nacimiento" name = "nacimiento" placeholder="Digite username"/>
+          </mat-form-field>
 
 
 
+          <div class="container text-center">
+            <!-- Boton submit -->
+            <button type="submit" mat-raised-button color="primary">Registrar</button>
+            <!-- Reset sirve para limpiar los campos -->
+            <button type="reset" style="margin-left: 20px;" mat-raised-button color="accent">Limpiar</button>
+          </div>
 
-                         <div class="text-center pt-1 mb-5 pb-1">
-                           <!-- con disabled deshabilitamos el boton de ingresar hasta que no esten correctos los datos -->
-                           <button  [disabled]="GetForm['username'].errors ||GetForm['password'].errors " (click)="logIn"  type="button"
-                           class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" style="font-size: 20px;" routerLink="/home" >Registrarme</button>
+        </form>
+        <br><br><br>
+      </mat-card>
+      </div>
 
-                         </div>
-
-                         <div class="d-flex align-items-center justify-content-center pb-4">
-                           <p class="mb-0 me-2">Ya tenés cuenta?</p>
-
-                           <button  type="button"  class="btn btn-outline-danger" routerLink="/LogIn">Ingresar a mi cuenta</button>
-                         </div>
-
-                       </form>
-
-                     </div>
-                   </div>
-                     <div class="col-lg-6 d-flex align-items-center gradient-custom-3">
-                   </div>
-                 </div>
-               </div>
-             </div>
-           </div>
-         </div>
-
+    </div>
+  </div>
+</div>
 
