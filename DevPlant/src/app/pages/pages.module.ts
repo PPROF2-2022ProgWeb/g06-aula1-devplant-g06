@@ -16,7 +16,11 @@ import { LogOutComponent } from './components/log-out/log-out.component';
 import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AdminComponent } from './components/admin/admin.component'; //importamos para poder utilizar los formularios reactivos de angular
-
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import {MatButtonModule} from '@angular/material/button';
+import {MatCardModule} from '@angular/material/card';
 
 
 
@@ -42,6 +46,11 @@ import { AdminComponent } from './components/admin/admin.component'; //importamo
     ECommerceModule,
     FormsModule,
     ReactiveFormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatSnackBarModule,
+    MatButtonModule,
+    MatCardModule,
 
 
     //Se importa el approutingmodule asi funciona en pages module

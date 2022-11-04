@@ -1,6 +1,6 @@
-package com.sistema.devplant.devplantbackend.repository;
+package com.devplantbackend.devplantbackend.repository;
 
-import com.sistema.devplant.devplantbackend.entity.Usuario;
+import com.devplantbackend.devplantbackend.entity.Usuario;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface UsuarioRepository extends JpaRepository<Usuario,Long> {

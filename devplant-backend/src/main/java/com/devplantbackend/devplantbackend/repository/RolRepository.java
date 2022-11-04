@@ -1,6 +1,6 @@
-package com.sistema.devplant.devplantbackend.repository;
+package com.devplantbackend.devplantbackend.repository;
 
-import com.sistema.devplant.devplantbackend.entity.Rol;
+import com.devplantbackend.devplantbackend.entity.Rol;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface RolRepository extends JpaRepository<Rol,Long> {

@@ -1,11 +1,13 @@
-package com.sistema.devplant.devplantbackend.Services.Impl;
+package com.devplantbackend.devplantbackend.services.Impl;
 
 
-import com.sistema.devplant.devplantbackend.Services.UsuarioService;
-import com.sistema.devplant.devplantbackend.entity.Usuario;
-import com.sistema.devplant.devplantbackend.entity.UsuarioRol;
-import com.sistema.devplant.devplantbackend.repository.RolRepository;
-import com.sistema.devplant.devplantbackend.repository.UsuarioRepository;
+import com.devplantbackend.devplantbackend.entity.Usuario;
+import com.devplantbackend.devplantbackend.entity.UsuarioRol;
+import com.devplantbackend.devplantbackend.repository.RolRepository;
+import com.devplantbackend.devplantbackend.repository.UsuarioRepository;
+import com.devplantbackend.devplantbackend.services.UsuarioService;
+
+import com.devplantbackend.devplantbackend.services.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -39,6 +41,15 @@ public class UsuarioServiceImpl implements UsuarioService{
         return usuarioLocal;
     }
 
+    @Override
+    public Usuario obtenerUsuario(String username) {
+        return usuarioRepository.findByUsername(username);
+    }
+
+    @Override
+    public void eliminarUsuario(Long usuarioId) {
+        usuarioRepository.deleteById(usuarioId);
+    }
 
 
 }

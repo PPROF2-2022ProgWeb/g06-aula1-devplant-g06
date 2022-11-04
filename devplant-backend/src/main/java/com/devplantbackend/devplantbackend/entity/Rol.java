@@ -1,4 +1,4 @@
-package com.sistema.devplant.devplantbackend.entity;
+package com.devplantbackend.devplantbackend.entity;
 
 
 import javax.persistence.*;

@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { UserService } from 'src/app/services/user.service';
+import Swal from 'sweetalert2';
 
 
 @Component({
@@ -19,7 +22,7 @@ export class CheckInComponent implements OnInit {
     nacimiento : ''
   }
 
-  constructor(private userService:UserService) {
+  constructor(private userService:UserService, private snack:MatSnackBar) {
 
    }
 
@@ -30,17 +33,33 @@ export class CheckInComponent implements OnInit {
   formSubmit(){
     console.log(this.user);
     if (this.user.username == '' || this.user.username == null){
-      alert('El nombre de usuario es requerido');
+      this.snack.open('El nombre de usuario es requerido!' , 'Aceptar', {
+        duration : 3000,
+        verticalPosition : 'top',
+        horizontalPosition : 'right'
+      });
       return;
     }
+    if (this.user.password == '' || this.user.password == null){
+      this.snack.open('La contraseña es requerida!' , 'Aceptar', {
+        duration : 3000,
+        verticalPosition : 'top',
+        horizontalPosition : 'right'
+      });
+      return;
+    }
+
+
 
     this.userService.registrarUsuario(this.user).subscribe(
       (data) => {
         console.log(data)
-        alert('Usuario guardado con exito')
+        Swal.fire('Usuario guardado', 'Usuario registrado con exito','success');
       },(error) => {
         console.log(error)
-        alert('Usuario ya esta registrado')
+        this.snack.open('Usuario ya esta registrado' , 'Aceptar', {
+          duration : 3000,
+        });
       }
     )
 

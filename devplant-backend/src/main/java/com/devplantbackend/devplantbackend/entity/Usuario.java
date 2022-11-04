@@ -1,6 +1,7 @@
-package com.sistema.devplant.devplantbackend.entity;
+package com.devplantbackend.devplantbackend.entity;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.query.criteria.internal.path.SetAttributeJoin;
 
 import javax.persistence.*;
@@ -29,6 +30,7 @@ public class Usuario {
     private String perfil;
 
     @OneToMany(cascade = CascadeType.ALL,fetch = FetchType.EAGER, mappedBy = "usuario")
+    @JsonIgnore
     private Set<UsuarioRol> usuarioRoles = new HashSet<>();
 
     public Long getId() {
