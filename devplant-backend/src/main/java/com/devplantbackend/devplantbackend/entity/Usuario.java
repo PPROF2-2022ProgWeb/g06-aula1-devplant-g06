@@ -2,12 +2,14 @@ package com.devplantbackend.devplantbackend.entity;
 
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import org.hibernate.query.criteria.internal.path.SetAttributeJoin;
+
+
 
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.HashSet;
 import java.util.Set;
+
 
 //Se informa q es una entidad
 @Entity

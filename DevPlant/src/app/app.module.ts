@@ -12,6 +12,8 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
+import { authInterceptorProviders } from './services/auth.interceptor';
+
 
 @NgModule({
   declarations: [
@@ -34,7 +36,7 @@ import {MatButtonModule} from '@angular/material/button';
     MatButtonModule
 
   ],
-  providers: [],
+  providers: [authInterceptorProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

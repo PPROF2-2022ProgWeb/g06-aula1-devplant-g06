@@ -12,7 +12,6 @@ import { BlogComponent } from './components/blog/blog.component';
 import { AccountComponent } from './components/account/account.component';
 import { LogInComponent } from './components/log-in/log-in.component';
 import { CheckInComponent } from './components/check-in/check-in.component';
-import { LogOutComponent } from './components/log-out/log-out.component';
 import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AdminComponent } from './components/admin/admin.component'; //importamos para poder utilizar los formularios reactivos de angular
@@ -21,6 +20,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
+
 
 
 
@@ -35,7 +35,6 @@ import {MatCardModule} from '@angular/material/card';
     AccountComponent,
     LogInComponent,
     CheckInComponent,
-    LogOutComponent,
     ResetPasswordComponent,
     AdminComponent
   ],
@@ -53,6 +52,7 @@ import {MatCardModule} from '@angular/material/card';
     MatCardModule,
 
 
+
     //Se importa el approutingmodule asi funciona en pages module
     RouterModule
   ],
@@ -66,12 +66,12 @@ import {MatCardModule} from '@angular/material/card';
     LogInComponent,
     CheckInComponent,
     ResetPasswordComponent,
-    LogOutComponent,
     AdminComponent
 
 
 
 
   ],
+  providers: []
 })
 export class PagesModule { }

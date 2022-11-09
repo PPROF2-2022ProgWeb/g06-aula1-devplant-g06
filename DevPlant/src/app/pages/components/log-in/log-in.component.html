@@ -1,7 +1,7 @@
 
 <div class="boostrap-wrapper">
   <div class="cointainer">
-    <div class="row mt20">
+
       <div class="col-md-6 offset-md-3" style="margin-bottom: 50px; margin-top: 50px;">
         <mat-card style="padding-top: 50px; padding-bottom: 50px;">
           <div class = "container text-center" style="padding-bottom: 30px;">
@@ -10,12 +10,12 @@
           </div>
 
 
-          <form action="">
+          <form (ngSubmit) = "formSubmit()">
 
             <mat-form-field class="full-width"  appearance = "outline">
               <mat-label>Nombre de usuario</mat-label>
               <!-- required es un campo requerido -->
-              <input matInput required placeholder="Ingrese nombre de usuario"/>
+              <input [(ngModel)] = "loginData.username" name="username" matInput required placeholder="Ingrese nombre de usuario"/>
               <mat-hint>El nombre de usuario debe ser valido</mat-hint>
             </mat-form-field>
             <br>
@@ -24,7 +24,7 @@
             <mat-form-field class="full-width"  appearance = "outline">
               <mat-label>Contraseña</mat-label>
               <!-- required es un campo requerido -->
-              <input type="password" matInput required placeholder="Ingrese su contraseña"/>
+              <input [(ngModel)] = "loginData.password" name="password" type="password" matInput required placeholder="Ingrese su contraseña"/>
               <mat-hint>El nombre de usuario debe ser valido</mat-hint>
             </mat-form-field>
 
@@ -41,5 +41,5 @@
         </mat-card>
       </div>
     </div>
-  </div>
+
 </div>

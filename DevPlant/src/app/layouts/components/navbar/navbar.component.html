@@ -1,15 +1,14 @@
-
 <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
   <div class="container-fluid">
-      <!-- Ruteo en el logo del sitio-->
+    <!-- Ruteo en el logo del sitio-->
     <a class="navbar-brand" routerLink="/home"
-            ><img
-              src="../../../../assets/logo_devplant.png"
-              class="logo"
-              width="150px"
-              height="40%"
-              alt="logo"
-          /></a>
+      ><img
+        src="../../../../assets/logo_devplant.png"
+        class="logo"
+        width="150px"
+        height="40%"
+        alt="logo"
+    /></a>
     <button
       class="navbar-toggler"
       type="button"
@@ -22,45 +21,96 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
       <!-- Ruteo mediante routerLink-->
-         <!-- Llamo a la variable session, al inicio de la lista, declarada en el component.ts, con ngIf realizo la validación, por ahora están !"deshabilitados"-->
-
+      <!-- Llamo a la variable session, al inicio de la lista, declarada en el component.ts, con ngIf realizo la validación, por ahora están !"deshabilitados"-->
 
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item" *ngIf="!session"><a class="nav-link" routerLink="/home" >Inicio</a></li>
-        <li class="nav-item" *ngIf="!session"><a class="nav-link" routerLink="/shop">Tienda</a></li>
-
-        <li class="nav-item" *ngIf="!session"><a class="nav-link" routerLink="/blog">Blog</a></li>
-        <li class="nav-item" *ngIf="!session"><a class="nav-link" routerLink="/about-us">Nosotros</a></li>
-        <li class="nav-item" *ngIf="!session"><a class="nav-link" routerLink="/faqs">FaQs</a></li>
-        <li class="nav-item" *ngIf="!session"><a class="nav-link" routerLink="/contact-us" >Contactanos</a></li>
-
-        </ul>
-        <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
-        <li class="nav-item d-lg-none" *ngIf="!session"><a class="nav-link carrito" style="height: 40px;"  routerLink="/cart" ><img src="../../../../assets/cart.png"></a></li>
-
-        <div class="btn-group d-none d-lg-block">
-
-          <button type="button" class="btn btn-danger" routerLink="/admin">Admin</button>
-
-          <button type="button" class="btn btn-success dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Mi Cuenta
+        <li class="nav-item">
+          <button type="button" class="btn" [routerLink]="'/home'">
+            Inicio
           </button>
+        </li>
 
-          <div class="dropdown-menu dropdown-menu-right">
-            <button class="dropdown-item" type="button"  routerLink="/account">Mi cuenta</button>
-            <button class="dropdown-item" type="button"  routerLink="/cart">Mi carrito  <img src="../../../../assets/cart.png"></button>
-          </div>
-        </div>
-        <li class="nav-item d-lg-none" *ngIf="!session"><a class="nav-link" routerLink="/account">Mi Cuenta</a></li>
-        <li class="nav-item" *ngIf="!session"><a class="nav-link" routerLink="/LogIn">Ingresar</a></li>
-        <li class="nav-item" *ngIf="!session"><a class="nav-link" routerLink="/CheckIn">Registrarse</a></li>
-        </ul>
+        <li class="nav-item">
+          <button
+            type="button"
+            *ngIf="login.isLoggedIn()"
+            class="btn"
+            routerLink="/shop"
+          >
+            Tienda
+          </button>
+        </li>
 
+        <li class="nav-item">
+          <button type="button" class="btn" [routerLink]="'/blog'">
+            Blog
+          </button>
+        </li>
 
+        <li class="nav-item">
+          <button type="button" class="btn" [routerLink]="'/about-us'">
+            Nosotros
+          </button>
+        </li>
 
+        <li class="nav-item">
+          <button type="button" class="btn" routerLink="/faqs" [routerLink]="'/faqs'">
+            FaQs
+          </button>
+        </li>
+
+        <li class="nav-item">
+          <button type="button" class="btn" [routerLink]="'/contact-us'">
+            Contactanos
+          </button>
+        </li>
+      </ul>
+
+      <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <button
+            type="button"
+            class="btn"
+            *ngIf="!login.isLoggedIn()"
+            [routerLink]="'/CheckIn'"
+          >
+            Registrarse
+          </button>
+        </li>
+
+        <li class="nav-item">
+          <button
+            type="button"
+            class="btn"
+            *ngIf="!login.isLoggedIn()"
+            [routerLink]="'/LogIn'"
+          >
+            Logearse
+          </button>
+        </li>
+
+        <li class="nav-item">
+          <button type="button" class="btn" *ngIf="login.isLoggedIn()">
+            {{ login.getUser().username }}
+          </button>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" *ngIf="login.isLoggedIn()"> </a>
+        </li>
+
+        <li class="nav-item">
+          <button
+            type="button"
+            class="btn btn-light"
+            *ngIf="login.isLoggedIn()"
+            (click)="logOut()"
+          >
+            Cerrar sesion
+          </button>
+        </li>
+      </ul>
     </div>
-
   </div>
 </nav>

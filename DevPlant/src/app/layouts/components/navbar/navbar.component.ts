@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LoginService } from 'src/app/services/login.service';
 
 @Component({
   selector: 'app-navbar',
@@ -7,11 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  session: boolean=false; //genero una variable para no mostrar todos los botones del nav, accedo desde el navbar.component.html
 
-  constructor() { }
+
+  constructor(public login:LoginService) { }
 
   ngOnInit(): void {
+  }
+
+  public logOut(){
+    this.login.logout();
+    window.location.reload();
   }
 
 }

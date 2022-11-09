@@ -9,13 +9,15 @@ import { RouterModule } from '@angular/router';
 
 
 
+
 @NgModule({
   declarations: [
     HeaderComponent,
     FooterComponent,
     NavbarComponent,
     ContentComponent,
-    GaleryComponent
+    GaleryComponent,
+
   ],
   imports: [
     CommonModule,
