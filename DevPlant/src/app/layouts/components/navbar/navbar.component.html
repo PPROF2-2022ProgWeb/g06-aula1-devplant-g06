@@ -91,7 +91,7 @@
         </li>
 
         <li class="nav-item">
-          <button type="button" class="btn" *ngIf="login.isLoggedIn()">
+          <button type="button" class="btn" *ngIf="login.isLoggedIn()" routerLink="/admin">
             {{ login.getUser().username }}
           </button>
         </li>

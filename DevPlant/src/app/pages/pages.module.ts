@@ -20,6 +20,9 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
+import {MatListModule} from '@angular/material/list';
+
+import {MatIconModule} from '@angular/material/icon';
 
 
 
@@ -36,7 +39,9 @@ import {MatCardModule} from '@angular/material/card';
     LogInComponent,
     CheckInComponent,
     ResetPasswordComponent,
-    AdminComponent
+    AdminComponent,
+
+
   ],
   imports: [
     AppRoutingModule,
@@ -50,6 +55,8 @@ import {MatCardModule} from '@angular/material/card';
     MatSnackBarModule,
     MatButtonModule,
     MatCardModule,
+    MatListModule,
+    MatIconModule,
 
 
 
