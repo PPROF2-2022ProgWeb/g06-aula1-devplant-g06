@@ -56,15 +56,13 @@ export class LogInComponent implements OnInit {
 
             //window.location.href = '/admin';
             this.router.navigate(['admin']);
+            this.loginService.loginStatusSubjec.next(true);
 
-          }else{
-            this.loginService.logout();
-          }
-
-          if(this.loginService.getUserRol() == "NORMAL"){
+          }else if(this.loginService.getUserRol() == "NORMAL"){
 
             //window.location.href = "/home";
             this.router.navigate(['shop']);
+            this.loginService.loginStatusSubjec.next(true);
 
           }else{
             this.loginService.logout();

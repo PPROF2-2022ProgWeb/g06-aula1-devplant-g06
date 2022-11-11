@@ -5,6 +5,7 @@ import com.devplantbackend.devplantbackend.configuraciones.JwtUtils;
 import com.devplantbackend.devplantbackend.entity.JwtRequest;
 import com.devplantbackend.devplantbackend.entity.JwtResponse;
 import com.devplantbackend.devplantbackend.entity.Usuario;
+import com.devplantbackend.devplantbackend.excepciones.UsuarioNotFoundException;
 import com.devplantbackend.devplantbackend.services.Impl.UserDetailsServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -35,7 +36,7 @@ public class AuthenticationController {
     public ResponseEntity<?> generarToken(@RequestBody JwtRequest jwtRequest) throws Exception {
         try{
             autenticar(jwtRequest.getUsername(),jwtRequest.getPassword());
-        }catch (Exception exception){
+        }catch (UsuarioNotFoundException exception){
             exception.printStackTrace();
             throw new Exception("Usuario no encontrado");
         }

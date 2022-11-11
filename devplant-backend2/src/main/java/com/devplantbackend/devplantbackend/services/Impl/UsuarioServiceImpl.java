@@ -3,6 +3,7 @@ package com.devplantbackend.devplantbackend.services.Impl;
 
 import com.devplantbackend.devplantbackend.entity.Usuario;
 import com.devplantbackend.devplantbackend.entity.UsuarioRol;
+import com.devplantbackend.devplantbackend.excepciones.UsuarioFoundException;
 import com.devplantbackend.devplantbackend.repository.RolRepository;
 import com.devplantbackend.devplantbackend.repository.UsuarioRepository;
 import com.devplantbackend.devplantbackend.services.UsuarioService;
@@ -29,7 +30,7 @@ public class UsuarioServiceImpl implements UsuarioService{
         Usuario usuarioLocal = usuarioRepository.findByUsername(usuario.getUsername());
         if(usuarioLocal != null){
             System.out.println("El usuario ya existe");
-            throw new Exception("El usuario ya esta presente");
+            throw new UsuarioFoundException("El usuario ya esta presente");
         }
         else{
             for(UsuarioRol usuarioRol:usuarioRoles){
