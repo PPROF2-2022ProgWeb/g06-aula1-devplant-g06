@@ -29,7 +29,7 @@ public class DevplantBackendApplication  implements CommandLineRunner {
 	public void run(String... args) throws Exception{
 
 		/* try{
-
+			Login y registro terminados
 			 Usuario usuario = new Usuario();
 
 			usuario.setNombre("Manuel");
