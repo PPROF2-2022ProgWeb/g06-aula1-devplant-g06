@@ -10,30 +10,40 @@ import { BlogComponent } from './pages/components/blog/blog.component';
 import { AccountComponent } from './pages/components/account/account.component';
 import { LogInComponent } from './pages/components/log-in/log-in.component';
 import { CheckInComponent } from './pages/components/check-in/check-in.component';
-import { LogOutComponent } from './pages/components/log-out/log-out.component';
 import { ResetPasswordComponent } from './pages/components/reset-password/reset-password.component';
 import { AdminComponent } from './pages/components/admin/admin.component';
+import { AdminGuard } from './services/admin.guard';
+import { NormalGuard } from './services/normal.guard';
+
 
 const routes: Routes = [
+  { path: '', component: HomeComponent, pathMatch: 'full' },
+  { path: 'home', component: HomeComponent, pathMatch: 'full' },
+  { path: 'contact-us', component: ContactUsComponent, pathMatch: 'full' },
+  { path: 'shop', component: ShopComponent, pathMatch: 'full' },
+  { path: 'cart', component: CartComponent, pathMatch: 'full' },
+  { path: 'about-us', component: AboutUsComponent, pathMatch: 'full' },
+  { path: 'faqs', component: FaqsComponent, pathMatch: 'full' },
+  { path: 'blog', component: BlogComponent, pathMatch: 'full' },
+  { path: 'account', component: AccountComponent, pathMatch: 'full' },
+  { path: 'LogIn', component: LogInComponent, pathMatch: 'full' },
+  { path: 'CheckIn', component: CheckInComponent, pathMatch: 'full' },
+  {
+    path: 'resetPassword',
+    component: ResetPasswordComponent,
+    pathMatch: 'full',
+  },
+  {
+    path: 'admin',
+    component: AdminComponent,
+    pathMatch: 'full',
+    canActivate: [AdminGuard],
 
-  {path: '', component: HomeComponent},
-  {path: 'home', component: HomeComponent},
-  {path: 'contact-us', component: ContactUsComponent},
-  {path: 'shop', component: ShopComponent},
-  {path: 'cart', component: CartComponent},
-  {path: 'about-us', component: AboutUsComponent},
-  {path: 'faqs', component: FaqsComponent},
-  {path: 'blog', component: BlogComponent},
-  {path: 'account', component: AccountComponent},
-  {path: 'LogIn', component:LogInComponent},
-  {path: 'logOut', component:LogOutComponent},
-  {path: 'CheckIn', component:CheckInComponent},
-  {path: 'resetPassword', component:ResetPasswordComponent},
-  {path: 'admin',component:AdminComponent}
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
