@@ -14,7 +14,9 @@ div.container-fluid{
     width: 100%;
     height: 550px;
     padding-top: 15px;
-    background-image: url("../../../../assets/flores.jpg");
+    background-color: #6b8e23;
+    opacity: 60%;
+   /* background-image: url("../../../../assets/flores.jpg");*/
     background-attachment: fixed;
     background-size: cover;
     background-position: center center;
