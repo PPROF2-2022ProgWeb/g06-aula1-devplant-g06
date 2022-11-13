@@ -8,7 +8,7 @@ import { LoginService } from './login.service';
 })
 export class NormalGuard implements CanActivate {
 
-  constructor(private loginService:LoginService, private router:Router){
+  constructor(private loginService:LoginService,private router:Router){
 
   }
 
@@ -18,8 +18,8 @@ export class NormalGuard implements CanActivate {
       if(this.loginService.isLoggedIn() && this.loginService.getUserRol() == 'NORMAL'){
         return true;
       }
-    this.router.navigate(['LogIn']);
-    return true;
-  }
 
+      this.router.navigate(['login']);
+      return false;
+  }
 }

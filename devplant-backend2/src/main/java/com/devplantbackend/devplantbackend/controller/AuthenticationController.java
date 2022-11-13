@@ -36,7 +36,7 @@ public class AuthenticationController {
     public ResponseEntity<?> generarToken(@RequestBody JwtRequest jwtRequest) throws Exception {
         try{
             autenticar(jwtRequest.getUsername(),jwtRequest.getPassword());
-        }catch (UsuarioNotFoundException exception){
+        }catch (Exception exception){
             exception.printStackTrace();
             throw new Exception("Usuario no encontrado");
         }
@@ -58,11 +58,9 @@ public class AuthenticationController {
 
     @GetMapping("/actual-usuario")
     public Usuario obtenerUsuarioActual(Principal principal){
-
-              //Casteo
         return (Usuario) this.userDetailsService.loadUserByUsername(principal.getName());
-
     }
-
-
 }
+
+
+

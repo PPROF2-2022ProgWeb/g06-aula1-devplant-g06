@@ -11,34 +11,27 @@ import { LoginService } from 'src/app/services/login.service';
 })
 export class LogInComponent implements OnInit {
 
-
   loginData = {
-    'username' : '',
-    'password' : ''
+    "username" : '',
+    "password" : '',
   }
 
-
-  constructor(private snack:MatSnackBar, private loginService:LoginService, private router:Router){
-
-  }
-
+  constructor(private snack:MatSnackBar,private loginService:LoginService,private router:Router) { }
 
   ngOnInit(): void {
-
   }
 
   formSubmit(){
-    //Hace q salte un pop up informandome si es correcto o requerido
     if(this.loginData.username.trim() == '' || this.loginData.username.trim() == null){
-      this.snack.open( 'El nombre de usuario es requerido', 'Aceptar', {
-        duration : 3000
+      this.snack.open('El nombre de usuario es requerido !!','Aceptar',{
+        duration:3000
       })
       return;
     }
 
     if(this.loginData.password.trim() == '' || this.loginData.password.trim() == null){
-      this.snack.open( 'La contraseña es requerida', 'Aceptar', {
-        duration : 3000
+      this.snack.open('La contraseña es requerida !!','Aceptar',{
+        duration:3000
       })
       return;
     }
@@ -46,37 +39,36 @@ export class LogInComponent implements OnInit {
     this.loginService.generateToken(this.loginData).subscribe(
       (data:any) => {
         console.log(data);
-        //Genero un token y lo almacena en el local storage
         this.loginService.loginUser(data.token);
         this.loginService.getCurrentUser().subscribe((user:any) => {
           this.loginService.setUser(user);
           console.log(user);
 
-          if(this.loginService.getUserRol() == "ADMIN"){
-
+          if(this.loginService.getUserRol() == 'ADMIN'){
+            //dashboard admin
             //window.location.href = '/admin';
             this.router.navigate(['admin']);
             this.loginService.loginStatusSubjec.next(true);
-
-          }else if(this.loginService.getUserRol() == "NORMAL"){
-
-            //window.location.href = "/home";
-            this.router.navigate(['shop']);
+          }
+          else if(this.loginService.getUserRol() == 'NORMAL'){
+            //user dashboard
+            //window.location.href = '/user-dashboard';
+            this.router.navigate(['home']);
             this.loginService.loginStatusSubjec.next(true);
-
-          }else{
+          }
+          else{
             this.loginService.logout();
           }
         })
-
       },(error) => {
         console.log(error);
-        this.snack.open('Detalles invalidos, vuelva a itentar', 'Aceptar',{
-          duration : 3000
+        this.snack.open('Detalles inválidos , vuelva a intentar !!','Aceptar',{
+          duration:3000
         })
-      })
-
-    }
-
-
+      }
+    )
+  }
 }
+
+
+

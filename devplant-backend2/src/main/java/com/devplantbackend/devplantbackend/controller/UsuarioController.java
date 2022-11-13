@@ -19,43 +19,42 @@ import java.util.Set;
 public class UsuarioController {
 
 
-        @Autowired
-        private UsuarioService usuarioService;
+    @Autowired
+    private UsuarioService usuarioService;
 
-        @Autowired
-        private BCryptPasswordEncoder bCryptPasswordEncoder;
+    @Autowired
+    private BCryptPasswordEncoder bCryptPasswordEncoder;
 
-        @PostMapping("/")
-        public Usuario guardarUsuario(@RequestBody Usuario usuario) throws Exception{
+    @PostMapping("/")
+    public Usuario guardarUsuario(@RequestBody Usuario usuario) throws Exception{
+        usuario.setPerfil("default.png");
 
-            usuario.setPerfil("default.png");
+        usuario.setPassword(this.bCryptPasswordEncoder.encode(usuario.getPassword()));
 
-            usuario.setPassword(this.bCryptPasswordEncoder.encode(usuario.getPassword()));
+        Set<UsuarioRol> usuarioRoles = new HashSet<>();
 
-            Set<UsuarioRol> usuarioRoles = new HashSet<>();
+        Rol rol = new Rol();
+        rol.setRolId(2L);
+        rol.setRolNombre("NORMAL");
 
-            Rol rol = new Rol();
-            rol.setRolId(2L);
-            rol.setRolNombre("NORMAL");
+        UsuarioRol usuarioRol = new UsuarioRol();
+        usuarioRol.setUsuario(usuario);
+        usuarioRol.setRol(rol);
 
-            UsuarioRol usuarioRol = new UsuarioRol();
-            usuarioRol.setUsuario(usuario);
-            usuarioRol.setRol(rol);
+        usuarioRoles.add(usuarioRol);
+        return usuarioService.guardarUsuario(usuario,usuarioRoles);
+    }
 
-            usuarioRoles.add(usuarioRol);
 
-            return usuarioService.guardarUsuario(usuario,usuarioRoles);
+    @GetMapping("/{username}")
+    public Usuario obtenerUsuario(@PathVariable("username") String username){
+        return usuarioService.obtenerUsuario(username);
+    }
 
-        }
-        @GetMapping("/{username}")
-        public Usuario obtenerUsuario(@PathVariable("username") String username){
-            return usuarioService.obtenerUsuario(username);
-        }
-
-        @DeleteMapping("/{usuarioId}")
-        public void eliminarUsuario(@PathVariable("usuarioId") Long usuarioId){
-            usuarioService.eliminarUsuario(usuarioId);
-        }
+    @DeleteMapping("/{usuarioId}")
+    public void eliminarUsuario(@PathVariable("usuarioId") Long usuarioId){
+        usuarioService.eliminarUsuario(usuarioId);
+    }
 
 }
 

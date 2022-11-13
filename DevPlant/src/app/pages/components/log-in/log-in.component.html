@@ -14,7 +14,7 @@
 
             <mat-form-field class="full-width"  appearance = "outline">
               <mat-label>Nombre de usuario</mat-label>
-              <!-- required es un campo requerido -->
+
               <input [(ngModel)] = "loginData.username" name="username" matInput required placeholder="Ingrese nombre de usuario"/>
               <mat-hint>No es un usuario válido</mat-hint>
             </mat-form-field>
@@ -23,7 +23,7 @@
             <br>
             <mat-form-field class="full-width"  appearance = "outline">
               <mat-label>Contraseña</mat-label>
-              <!-- required es un campo requerido -->
+
               <input [(ngModel)] = "loginData.password" name="password" type="password" matInput required placeholder="Ingrese su contraseña"/>
               <mat-hint>La contraseña no es válida</mat-hint>
             </mat-form-field>
@@ -31,9 +31,9 @@
             <br><br><br><br>
 
             <div class="container text-center">
-              <!-- Boton submit -->
+
               <button type="submit" mat-raised-button color="primary">Iniciar sesión</button>
-              <!-- Reset sirve para limpiar los campos -->
+
               <button type="reset" style="margin-left: 20px;" mat-raised-button color="accent">Limpiar</button>
 
             </div>
@@ -44,3 +44,5 @@
     </div>
 
 </div>
+
+

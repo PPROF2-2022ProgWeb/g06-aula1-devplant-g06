@@ -23,14 +23,12 @@ public class UsuarioServiceImpl implements UsuarioService{
     @Autowired
     private RolRepository rolRepository;
 
-
     @Override
     public Usuario guardarUsuario(Usuario usuario, Set<UsuarioRol> usuarioRoles) throws Exception {
-
         Usuario usuarioLocal = usuarioRepository.findByUsername(usuario.getUsername());
         if(usuarioLocal != null){
             System.out.println("El usuario ya existe");
-            throw new UsuarioFoundException("El usuario ya esta presente");
+            throw new Exception("El usuario ya esta presente");
         }
         else{
             for(UsuarioRol usuarioRol:usuarioRoles){
