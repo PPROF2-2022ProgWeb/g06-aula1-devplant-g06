@@ -97,7 +97,7 @@
               {{ login.getUser().username }}
           </button>
           <button type="button" class="btn" *ngIf="login.isLoggedIn() && login.getUserRol() == 'NORMAL'" routerLink="/normal">
-              {{ login.getUser().username }}
+             {{ login.getUser().username }}
           </button>
         </li>
 
@@ -111,6 +111,7 @@
             class="btn btn-light"
             *ngIf="login.isLoggedIn()"
             (click)="logOut()"
+            routerLink="/LogIn"
           >
             Cerrar sesion
           </button>

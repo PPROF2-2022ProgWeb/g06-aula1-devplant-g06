@@ -51,9 +51,7 @@ export class LoginService {
   public setUser(user:any){
     localStorage.setItem('user', JSON.stringify(user));
   }
-  public setToken(token:any){
-    localStorage.setItem('token', JSON.stringify(token));
-  }
+
 
   public getUser(){
     let userStr = localStorage.getItem('user');
