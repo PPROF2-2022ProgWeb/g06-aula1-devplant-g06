@@ -8,7 +8,7 @@ import baserUrl from './helper';
 })
 export class LoginService {
 
-  public loginStatusSubjec = new Subject<boolean>();
+  public loginStatusSubjec = new Subject<boolean>;
 
   constructor(private http:HttpClient) { }
 
@@ -51,6 +51,7 @@ export class LoginService {
   public setUser(user:any){
     localStorage.setItem('user', JSON.stringify(user));
   }
+
 
   public getUser(){
     let userStr = localStorage.getItem('user');

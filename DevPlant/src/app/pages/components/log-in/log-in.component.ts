@@ -42,19 +42,24 @@ export class LogInComponent implements OnInit {
         this.loginService.loginUser(data.token);
         this.loginService.getCurrentUser().subscribe((user:any) => {
           this.loginService.setUser(user);
+          this.loginService.loginUser(data.token);
           console.log(user);
 
-          if(this.loginService.getUserRol() == 'ADMIN'){
+          if(this.loginService.getUserRol() == 'ADMIN' ){
             //dashboard admin
             //window.location.href = '/admin';
-            this.router.navigate(['admin']);
+
             this.loginService.loginStatusSubjec.next(true);
+            this.router.navigate(['admin']);
+
           }
           else if(this.loginService.getUserRol() == 'NORMAL'){
             //user dashboard
             //window.location.href = '/user-dashboard';
-            this.router.navigate(['home']);
+
             this.loginService.loginStatusSubjec.next(true);
+            this.router.navigate(['home']);
+
           }
           else{
             this.loginService.logout();
