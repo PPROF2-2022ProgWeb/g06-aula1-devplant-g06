@@ -1,75 +1,9 @@
 
-.container30{
 
-  padding-bottom: 50px;
-  padding-top: 50px;
+
+.header {
+  color: black;
+  font-size: 27px;
+  padding: 10px;
 }
 
-.abs-center{
-  margin-top: 50px;
-  padding: 45px 55px;
-  background: #3d3838 !important;
-  height: auto;
-  width: 400px;
-  left: 460px;
-  top: 207px;
-  border-radius: 30px;
-}
-
-.form-gruop{
-  height: 50px;
-  width: 250px;
-}
-
-
-.form-control3{
-  height: 500px;
-  width: 285px;
-  border-radius: 20px;
-
-
-}
-
-
-.form-img{
-  width: 300px;
-  height: auto;
-  margin-bottom: 15px;
-}
-
-::placeholder {
- color: #000000 !important;
- font-size: medium;
-}
-
-.botones {
-  padding-top: 40px;
-  color: #ffffff;
-}
-
-textarea {
-  resize: none;
-  cursor: pointer;
-}
-
-input {
-  display: block;
-  text-align: center;
-  width: 100%;
-  font-size: 14px;
-  background-color: #fff4e3 !important;
-  border-radius: 20px;
-  color:  #FFFFFF;
-  cursor: pointer;
-
-}
-
-
-
-
-.label {
-  color: #e2e2e2; /* Color de todos los h3 del sitio */
-  font-weight: normal;
-  font-size: 16px;
-  padding-bottom: 5px;
-}

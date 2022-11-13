@@ -23,6 +23,7 @@ import {MatCardModule} from '@angular/material/card';
 import {MatListModule} from '@angular/material/list';
 
 import {MatIconModule} from '@angular/material/icon';
+import { NormalComponent } from './components/normal/normal.component';
 
 
 
@@ -40,6 +41,7 @@ import {MatIconModule} from '@angular/material/icon';
     CheckInComponent,
     ResetPasswordComponent,
     AdminComponent,
+    NormalComponent,
 
 
   ],
