@@ -14,6 +14,7 @@ import { ResetPasswordComponent } from './pages/components/reset-password/reset-
 import { AdminComponent } from './pages/components/admin/admin.component';
 import { AdminGuard } from './services/admin.guard';
 import { NormalGuard } from './services/normal.guard';
+import { NormalComponent } from './pages/components/normal/normal.component';
 
 
 const routes: Routes = [
@@ -40,6 +41,8 @@ const routes: Routes = [
     canActivate: [AdminGuard],
 
   },
+  {path:'normal', component: NormalComponent, pathMatch: 'full', canActivate: [NormalGuard]}
+  ,
 ];
 
 @NgModule({

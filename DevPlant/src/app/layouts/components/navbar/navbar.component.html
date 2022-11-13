@@ -93,10 +93,11 @@
 
         <li class="nav-item">
 
-          <button type="button" class="btn" *ngIf="login.isLoggedIn()" routerLink="/admin">
-
+          <button type="button" class="btn" *ngIf="login.isLoggedIn() && login.getUserRol() == 'ADMIN'" routerLink="/admin">
               {{ login.getUser().username }}
-
+          </button>
+          <button type="button" class="btn" *ngIf="login.isLoggedIn() && login.getUserRol() == 'NORMAL'" routerLink="/normal">
+              {{ login.getUser().username }}
           </button>
         </li>
 
