@@ -9,8 +9,14 @@ border-radius: 5px;
 
 .linktext{
  color: black;
+ margin-left: 8px;
 }
 
 .sociales{
-         margin-right: 15px;
+         margin-left: 15px;
+       
+}
+
+.mb-3{
+margin-left: 15px;
 }
