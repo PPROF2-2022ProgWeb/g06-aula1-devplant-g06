@@ -51,7 +51,7 @@ export class CheckInComponent implements OnInit {
 
 
 
-    this.userService.registrarUsuario(this.user).subscribe(
+    this.userService.añadirUsuario(this.user).subscribe(
       (data) => {
         console.log(data)
         Swal.fire('Usuario guardado', 'Usuario registrado con exito','success');

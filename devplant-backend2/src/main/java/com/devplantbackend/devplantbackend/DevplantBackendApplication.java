@@ -27,9 +27,8 @@ public class DevplantBackendApplication  implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception{
-
-		/* try{
-			Login y registro terminados
+		/*
+		try{
 			 Usuario usuario = new Usuario();
 
 			usuario.setNombre("Manuel");
@@ -55,8 +54,8 @@ public class DevplantBackendApplication  implements CommandLineRunner {
 
 		}catch(UsuarioNotFoundException exception){
 			exception.printStackTrace();
-		}*/
-
+		}
+		*/
 
 
 
