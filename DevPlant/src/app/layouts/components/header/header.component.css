@@ -1,13 +1,6 @@
 
 
-div.row{
-  margin-right: 0px;
-}
 
-div.container-fluid{
-  padding-right: 20px;
-
-}
 
 
 .header {
@@ -31,7 +24,7 @@ div.container-fluid{
   color: #ffffff;
 
   margin-top: 8.5rem;
-  margin-right: 3.5rem;
+
 }
 
 .devplant {
@@ -43,7 +36,7 @@ div.container-fluid{
   color: #ffffff;
 
   margin-top: 3rem;
-  margin-right: 3.5rem;
+
 }
 
 .tips {
@@ -54,7 +47,7 @@ div.container-fluid{
   color: #ffffff;
 
   margin-top: 3rem;
-  margin-right: 3.5rem;
+
   margin-bottom: 0.2rem;
 }
 
