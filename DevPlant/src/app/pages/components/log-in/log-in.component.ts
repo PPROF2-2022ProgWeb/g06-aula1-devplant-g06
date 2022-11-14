@@ -39,6 +39,7 @@ export class LogInComponent implements OnInit {
     this.loginService.generateToken(this.loginData).subscribe(
       (data:any) => {
         console.log(data);
+
         this.loginService.loginUser(data.token);
         this.loginService.getCurrentUser().subscribe((user:any) => {
           this.loginService.setUser(user);

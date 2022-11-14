@@ -10,7 +10,6 @@ import { BlogComponent } from './pages/components/blog/blog.component';
 import { AccountComponent } from './pages/components/account/account.component';
 import { LogInComponent } from './pages/components/log-in/log-in.component';
 import { CheckInComponent } from './pages/components/check-in/check-in.component';
-import { ResetPasswordComponent } from './pages/components/reset-password/reset-password.component';
 import { AdminComponent } from './pages/components/admin/admin.component';
 import { AdminGuard } from './services/admin.guard';
 import { NormalGuard } from './services/normal.guard';
@@ -29,11 +28,6 @@ const routes: Routes = [
   { path: 'account', component: AccountComponent, pathMatch: 'full' },
   { path: 'LogIn', component: LogInComponent, pathMatch: 'full' },
   { path: 'CheckIn', component: CheckInComponent, pathMatch: 'full' },
-  {
-    path: 'resetPassword',
-    component: ResetPasswordComponent,
-    pathMatch: 'full',
-  },
   {
     path: 'admin',
     component: AdminComponent,
