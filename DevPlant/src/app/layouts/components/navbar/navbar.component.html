@@ -1,121 +1,125 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-  <div class="container-fluid">
-    <!-- Ruteo en el logo del sitio-->
-    <a class="navbar-brand" routerLink="/home"
-      ><img
-        src="../../../../assets/logo_devplant.png"
-        class="logo"
-        width="150px"
-        height="40%"
-        alt="logo"
-    /></a>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <!-- Ruteo mediante routerLink-->
-      <!-- Llamo a la variable session, al inicio de la lista, declarada en el component.ts, con ngIf realizo la validación, por ahora están !"deshabilitados"-->
 
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <button type="button" class="btn" [routerLink]="'/home'">
-            Inicio
-          </button>
-        </li>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+      <div class="container-fluid">
+      <!-- Ruteo en el logo del siti  o-->
+      <a class="navbar-brand" routerLink="/home"
+        ><img
+          src="../../../../assets/logo_devplant.png"
+          class="logo"
+          width="150px"
+          height="40%"
+          alt="logo"
+      /></a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <!-- Ruteo mediante routerLink-->
+        <!-- Llamo a la variable session, al inicio de la lista, declarada en el component.ts, con ngIf realizo la validación, por ahora están !"deshabilitados"-->
 
-        <li class="nav-item">
-          <button
-            type="button"
-            *ngIf="login.isLoggedIn()"
-            class="btn"
-            routerLink="/shop"
-          >
-            Tienda
-          </button>
-        </li>
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <button type="button" class="btn" [routerLink]="'/home'">
+              Inicio
+            </button>
+          </li>
 
-       <!-- <li class="nav-item">
-          <button type="button" class="btn" [routerLink]="'/blog'">
-            Blog
-          </button>
-        </li>
+          <li class="nav-item">
+            <button
+              type="button"
+              *ngIf="login.isLoggedIn()"
+              class="btn"
+              routerLink="/shop"
+            >
+              Tienda
+            </button>
+          </li>
 
-      <span class="navbar-toggler-icon"></span>
-        <li class="nav-item">
-          <button type="button" class="btn" [routerLink]="'/about-us'">
-            Nosotros
-          </button>
-        </li>
+         <!-- <li class="nav-item">
+            <button type="button" class="btn" [routerLink]="'/blog'">
+              Blog
+            </button>
+          </li>
 
-        <li class="nav-item">
-          <button type="button" class="btn" [routerLink]="'/faqs'">
-            FaQs
-          </button>
-        </li>-->
+        <span class="navbar-toggler-icon"></span>
+          <li class="nav-item">
+            <button type="button" class="btn" [routerLink]="'/about-us'">
+              Nosotros
+            </button>
+          </li>
 
-        <li class="nav-item">
-          <button type="button" class="btn" [routerLink]="'/contact-us'">
-            Contactanos
-          </button>
-        </li>
-      </ul>
+          <li class="nav-item">
+            <button type="button" class="btn" [routerLink]="'/faqs'">
+              FaQs
+            </button>
+          </li>-->
 
-      <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <button
-            type="button"
-            class="btn"
-            *ngIf="!login.isLoggedIn()"
-            [routerLink]="'/CheckIn'"
-          >
-            Registrarse
-          </button>
-        </li>
+          <li class="nav-item">
+            <button type="button" class="btn" [routerLink]="'/contact-us'">
+              Contactanos
+            </button>
+          </li>
+        </ul>
 
-        <li class="nav-item">
-          <button
-            type="button"
-            class="btn"
-            *ngIf="!login.isLoggedIn()"
-            [routerLink]="'/LogIn'"
-          >
-            Logearse
-          </button>
-        </li>
+        <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <button
+              type="button"
+              class="btn"
+              *ngIf="!login.isLoggedIn()"
+              [routerLink]="'/CheckIn'"
+            >
+              Registrarse
+            </button>
+          </li>
 
-        <li class="nav-item">
+          <li class="nav-item">
+            <button
+              type="button"
+              class="btn"
+              *ngIf="!login.isLoggedIn()"
+              [routerLink]="'/LogIn'"
+            >
+              Logearse
+            </button>
+          </li>
 
-          <button type="button" class="btn" *ngIf="login.isLoggedIn() && login.getUserRol() == 'ADMIN'" routerLink="/admin">
-              {{ login.getUser().username }}
-          </button>
-          <button type="button" class="btn" *ngIf="login.isLoggedIn() && login.getUserRol() == 'NORMAL'" routerLink="/normal">
-             {{ login.getUser().username }}
-          </button>
-        </li>
+          <li class="nav-item">
 
-        <li class="nav-item">
-          <a class="nav-link" *ngIf="login.isLoggedIn()"> </a>
-        </li>
+            <button type="button" class="btn" *ngIf="login.isLoggedIn() && login.getUserRol() == 'ADMIN'" routerLink="/admin">
+                {{ login.getUser().username }}
+            </button>
+            <button type="button" class="btn" *ngIf="login.isLoggedIn() && login.getUserRol() == 'NORMAL'" routerLink="/normal">
+               {{ login.getUser().username }}
+            </button>
+          </li>
 
-        <li class="nav-item">
-          <button
-            type="button"
-            class="btn btn-light"
-            *ngIf="login.isLoggedIn()"
-            (click)="logOut()"
-          >
-            Cerrar sesion
-          </button>
-        </li>
-      </ul>
-    </div>
+          <li class="nav-item">
+            <a class="nav-link" *ngIf="login.isLoggedIn()"> </a>
+          </li>
+
+          <li class="nav-item">
+            <button
+              type="button"
+              class="btn btn-light"
+              *ngIf="login.isLoggedIn()"
+              (click)="logOut()"
+            >
+              Cerrar sesion
+            </button>
+          </li>
+        </ul>
+      </div>
+
   </div>
-</nav>
+  </nav>
+
+
