@@ -12,13 +12,14 @@ border-radius: 5px;
 
 .linktext{
  color: black;
- font-size: 17px;
-}
-
-.dev{
-  font-size: 17px;
+ margin-left: 8px;
 }
 
 .sociales{
-         margin-right: 15px;
+         margin-left: 15px;
+       
+}
+
+.mb-3{
+margin-left: 15px;
 }
