@@ -23,6 +23,9 @@ import {MatListModule} from '@angular/material/list';
 
 import {MatIconModule} from '@angular/material/icon';
 import { NormalComponent } from './components/normal/normal.component';
+import { ListaProductoComponent } from './components/producto/lista-producto.component';
+import { CrearProductoComponent } from './components/producto/crear-producto.component';
+import { DetalleProductoComponent } from './components/producto/detalle-producto.component';
 
 
 
@@ -39,7 +42,12 @@ import { NormalComponent } from './components/normal/normal.component';
     LogInComponent,
     CheckInComponent,
     AdminComponent,
-    NormalComponent
+    NormalComponent,
+    ListaProductoComponent,
+    CrearProductoComponent,
+    DetalleProductoComponent,
+
+
 
 
   ],
