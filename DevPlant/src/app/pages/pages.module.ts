@@ -20,7 +20,7 @@ import { MatInputModule } from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import {MatListModule} from '@angular/material/list';
-
+import {MatTableModule} from '@angular/material/table';
 import {MatIconModule} from '@angular/material/icon';
 import { NormalComponent } from './components/normal/normal.component';
 import { ListaProductoComponent } from './components/producto/lista-producto.component';
@@ -64,6 +64,7 @@ import { CrearProductoComponent } from './components/producto/crear-producto.com
     MatCardModule,
     MatListModule,
     MatIconModule,
+    MatTableModule,
 
 
 

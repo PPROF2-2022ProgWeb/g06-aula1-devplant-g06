@@ -54,12 +54,11 @@ export class CheckInComponent implements OnInit {
     this.userService.añadirUsuario(this.user).subscribe(
       (data) => {
         console.log(data)
-        Swal.fire('Usuario guardado', 'Usuario registrado con exito','success');
+        Swal.fire('Usuario registrado', 'Usuario registrado con exito','success');
       },(error) => {
         console.log(error)
-        this.snack.open('Usuario ya esta registrado' , 'Aceptar', {
-          duration : 3000,
-        });
+        Swal.fire('Usuario no registrado', 'Usuario no registrado con exito','error');
+        ;
       }
     )
 

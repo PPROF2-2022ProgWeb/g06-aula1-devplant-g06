@@ -1,10 +1,9 @@
 <div class="container">
   <div class="row">
-    <mat-card class="card">
-      <h1 class="text-center">Productos</h1>
-      <mat-card-content>
+    <mat-card class="card card-style">
+      <h1 class="text-center" style="padding-top: 20px;">Productos</h1>
+      <mat-card-content >
         <div class="bootstrap-wrapper">
-          <div class="container">
             <div class="text-center">
               <img
                 src="../../../../assets/planta1.jpg"
@@ -17,12 +16,9 @@
                 <h2></h2>
               </div>
             </div>
-            <br />
-            <br />
-
             <div class="col-md-10 offset-md-1">
-              <table class="table ">
-                <thead>
+              <table class="table mat-table">
+                <thead class="thead-dark">
                   <tr>
                     <th scope="col">Id</th>
                     <th scope="col">Nombre</th>
@@ -37,7 +33,7 @@
                     <td>{{ producto.precio }}</td>
                     <td *ngIf="producto.id != undefined">
                       <button
-                        class="btn btn-outline-danger"
+                        class="btn btn-outline-danger boton"
                         (click)="borrar(producto.id)"
                       >
                         <i class="far fa-trash-alt"></i> Eliminar
@@ -50,10 +46,11 @@
             </div>
 
           </div>
-        </div>
+
       </mat-card-content>
 
     </mat-card>
     <button type="button" class="btn btn-success" routerLink="/admin">Volver</button>
   </div>
 </div>
+

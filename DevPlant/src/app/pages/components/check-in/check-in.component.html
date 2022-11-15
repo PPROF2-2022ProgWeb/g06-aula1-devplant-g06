@@ -29,22 +29,22 @@
 
           <mat-form-field class="full-width" appearance="outline">
             <mat-label>Nombre </mat-label>
-            <input matInput [(ngModel)]="user.nombre" name="nombre" placeholder="Digite su nombre" />
+            <input matInput required [(ngModel)]="user.nombre" name="nombre" placeholder="Digite su nombre" />
           </mat-form-field>
 
           <mat-form-field class="full-width" appearance="outline">
             <mat-label>Apellido</mat-label>
-            <input matInput [(ngModel)]="user.apellido" name="apellido" placeholder="Digite su apellido" />
+            <input matInput required [(ngModel)]="user.apellido" name="apellido" placeholder="Digite su apellido" />
           </mat-form-field>
 
           <mat-form-field class="full-width" appearance="outline">
             <mat-label>Telefono</mat-label>
-            <input matInput [(ngModel)]="user.telefono" name="telefono" placeholder="Digite su telefono" />
+            <input matInput type="number" required [(ngModel)]="user.telefono" name="telefono" placeholder="Digite su telefono" />
           </mat-form-field>
 
           <mat-form-field class="full-width" appearance="outline">
             <mat-label>Fecha de nacimiento</mat-label>
-            <input matInput type="date" [(ngModel)]="user.nacimiento" name="nacimiento" placeholder="Digite username" />
+            <input matInput type="date" required [(ngModel)]="user.nacimiento" name="nacimiento" placeholder="Digite username" />
           </mat-form-field>
 
           <div class="container text-center">
