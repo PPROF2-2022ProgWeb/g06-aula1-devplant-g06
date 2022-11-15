@@ -14,13 +14,16 @@ import { AdminComponent } from './pages/components/admin/admin.component';
 import { AdminGuard } from './services/admin.guard';
 import { NormalGuard } from './services/normal.guard';
 import { NormalComponent } from './pages/components/normal/normal.component';
+import { CrearProductoComponent } from './pages/components/producto/crear-producto.component';
+
+import { ListaProductoComponent } from './pages/components/producto/lista-producto.component';
 
 
 const routes: Routes = [
   { path: '', component: HomeComponent, pathMatch: 'full' },
   { path: 'home', component: HomeComponent, pathMatch: 'full' },
   { path: 'contact-us', component: ContactUsComponent, pathMatch: 'full' },
-  { path: 'shop', component: ShopComponent, pathMatch: 'full'},
+  { path: 'shop', component: ShopComponent, pathMatch: 'full' },
   { path: 'cart', component: CartComponent, pathMatch: 'full' },
   { path: 'about-us', component: AboutUsComponent, pathMatch: 'full' },
   { path: 'faqs', component: FaqsComponent, pathMatch: 'full' },
@@ -35,12 +38,16 @@ const routes: Routes = [
     canActivate: [AdminGuard],
 
   },
-  {path:'normal', component: NormalComponent, pathMatch: 'full', canActivate: [NormalGuard]}
+  { path: 'normal', component: NormalComponent, pathMatch: 'full', canActivate: [NormalGuard] }
   ,
+  {path:'crear', component: CrearProductoComponent, pathMatch: 'full'},
+  {path:'lista', component: ListaProductoComponent, pathMatch: 'full'},
+
+
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

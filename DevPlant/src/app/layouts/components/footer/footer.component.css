@@ -5,8 +5,8 @@ width: 100%;
 background-color: rgba(203, 210, 210, 0.5);
 border-radius: 5px;
 
-
 }
+
 
 
 
@@ -36,12 +36,7 @@ img{
 
 
 
-.container{
-display: flex;
-justify-content:space-between;
-align-items: center;
 
-}
 
 .redes{
 margin-right: 0.5em;

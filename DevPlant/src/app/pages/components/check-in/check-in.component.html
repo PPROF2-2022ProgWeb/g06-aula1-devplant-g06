@@ -1,13 +1,13 @@
-<div class="boostrap-wrapper">
+<div class="boostrap-wrapper vevo">
   <div class="cointainer">
-    <div class="col-md-6 offset-md-3" style="margin-bottom: 50px; margin-top: 50px">
+    <div class="col-md-6 offset-md-3" >
       <mat-card style="padding-top: 50px; padding-bottom: 50px">
         <div class="container text-center" style="padding-bottom: 30px">
           <img src="../../../../assets/iconoPlanta.png" style="width: 100px" alt="" />
           <h1 class="text-center">Registrarse</h1>
         </div>
 
-        <form (ngSubmit)="formSubmit()" class="form-style">
+        <form (ngSubmit)="formSubmit()" novalidate #f="ngForm" class="form-style">
           <mat-form-field class="full-width" appearance="outline">
             <mat-label>Nombre de usuario</mat-label>
             <!-- required es un campo requerido -->
@@ -49,7 +49,7 @@
 
           <div class="container text-center">
             <!-- Boton submit -->
-            <button type="submit" mat-stroked-button color="primary">
+            <button type="submit" mat-stroked-button color="primary" [disabled]="!f.valid">
               Registrar
             </button>
             <!-- Reset sirve para limpiar los campos -->
