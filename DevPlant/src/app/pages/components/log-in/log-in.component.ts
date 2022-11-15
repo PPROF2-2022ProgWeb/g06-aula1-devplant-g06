@@ -1,0 +1,87 @@
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { Router } from '@angular/router';
+import { LoginService } from 'src/app/services/login.service';
+import Swal from 'sweetalert2';
+
+@Component({
+  selector: 'app-log-in',
+  templateUrl: './log-in.component.html',
+  styleUrls: ['./log-in.component.css']
+})
+export class LogInComponent implements OnInit {
+
+  loginData = {
+    "username" : '',
+    "password" : '',
+  }
+
+  constructor(private snack:MatSnackBar,private loginService:LoginService,private router:Router) { }
+
+  ngOnInit(): void {
+  }
+
+  formSubmit(){
+    if(this.loginData.username.trim() == '' || this.loginData.username.trim() == null){
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Nombre de usuario requerido',
+      })
+      return;
+    }
+
+    if(this.loginData.password.trim() == '' || this.loginData.password.trim() == null){
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Contraseña requerida',
+      })
+      return;
+    }
+
+    this.loginService.generateToken(this.loginData).subscribe(
+      (data:any) => {
+        console.log(data);
+
+        this.loginService.loginUser(data.token);
+        this.loginService.getCurrentUser().subscribe((user:any) => {
+          this.loginService.setUser(user);
+          this.loginService.loginUser(data.token);
+          console.log(user);
+
+          if(this.loginService.getUserRol() == 'ADMIN' ){
+            //dashboard admin
+            //window.location.href = '/admin';
+
+            this.loginService.loginStatusSubjec.next(true);
+            this.router.navigate(['admin']);
+
+          }
+          else if(this.loginService.getUserRol() == 'NORMAL'){
+            //user dashboard
+            //window.location.href = '/user-dashboard';
+
+            this.loginService.loginStatusSubjec.next(true);
+            this.router.navigate(['home']);
+
+          }
+          else{
+            this.loginService.logout();
+          }
+        })
+      },(error) => {
+        console.log(error);
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Usuario ingresado incorrecto',
+        })
+      }
+    )
+  }
+}
+
+
+

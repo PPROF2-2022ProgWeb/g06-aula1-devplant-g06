@@ -1,2 +1,40 @@
-<p>shop works!</p>
-<app-cart></app-cart>
+  <!--  1- poner mas imágenes y que cambien por otra cuando pasa el mouse -->
+  <!--  2- acomodar las imagenes para que queden ajustadas a la tarjeta -->
+  <!--  3- arreglar los botones de comprar y que se carguen al carrito  -->
+  <!--  4- arreglar los botones de guardar en fav y que se guarden en narnia  -->
+  <!--  5- poner la descripción  a las fotos, o un desplegable -->
+  <!--  6- Acomodar la tabla de carrito de compra en algun lugar mejor y los botones comprar de cada producto deberian plasmarse en esa tabla y el la pagina de carrito -->
+
+
+
+
+  <div class="container">
+    <div class="row">
+      <form class="d-flex" role="search">
+
+
+      </form>
+
+      <h2 class="titulo"><img src="../../../assets/plantaicono.png" style="width: 100px;" /> Productos disponibles</h2>
+
+      <div class="columnas col-lg-3 mb-6" *ngFor="let producto of productos">
+
+        <div class="card" >
+
+          <img
+            src="../../../assets/DRACAENAPALODEAGUA1.jpg"
+            class="img"
+            alt="palo de agua"
+          />
+          <div class="card-body" >
+            <h3 class="card-title text-center">Nombre producto</h3>
+            <h2 class="text-center"> {{producto.nombre}} </h2>
+            <h3 class="card-title text-center">Precio</h3>
+            <h2 class="card-title text-center">${{producto.precio}} </h2>
+            <button type="button" class="col-lg-12 col-sm-12 btn btn-success justify-content-center">Comprar</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>

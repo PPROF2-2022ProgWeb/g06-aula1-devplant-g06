@@ -1,0 +1,46 @@
+
+<div class="boostrap-wrapper vevo">
+  <div class="cointainer">
+      <div class="col-md-6 offset-md-3" >
+        <mat-card style="padding-top: 50px; padding-bottom: 50px;">
+          <div class = "container text-center" style="padding-bottom: 30px;">
+            <img src="../../../../assets/iconoPlanta.png" style="width: 100px;" alt="">
+            <h1 class="text-center">Iniciar sesión</h1>
+          </div>
+
+
+          <form (ngSubmit) = "formSubmit()">
+
+            <mat-form-field class="full-width"  appearance = "outline">
+              <mat-label>Nombre de usuario</mat-label>
+
+              <input [(ngModel)] = "loginData.username" name="username" matInput required placeholder="Ingrese nombre de usuario"/>
+              <mat-hint>No es un usuario válido</mat-hint>
+            </mat-form-field>
+            <br>
+            <br>
+            <br>
+            <mat-form-field class="full-width"  appearance = "outline">
+              <mat-label>Contraseña</mat-label>
+
+              <input [(ngModel)] = "loginData.password" name="password" type="password" matInput required placeholder="Ingrese su contraseña"/>
+              <mat-hint>La contraseña no es válida</mat-hint>
+            </mat-form-field>
+
+            <br><br><br><br>
+
+            <div class="container text-center">
+
+              <button type="submit" mat-stroked-button color="primary">Iniciar sesión</button>
+
+              <button type="reset" style="margin-left: 20px;" mat-stroked-button color="accent">Limpiar</button>
+
+            </div>
+
+          </form>
+        </mat-card>
+      </div>
+    </div>
+</div>
+
+
