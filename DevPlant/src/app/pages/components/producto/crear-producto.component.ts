@@ -35,9 +35,8 @@ export class CrearProductoComponent implements OnInit {
         Swal.fire('Producto registrado', 'Producto registrado con exito','success');
       },(error) => {
         console.log(error)
-        this.snack.open(error.error.mensaje , 'Aceptar', {
-          duration : 3000,
-        });
+        Swal.fire('Producto no registrado', 'Producto no registrado con exito (Precio tiene q ser mayor a 0) ','error');
+        ;
       }
     )
   }

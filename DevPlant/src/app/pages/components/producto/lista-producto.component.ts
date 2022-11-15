@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Producto } from '../models/producto';
 import { ProductoService } from 'src/app/services/producto.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
+
 import Swal from 'sweetalert2';
 
 @Component({
@@ -43,9 +44,7 @@ export class ListaProductoComponent implements OnInit {
     }, error => {
       console.log(error)
 
-      this.snack.open('Producto ya esta registrado' , 'Aceptar', {
-        duration : 3000,
-      });
+      Swal.fire('Producto no eliminado', 'Producto eliminado no ha sido con exito','error');;
 
     })
   }
