@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Producto } from '../models/producto';
+import { ProductoService } from 'src/app/services/producto.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-lista-producto',
@@ -7,9 +11,47 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListaProductoComponent implements OnInit {
 
-  constructor() { }
+  productos: Producto [] = [];
 
-  ngOnInit(): void {
+  constructor(
+    private productoService: ProductoService,
+    private snack:MatSnackBar
+    ) { }
+
+  ngOnInit() {
+    this.cargarProductos();
   }
 
+  cargarProductos(): void {
+    this.productoService.lista().subscribe(
+      data => {
+        this.productos = data;
+      },
+      error => {
+        console.log(error);
+      }
+    );
+  }
+
+  borrar(id: number) {
+    this.productoService.delete(id).subscribe(() => {
+
+      Swal.fire('Producto eliminado', 'Producto eliminado con exito','success');
+
+      this.cargarProductos()
+
+    }, error => {
+      console.log(error)
+
+      this.snack.open('Producto ya esta registrado' , 'Aceptar', {
+        duration : 3000,
+      });
+
+    })
+  }
+
+
+
+
 }
+

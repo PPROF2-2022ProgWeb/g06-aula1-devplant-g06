@@ -14,6 +14,9 @@ import { AdminComponent } from './pages/components/admin/admin.component';
 import { AdminGuard } from './services/admin.guard';
 import { NormalGuard } from './services/normal.guard';
 import { NormalComponent } from './pages/components/normal/normal.component';
+import { CrearProductoComponent } from './pages/components/producto/crear-producto.component';
+
+import { ListaProductoComponent } from './pages/components/producto/lista-producto.component';
 
 
 const routes: Routes = [
@@ -37,6 +40,10 @@ const routes: Routes = [
   },
   { path: 'normal', component: NormalComponent, pathMatch: 'full', canActivate: [NormalGuard] }
   ,
+  {path:'crear', component: CrearProductoComponent, pathMatch: 'full'},
+  {path:'lista', component: ListaProductoComponent, pathMatch: 'full'},
+
+
 ];
 
 @NgModule({
