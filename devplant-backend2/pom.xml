@@ -75,14 +75,6 @@
 		</dependency>
 
 
-		<!-- https://mvnrepository.com/artifact/com.stripe/stripe-java -->
-		<dependency>
-			<groupId>com.stripe</groupId>
-			<artifactId>stripe-java</artifactId>
-			<version>21.16.0-beta.1</version>
-		</dependency>
-
-
 	</dependencies>
 
 	<build>

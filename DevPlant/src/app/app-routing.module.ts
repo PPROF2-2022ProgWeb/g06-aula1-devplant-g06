@@ -17,6 +17,8 @@ import { NormalComponent } from './pages/components/normal/normal.component';
 import { CrearProductoComponent } from './pages/components/producto/crear-producto.component';
 
 import { ListaProductoComponent } from './pages/components/producto/lista-producto.component';
+import { EditarComponent } from './pages/components/producto/editar.component';
+import { DetalleComponent } from './pages/components/producto/detalle.component';
 
 
 const routes: Routes = [
@@ -40,6 +42,8 @@ const routes: Routes = [
   },
   { path: 'normal', component: NormalComponent, pathMatch: 'full', canActivate: [NormalGuard] }
   ,
+  {path:'editar/:id', component: EditarComponent, pathMatch: 'full'},
+  {path:'detalle/:id', component: DetalleComponent, pathMatch: 'full'},
   {path:'crear', component: CrearProductoComponent, pathMatch: 'full'},
   {path:'lista', component: ListaProductoComponent, pathMatch: 'full'},
 

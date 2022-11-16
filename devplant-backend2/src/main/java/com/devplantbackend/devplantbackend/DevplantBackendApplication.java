@@ -27,15 +27,15 @@ public class DevplantBackendApplication  implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception{
-/*
+ 		/*
 		try{
 			 Usuario usuario = new Usuario();
 
-			usuario.setNombre("Belen");
-			usuario.setApellido("Re");
-			usuario.setUsername("Belu");
+			usuario.setNombre("Manuel");
+			usuario.setApellido("Canas");
+			usuario.setUsername("Manuels");
 			usuario.setPassword(bCryptPasswordEncoder.encode( "12345"));
-			usuario.setEmail("belen.re.gareis@gmail.com");
+			usuario.setEmail("manuels4641366@gmail.com");
 			usuario.setTelefono("3584113711");
 			usuario.setPerfil("foto.png");
 
@@ -55,8 +55,8 @@ public class DevplantBackendApplication  implements CommandLineRunner {
 		}catch(UsuarioNotFoundException exception){
 			exception.printStackTrace();
 		}
+		*/
 
-*/
 
 
 	}

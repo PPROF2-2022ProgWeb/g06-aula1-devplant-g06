@@ -25,6 +25,10 @@ import {MatIconModule} from '@angular/material/icon';
 import { NormalComponent } from './components/normal/normal.component';
 import { ListaProductoComponent } from './components/producto/lista-producto.component';
 import { CrearProductoComponent } from './components/producto/crear-producto.component';
+import { EditarComponent } from './components/producto/editar.component';
+import { DetalleComponent } from './components/producto/detalle.component';
+
+
 
 
 
@@ -45,6 +49,9 @@ import { CrearProductoComponent } from './components/producto/crear-producto.com
     NormalComponent,
     ListaProductoComponent,
     CrearProductoComponent,
+    EditarComponent,
+    DetalleComponent,
+
 
 
 

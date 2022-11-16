@@ -1,14 +1,18 @@
 .container{
 
-         margin-top: 50px;
-         padding: 50px;
-         background-color: rgba(203, 210, 210, 0.5); 
-         width: 100%;
-         
+         margin-bottom: 200px;
 
-    
+
+         background-color: rgba(203, 210, 210, 0.5);
+         width: 100%;
+
 }
 .col{
          width: 100%;
-         
+
+}
+
+.vevo{
+  padding-top: 100px;
+  padding-bottom: 200px;
 }

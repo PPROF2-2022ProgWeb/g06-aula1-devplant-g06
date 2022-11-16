@@ -16,10 +16,12 @@ export class CrearProductoComponent implements OnInit {
 
   nombre = '';
   precio : any ;
+  id: any;
 
 
   constructor(private productoService: ProductoService,
-      private snack:MatSnackBar
+      private snack:MatSnackBar,
+      private router: Router
     ) { }
 
   ngOnInit(): void {
@@ -28,14 +30,15 @@ export class CrearProductoComponent implements OnInit {
 
 
   onCreate(): void{
-    const producto = new Producto(this.nombre, this.precio);
+    const producto = new Producto(this.nombre, this.precio, this.id);
     this.productoService.save(producto).subscribe(
       (data) => {
         console.log(data)
         Swal.fire('Producto registrado', 'Producto registrado con exito','success');
+        this.router.navigate(['/admin']);
       },(error) => {
         console.log(error)
-        Swal.fire('Producto no registrado', 'Producto no registrado con exito (Precio tiene q ser mayor a 0) ','error');
+        Swal.fire('Producto no registrado', 'Producto no registrado con exito (Precio tiene q ser mayor a 0) o ya existe ','error');
         ;
       }
     )

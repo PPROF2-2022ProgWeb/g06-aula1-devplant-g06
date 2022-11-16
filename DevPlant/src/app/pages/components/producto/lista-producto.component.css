@@ -21,7 +21,11 @@
 }
 
 
-.card{
-  height: auto;
+.card-style{
+  padding-bottom: 50px;
 }
 
+.btn{
+  text-align: center;
+  width: 100%;
+}
