@@ -6,10 +6,11 @@ import { ShopComponent } from './shop/shop.component';
 
 
 
+
 @NgModule({
   declarations: [
     ShopComponent,
-    CartComponent
+    CartComponent,
   ],
 
   imports: [

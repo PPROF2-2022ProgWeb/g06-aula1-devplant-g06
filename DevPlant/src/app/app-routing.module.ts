@@ -43,6 +43,7 @@ const routes: Routes = [
   { path: 'normal', component: NormalComponent, pathMatch: 'full', canActivate: [NormalGuard] }
   ,
   {path:'editar/:id', component: EditarComponent, pathMatch: 'full'},
+  {path:'carrito/:id', component: CartComponent, pathMatch: 'full'},
   {path:'detalle/:id', component: DetalleComponent, pathMatch: 'full'},
   {path:'crear', component: CrearProductoComponent, pathMatch: 'full'},
   {path:'lista', component: ListaProductoComponent, pathMatch: 'full'},
