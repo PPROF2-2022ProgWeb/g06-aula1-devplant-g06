@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import {  NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LayoutsModule } from '../layouts/layouts.module';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
@@ -27,7 +27,7 @@ import { ListaProductoComponent } from './components/producto/lista-producto.com
 import { CrearProductoComponent } from './components/producto/crear-producto.component';
 import { EditarComponent } from './components/producto/editar.component';
 import { DetalleComponent } from './components/producto/detalle.component';
-
+import { EliminarComponent } from './components/eliminar/eliminar.component';
 
 
 
@@ -51,6 +51,7 @@ import { DetalleComponent } from './components/producto/detalle.component';
     CrearProductoComponent,
     EditarComponent,
     DetalleComponent,
+    EliminarComponent,
 
 
 
@@ -75,6 +76,7 @@ import { DetalleComponent } from './components/producto/detalle.component';
 
 
 
+
     //Se importa el approutingmodule asi funciona en pages module
     RouterModule
   ],
@@ -94,6 +96,6 @@ import { DetalleComponent } from './components/producto/detalle.component';
 
 
   ],
-  providers: []
+  providers: [],
 })
 export class PagesModule { }

@@ -18,7 +18,7 @@ import { ShopComponent } from './shop/shop.component';
   ],
 
   exports: [
-  
+
   ]
 })
 export class ECommerceModule { }

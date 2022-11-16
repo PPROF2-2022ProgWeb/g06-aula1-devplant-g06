@@ -16,14 +16,17 @@ import { authInterceptorProviders } from './services/auth.interceptor';
 import { ReactiveFormsModule } from '@angular/forms';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
 
 
 
+
   ],
   imports: [
+
     BrowserModule,
     AppRoutingModule,
     LayoutsModule,
@@ -37,7 +40,6 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatInputModule,
     MatButtonModule,
     ReactiveFormsModule,
-
 
   ],
   providers: [authInterceptorProviders],

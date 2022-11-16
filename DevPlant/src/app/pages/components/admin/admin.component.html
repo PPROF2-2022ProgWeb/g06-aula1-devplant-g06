@@ -4,7 +4,7 @@
 <div class="container">
   <div class="row">
     <mat-card class="card">
-      <h1 class="text-center">Detalles del perfil</h1>
+      <h1 style="padding-top: 50px;"class="text-center">Detalles del perfil</h1>
       <mat-card-content>
         <div class="bootstrap-wrapper">
           <div class="container">
@@ -69,6 +69,9 @@
                 </button>
                 <button mat-list-item routerLink="/crear">
                   <mat-icon mat-list-icon >add_to_queue</mat-icon> Añadir producto
+                </button>
+                <button mat-list-item routerLink="/eliminar" disabled>
+                  <mat-icon mat-list-icon >delete_to_queue</mat-icon> Listado / Editar / Eliminar Usuario
                 </button>
               </mat-card>
               </mat-action-list>

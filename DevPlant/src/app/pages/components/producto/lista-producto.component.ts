@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Producto } from '../models/producto';
 import { ProductoService } from 'src/app/services/producto.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
-
 import Swal from 'sweetalert2';
+
 
 @Component({
   selector: 'app-lista-producto',

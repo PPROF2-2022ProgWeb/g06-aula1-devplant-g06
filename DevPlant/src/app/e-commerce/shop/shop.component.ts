@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { Producto } from 'src/app/pages/components/models/producto';
 import { ProductoService } from 'src/app/services/producto.service';
 
+
+
+
 @Component({
   selector: 'app-shop',
   templateUrl: './shop.component.html',
@@ -10,6 +13,9 @@ import { ProductoService } from 'src/app/services/producto.service';
 export class ShopComponent implements OnInit {
 
   productos: Producto[] = [];
+
+
+
 
   constructor(private productoService: ProductoService) { }
 
@@ -34,4 +40,12 @@ export class ShopComponent implements OnInit {
   borrar( id : number) {
     alert("Borrar el " + id);
   }
+
+
+
+
+
+
 }
+
+
