@@ -27,6 +27,9 @@ public class UsuarioController {
 
     @PostMapping("/")
     public Usuario guardarUsuario(@RequestBody Usuario usuario) throws Exception{
+
+
+
         usuario.setPerfil("default.png");
 
         usuario.setPassword(this.bCryptPasswordEncoder.encode(usuario.getPassword()));
@@ -36,6 +39,8 @@ public class UsuarioController {
         Rol rol = new Rol();
         rol.setRolId(2L);
         rol.setRolNombre("NORMAL");
+
+
 
         UsuarioRol usuarioRol = new UsuarioRol();
         usuarioRol.setUsuario(usuario);
