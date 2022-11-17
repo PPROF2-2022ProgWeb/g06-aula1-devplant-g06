@@ -35,7 +35,7 @@
           <li class="nav-item">
             <button
               type="button"
-              *ngIf="login.isLoggedIn()"
+              
               class="btn"
               routerLink="/shop"
             >
@@ -60,6 +60,7 @@
             <button type="button" class="btn" [routerLink]="'/faqs'">
               FaQs
             </button>
+             *ngIf="login.isLoggedIn()">
           </li>-->
 
           <li class="nav-item">
@@ -74,7 +75,7 @@
             <button
               type="button"
               class="btn"
-              *ngIf="!login.isLoggedIn()"
+             
               [routerLink]="'/CheckIn'"
             >
               Registrarse
