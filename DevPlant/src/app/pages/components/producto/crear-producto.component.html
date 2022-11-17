@@ -30,7 +30,7 @@
 
           <div class="container text-center">
             <!-- Boton submit -->
-            <button mat-stroked-button color="primary" [disabled]="!f.valid && precio<= 0">
+            <button mat-stroked-button color="primary" [disabled]="!f.valid || precio<= 0">
               Registrar
             </button>
             <!-- Reset sirve para limpiar los campos -->
