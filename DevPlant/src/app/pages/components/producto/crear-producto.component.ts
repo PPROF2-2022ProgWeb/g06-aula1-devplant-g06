@@ -35,7 +35,7 @@ export class CrearProductoComponent implements OnInit {
       (data) => {
         console.log(data)
         Swal.fire('Producto registrado', 'Producto registrado con exito','success');
-        this.router.navigate(['/admin']);
+        
       },(error) => {
         console.log(error)
         Swal.fire('Producto no registrado', 'Producto no registrado con exito (Precio tiene q ser mayor a 0) o ya existe ','error');
