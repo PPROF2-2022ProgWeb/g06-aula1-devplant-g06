@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.1.0
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 13-11-2022 a las 23:36:25
--- Versión del servidor: 10.4.24-MariaDB
--- Versión de PHP: 8.1.6
+-- Tiempo de generación: 17-11-2022 a las 18:58:57
+-- Versión del servidor: 10.4.18-MariaDB
+-- Versión de PHP: 7.3.27
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -32,6 +32,18 @@ CREATE TABLE `producto` (
   `nombre` varchar(255) DEFAULT NULL,
   `precio` float NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `producto`
+--
+
+INSERT INTO `producto` (`id`, `nombre`, `precio`) VALUES
+(2, 'flores', 125),
+(3, 'hortensia', 560),
+(4, 'zanahoria', 52),
+(5, 'pino', 4556),
+(6, 'margarita', 123),
+(7, 'flor1', 123);
 
 -- --------------------------------------------------------
 
@@ -75,13 +87,8 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id`, `apellido`, `email`, `enabled`, `nombre`, `password`, `perfil`, `telefono`, `username`) VALUES
-(1, 'Canas', 'manuels4641366@gmail.com', b'1', 'Manuel', '$2a$10$f1GDb2MCt18FYEBRjhmvIOFwOTCaGxFM51coH1P5hjYGVmZQCeg6G', 'foto.png', '3584113711', 'Manuels'),
-(2, 'Cañas', 'joven_43@hotmail.com', b'1', 'Manuel Ignacio', '1234', 'default.png', '', 'Manuels2'),
-(3, 'canas', 'm.canas@itecriocuarto.org.ar', b'1', 'manuel', '$2a$10$CjHzt11zc6.zbBYc8ysppuOhiPibyksenh2TtBcTM6g.tIhwoTiM2', 'default.png', '', 'Manuels3'),
-(4, 're', 'belen@gmail.com', b'1', 'belen', '$2a$10$vfY.IzS1OMRu01OBdYKaG.pVb.4norSfV.8uqrc4m2/iVhLsJ.RSK', 'default.png', '', 'Belen3'),
-(5, 'CANAS', 'rodrigoc.wow86@gmail.com', b'1', 'manuel', '$2a$10$wNX9DYEepmTROcbmNtb0mucbGQHqA567NpoHCwWcsd53gbA68b3Vm', 'default.png', '', 'belen4'),
-(6, 'lala', 'lala@gmail.com', b'1', 'lala', '$2a$10$UQGI2S05wnYa7/TFHZGE2ONWWbhodKV3Dtf0o1nFPxNVB9fUvIqde', 'default.png', '', 'lala'),
-(7, 'lala', 'lala@gmail.com', b'1', 'lala', '$2a$10$aodcoHbHNMqfaCKpxwLkW.eDNLtObSB/Td7i2GqZSeobs/emRQHEu', 'default.png', '', 'lala2');
+(1, 'Re', 'belen.re.gareis@gmail.com', b'1', 'Belen', '$2a$10$b0dYBI9sYgRNgQ.dMbiayeVIbvMmP2Jzsh1OoJDkLE2rd0bPc2GD6', 'foto.png', '3584113711', 'Belu'),
+(2, 'Windsor', 'carlosIII@gmail.com', b'1', 'Carlos', '$2a$10$iX1KLcqjJhkbeEdu1aNJlODkTUPFw1mrMgRCxqXjufZI2KKMfxC0e', 'default.png', '123456', 'carlos');
 
 -- --------------------------------------------------------
 
@@ -101,12 +108,7 @@ CREATE TABLE `usuario_rol` (
 
 INSERT INTO `usuario_rol` (`usuario_rol_id`, `rol_rol_id`, `usuario_id`) VALUES
 (1, 1, 1),
-(2, 2, 2),
-(3, 2, 3),
-(4, 2, 4),
-(5, 2, 5),
-(6, 2, 6),
-(7, 2, 7);
+(2, 2, 2);
 
 --
 -- Índices para tablas volcadas
@@ -146,19 +148,19 @@ ALTER TABLE `usuario_rol`
 -- AUTO_INCREMENT de la tabla `producto`
 --
 ALTER TABLE `producto`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `usuario_rol`
 --
 ALTER TABLE `usuario_rol`
-  MODIFY `usuario_rol_id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `usuario_rol_id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Restricciones para tablas volcadas
